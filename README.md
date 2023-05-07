@@ -1,31 +1,30 @@
-# capacIT.com       
+# CapacIT.com       
 
 (Proyecto Integrador - ISPC)
 
+La web CapacIT es una plataforma de formación en línea que ofrece una amplia variedad de cursos básicos para principiantes hasta cursos avanzados para profesionales con experiencia en áreas de programación, tecnología de la información y disciplinas relacionadas. Los cursos están diseñados para atender las necesidades tanto de aquellos que buscan adquirir habilidades técnicas para su carrera profesional, como de aquellos que buscan aprender por hobby o interés personal.
 
-La Web CapacIT brindará cursos de formación en áreas de programación, áreas IT y otras relacionadas. 
-
-
-
-### Pre-requisitos 📋
 
 
 
 ## Construido con 🛠️
 
-Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON, MySQL
+SPA (Single Page Application) con ANGULAR
 
-ANGULAR
+POO con Django-Python
+
+
+Proyecto anterior: Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON, MySQL
 
 
 
 ## Wiki 📖
 
-en nuestra [Wiki]( ) puede consultar:
+En nuestra [Wiki]( ) pueden consultar:
 
   * Meeting realizadas : https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Reuniones
 
-  * Detalle de Proyecto a realizar: https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Proyecto-Final
+  * Detalle del Proyecto a realizar: https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Proyecto-Final
 
 
 ## Autores ✒️
@@ -36,8 +35,7 @@ en nuestra [Wiki]( ) puede consultar:
 
 
 
-
-# capacIT.com  (Segundo cuatrimestre 2022, ISPC)
+# CapacIT.com
 
 VIDEO DE PRESENTACIÓN
 Video presentación del grupo: https://youtu.be/iT5mAPhwegA
