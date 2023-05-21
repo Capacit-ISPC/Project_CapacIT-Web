@@ -1,4 +1,4 @@
 footer{
-    background-color: rgb(50, 153, 148);
-
+    background-color: var(--secondary-color);
+    
 }
