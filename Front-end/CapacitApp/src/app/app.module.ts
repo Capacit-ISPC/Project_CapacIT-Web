@@ -19,6 +19,8 @@ import { RutasComponent } from './rutas/rutas.component';
 import { LoginComponent } from './login/login.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { RoutesAddressComponent } from './routes-address/routes-address.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 
 
@@ -39,13 +41,14 @@ import { RoutesAddressComponent } from './routes-address/routes-address.componen
     LoginComponent,
     CourseCardComponent,
     RoutesAddressComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ HttpClientModule],
   bootstrap: [AppComponent]

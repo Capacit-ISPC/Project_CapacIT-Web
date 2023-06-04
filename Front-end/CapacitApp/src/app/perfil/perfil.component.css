@@ -1,3 +1,10 @@
 h1, div {
   text-align: center;
  }
+
+.card{
+  background-color: var(--secondary-color);
+  width: auto;
+  box-shadow: 10px 5px 5px rgb(0,0,0,0.3);
+  height: 75%;
+}
