@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { AuthModule } from '@auth0/auth0-angular';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -48,7 +49,14 @@ import { FormControl } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthModule.forRoot({
+      domain: 'dev-v6nosfjsb2rnwbk8.us.auth0.com',
+      clientId: 'fdQV0bSXaEoBOPDcw68vsxW5qWLHPJiu',
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    }),
   ],
   providers: [ HttpClientModule],
   bootstrap: [AppComponent]

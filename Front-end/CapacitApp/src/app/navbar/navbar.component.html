@@ -7,7 +7,7 @@
                         <a routerLink="/">Inicio</a>
                     </i>
                 </li>
-                <li class="navbar-lista-item">
+                <li *ngIf="auth.isAuthenticated$ | async" class="navbar-lista-item">
                     <i class="bi bi-journal-bookmark-fill"> 
                         <a routerLink="/course">Cursos</a>
                     </i>

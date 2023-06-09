@@ -18,7 +18,10 @@
                 <label for="name">Nombre curso</label>
                 <input type="text" class="form-control" [(ngModel)]="newCourse.name" name="name" placeholder="Nombre" required>
             </div>
-
+            <div class="form-group">
+                <label for="languaje">Lenguaje de programación</label>
+                <input type="text" class="form-control" [(ngModel)]="newCourse.languaje" name="languaje" placeholder="Lenguaje" required>
+            </div>
             <div class="form-group">
                 <label for="description">Descripcion del curso</label>
                 <input type="text" class="form-control" [(ngModel)]="newCourse.description" name="description" placeholder="Descripcion">

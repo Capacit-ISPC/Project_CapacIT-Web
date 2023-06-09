@@ -15,7 +15,6 @@ nav ul{
 
 }
 
-
 nav ul a{
   background-color: rgb(50, 153, 148);
   color:white;
@@ -25,9 +24,9 @@ nav ul a{
   border-radius: 5px;
   transition: background-color .5s ;
 }
-nav ul a:last-child {
+/* nav ul a:last-child {
   background: #b2b3b2;
-}
+} */
 
 nav ul a:hover{
   background-color: white;
