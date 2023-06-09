@@ -33,8 +33,8 @@ export class CursosComponent {
       .subscribe({
         next: (data) => {
           console.log("Curso creado exitosamente", data)
-          this.newCourse = {} as Course;
-
+          this.newCourse = data;
+          this.courses.push(this.newCourse)
         },
         error: (error) => {
           console.log("Error al creal el curso", error)

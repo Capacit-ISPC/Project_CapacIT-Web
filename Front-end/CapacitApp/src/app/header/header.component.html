@@ -11,10 +11,13 @@
 
   <nav>
     <ul>
-      <a routerLink="/login">Login</a>
-      <a routerLink="/register">Registro</a>
-      <a routerLink="/cart">
-        <span class="bi bi-cart2"></span></a>
+      <span *ngIf="auth.user$ | async as user">{{user.name}}</span>
+      <a *ngIf="!(auth.isAuthenticated$ | async)" (click)="login()">Login</a>
+      <a *ngIf="auth.isAuthenticated$ | async" (click)="logout()">Logout</a>
+      <!-- <a routerLink="/register">Registro</a> -->
+      <a *ngIf="auth.isAuthenticated$ | async" routerLink="/cart">        
+        <span class="bi bi-cart2"></span>
+      </a>
     </ul>
   </nav>
 </header>

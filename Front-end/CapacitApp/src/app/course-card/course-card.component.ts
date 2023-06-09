@@ -12,14 +12,14 @@ export class CourseCardComponent implements OnInit{
 
   @Input() course!: Course;
 
-  imagePath!: string;
+ // imagePath!: string;
 
   constructor(){  
 
   }
   
   ngOnInit(): void {
-    this.imagePath = this.course.imagePath;
+   // this.imagePath = this.course.imagePath;
   }
 
 }
