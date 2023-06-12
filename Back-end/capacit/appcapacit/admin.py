@@ -1,20 +1,18 @@
 from django.contrib import admin
-from .models import User, Sale, Student, Video, Payment, Teacher, Course
 
-from django.contrib import admin
-from .models import CustomUser
-from django.contrib.auth import get_user_model 
+from django.contrib.auth import get_user_model
+from django.contrib.auth.admin import UserAdmin
+
+from .models import Curso
 
 # Register your models here.
 
-admin.site.register(User)
-admin.site.register(Student)
-admin.site.register(Video)
-admin.site.register(Sale)
-admin.site.register(Payment)
-admin.site.register(Teacher)
-admin.site.register(Course)
+class CursoAdmin(admin.ModelAdmin):
+    list_display = ("name", "description", "language", "technology", "level", "value","teacher_name")
 
-@admin.register(CustomUser)
-class CustomUserAdmin(admin.ModelAdmin):
+
+@admin.register(get_user_model())
+class CustomUserAdmin(UserAdmin):
     pass
+admin.site.register(Curso,CursoAdmin)
+

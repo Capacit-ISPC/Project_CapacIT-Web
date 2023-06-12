@@ -37,9 +37,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "corsheaders",
     "rest_framework",
-    "coreapi",#modulo para documentar los endpoints
+    'drf_spectacular',
+    "corsheaders",
+    'django_rest_passwordreset',
     "appcapacit"
 ]
 
@@ -83,8 +84,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     },
-}    
-
+   
 #  "default": {
 #      "ENGINE": "django.db.backends.mysql",
 #      "NAME": "Capacit_E-commerce",
@@ -96,10 +96,9 @@ DATABASES = {
 #      "sql_mode": "traditional",
 #      }
 #  }
-          
 
-#Custom user model
-AUTH_USER_MODEL = "appcapacit.CustomUser"
+}           
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -142,13 +141,22 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-#CAPACIT
-#que otro servidor se puede conectar? o sea el frontend angular
-#quien puede conectarse a nuestro servidor
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:9000", #esta no es la url de angular por lo q la cambiaremos proximamente
-]
+#
+AUTH_USER_MODEL = 'appcapacit.CustomUser'
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_SCHEMA_CLASS':'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication'
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.IsAuthenticated',
+        'rest_framework.permissions.IsAdminUser'
+    ]
+    
 }
+
+CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
+CORS_ALLOW_CREDENTIALS = True
