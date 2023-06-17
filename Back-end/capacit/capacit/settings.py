@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "rest_framework.authtoken",
     'drf_spectacular',
     "corsheaders",
     'django_rest_passwordreset',
@@ -141,20 +142,19 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-#
-AUTH_USER_MODEL = 'appcapacit.CustomUser'
+AUTH_USER_MODEL = 'appcapacit.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS':'drf_spectacular.openapi.AutoSchema',
-    'DEFAULT_AUTHENTICATION_CLASSES':[
-        'rest_framework.authentication.TokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication'
-    ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-        'rest_framework.permissions.IsAuthenticated',
-        'rest_framework.permissions.IsAdminUser'
-    ]
+    # 'DEFAULT_AUTHENTICATION_CLASSES':[
+    #     'rest_framework.authentication.TokenAuthentication',
+    #     'rest_framework.authentication.SessionAuthentication'
+    # ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    #     'rest_framework.permissions.IsAuthenticated',
+    #     'rest_framework.permissions.IsAdminUser'
+    # ]
     
 }
 

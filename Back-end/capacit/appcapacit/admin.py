@@ -1,18 +1,45 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.utils.translation import gettext_lazy as _
 
-from django.contrib.auth import get_user_model
-from django.contrib.auth.admin import UserAdmin
-
-from .models import Curso
-
-# Register your models here.
-
-class CursoAdmin(admin.ModelAdmin):
-    list_display = ("name", "description", "language", "technology", "level", "value","teacher_name")
+from appcapacit import models
 
 
-@admin.register(get_user_model())
-class CustomUserAdmin(UserAdmin):
-    pass
-admin.site.register(Curso,CursoAdmin)
+class UserAdmin(BaseUserAdmin):
+    """Define the admin pages for users."""
+    ordering = ['id']
+    list_display = ['email','name']
+    fieldsets =(
+        (None, {'fields': ('email', 'password')}),
+        (
+            _('Permissions'),
+            {
+                'fields': (
+                    'is_active',
+                    'is_staff',
+                    'is_superuser',
+                )
+            }
+        ),
+        (_('Importan dates'),{'fields': ('last_login',)}),
+    )
+    readonly_fields =['last_login']
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': (
+                'email',
+                'password1',
+                'password2',
+                'name',
+                'is_active',
+                'is_staff',
+                'is_superuser',  
+            )
+        }),
+    )
+
+
+admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Course)
 

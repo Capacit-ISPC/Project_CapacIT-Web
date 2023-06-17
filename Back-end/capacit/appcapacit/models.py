@@ -1,30 +1,115 @@
+from django.conf import settings
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import (
+    AbstractBaseUser,
+    BaseUserManager,
+    PermissionsMixin
+)
+
+class UserManager(BaseUserManager):
+    """Manager for users."""
+
+    def create_user(self, email, password=None, **extra_fields):
+        """Create, save and return a new user."""
+        if not email:
+            raise ValueError('User must have an email address')
+        user = self.model(email=self.normalize_email(email), **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+
+        return user
+    
+    def create_superuser(self, email, password):
+        """Create and return a new superuser"""
+        user = self.create_user(email, password)
+        user.is_staff = True
+        user.is_superuser = True
+        user.save(using=self._db)
 
 
-class CustomUser(AbstractUser):
-    email = models.EmailField(
-        max_length=150, unique=True)
+class User(AbstractBaseUser, PermissionsMixin):
+    """User in the system"""
+    email = models.EmailField(max_length=255, unique=True)
+    name = models.CharField(max_length=255)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
+    objects = UserManager()
+
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'password']
+
+
+class Course(models.Model):
+    name = models.CharField(max_length=255)
+    description =models.TextField(blank=True)
+    language = models.CharField(max_length=255)
+    technology = models.CharField(max_length=255)
+    level = models.CharField(max_length=255)
+    price = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
+    link = models.CharField(max_length=255)
+    teacher_name =models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 
-class Curso(models.Model):
-    name = models.CharField(max_length=100, blank=False)
-    description = models.TextField(max_length=1000, blank=False)
-    language = models.CharField(max_length=50, blank=False)
-    technology = models.CharField(max_length=100, blank=False)
-    level = models.CharField(max_length=100, blank=False)
-    value = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
-    teacher_name = models.CharField(max_length=100, blank=False)
-    class Meta:
-        db_table = "Curso"
-        verbose_name="Cursos en venta"
-        verbose_name_plural="Cursos"
-    def __unicode__(self):
-        return self.nombre
-    def __str__(self):
-        return self.nombre   
+
+
+
+
+
+
+
+
+
+# class Curso(models.Model):
+#     name = models.CharField(max_length=100, blank=False)
+#     description = models.TextField(max_length=1000, blank=False)
+#     language = models.CharField(max_length=50, blank=False)
+#     technology = models.CharField(max_length=100, blank=False)
+#     level = models.CharField(max_length=100, blank=False)
+#     value = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
+#     teacher_name = models.CharField(max_length=100, blank=False)
+#     class Meta:
+#         db_table = "Curso"
+#         verbose_name="Cursos en venta"
+#         verbose_name_plural="Cursos"
+#     def __unicode__(self):
+#         return self.nombre
+#     def __str__(self):
+#         return self.nombre   
 
 
 # class Sale(models.Model):
