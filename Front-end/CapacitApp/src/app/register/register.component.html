@@ -1,38 +1,61 @@
 
-<div class="container">  
+<div class="container">
     <form action="" method="get" onsubmit="onEnviar()">
         <div class="section-inputs">
+
             <label for="name">
                 <span>Name</span>
-                <input autoFocus type="text" name="" id="name" required>
+                <input autoFocus type="text" [formControl]="name" name="name" id="name" required>
             </label>
+            <div class="alert alert-danger" [hidden]="name.valid || name.pristine">
+              El nombre es obligatorio
+            </div>
         </div>
+
         <div>
             <label for="lastname">
                 <span>Lastname</span>
-                <input type="text" name="lastname" id="lastname" required>
+                <input type="text" [formControl]="lastname" name="lastname" id="lastname" required>
             </label>
+            <div class="alert alert-danger" [hidden]="lastname.valid || lastname.pristine">
+              El apellido es obligatorio
+            </div>
         </div>
+
         <div>
             <label for="username">
                 <span>Username</span>
-                <input type="text" name="username" id="username" required>
+                <input type="text" [formControl]="username" name="username" id="username" required>
             </label>
+            <div class="alert alert-danger " [hidden]="username.valid || username.pristine">
+              El nombre de usuario es obligatorio
+            </div>
         </div>
+
         <div>
             <label for="email">
                 <span>Email</span>
-                <input type="email" name="email" id="email" required>
+                <input type="email" [formControl]="email" name="email" id="email" required>
             </label>
+            <div class="alert alert-danger" [hidden]="email.valid || email.pristine">
+              <span *ngIf="email.errors?.['required']">
+                El email debe ser obligatorio
+              </span>
+              <span *ngIf="email.errors?.['email']">
+                El email debe ser válido
+              </span>
+            </div>
         </div>
+
         <div>
             <label for="password">
                 <span>Password</span>
-                <input type="password" name="password" id="password" required minlength="8" maxlength="15" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                <input type="password" [formControl]="password" name="password" id="password" required minlength="8" maxlength="15" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
             </label>
         </div>
+
         <span>Recuérdame</span>
-        
+
         <div>
             <label for="boton">
                 <button class="boton"type="submit">Crear cuenta</button>

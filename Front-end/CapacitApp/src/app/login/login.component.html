@@ -1,20 +1,52 @@
-<div>
-  <form name="myForm"  method="post">
-      <label for="username">
-          <span>Username</span>
-          <input autoFocus type="text" name="username" id="username">
-      </label>
-      <label for="password">
-          <span>Password</span>
-          <input type="password" name="password" id="password" minlength="8" maxlength="15"
-              pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
-      </label>
-      <label for="boton">
-          <button class="boton" type="submit" routerLink="123">Ingresar</button>
-      </label>
-  </form><br>
-  <div class="recuperar-contra"><a routerLink="123">¿Has olvidado la contraseña?</a></div>
-  <div class="registrarse">¿Todavía no te registraste?</div>
-  <div class="registrarse"><a routerLink="/register">Registrarme</a> </div>
-</div>
 
+<div class="card">
+ <div class="card-body">
+      <form [formGroup]="formUser" method="post">
+        <div>
+          <label class="form-label">
+              <span>Username</span>
+              <input  type="text" formControlName="Username" class="form-control" id="username" placeholder="Por favor ingrese su nombre">
+          </label>
+          <div
+          class="alert alert-danger"
+          [hidden]="Username.valid || formUser.get('Username')?.pristine"
+        >
+          <span *ngIf="Username?.errors?. ['required']"
+            >El nombre es obligatorio</span
+          >
+        </div>
+        </div>
+
+        <div>
+          <label for="password" class="form-label">
+              <span>Password</span>
+              <input type="password" formControlName="Password" id="password" class="form-control"
+              placeholder="Por favor ingrese su contraseña"
+                  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+          </label>
+          <div
+          class="alert alert-danger"
+          [hidden]="Password.valid || Password.pristine"
+        >
+          <span *ngIf="Password.errors?. ['required']">
+            La Password es obligatorio
+          </span>
+
+          <span *ngIf="Password.errors?. ['minlength']">
+            La Password debe ser de 8 o más caracteres.
+          </span>
+        </div>
+        </div>
+
+          <label for="boton">
+              <button class="boton" type="submit" routerLink="123" [disabled]="formUser.invalid">Ingresar</button>
+          </label>
+      </form><br>
+
+
+      <div class="recuperar-contra"><a routerLink="123">¿Has olvidado la contraseña?</a></div>
+      <div class="registrarse">¿Todavía no te registraste?</div>
+      <div class="registrarse"><a routerLink="/register">Registrarme</a> </div>
+    </div>
+  </div>
+  {{ formUser.get("Password")?.valid }}
