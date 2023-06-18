@@ -23,6 +23,12 @@ from appcapacit.serializers import (
     UserSerializer,
     AuthTokenSerializer
 )
+#####
+from rest_framework import viewsets
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
+from appcapacit.models import Course
+from appcapacit.serializers import CourseSerializer, CourseDetailSerializer
 
 class CreateUserView(generics.CreateAPIView):
     """Create a new user in the system."""
@@ -43,10 +49,29 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
         """Retrieve and return the authenticated user."""
         return self.request.user
 
+#######################################################################
 
+"""views for the Course APIs"""
 
+class CourseViewSet(viewsets.ModelViewSet):
+    """View for manage course API."""
+    serializer_class = CourseDetailSerializer
+    queryset = Course.objects.all()
+    authentication_classes = [TokenAuthentication]
+    permission_classes =[IsAuthenticated]
 
-
+    def get_queryset(self):
+        """Retrieve Courses for authenticated user."""
+        return self.queryset.all().order_by('-id')
+    
+    def get_serializer_class(self):
+        """REturn the serializer class for the request."""
+        if self.action == 'list':
+            return CourseSerializer
+        
+        return self.serializer_class
+    
+    
 
 
 
