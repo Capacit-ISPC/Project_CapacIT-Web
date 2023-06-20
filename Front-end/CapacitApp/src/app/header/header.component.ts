@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '@auth0/auth0-angular';
+import { Router, RouterLink } from '@angular/router';
+//import { AuthService } from '@auth0/auth0-angular';
 import { take } from 'rxjs/operators';
 
 @Component({
@@ -12,23 +12,21 @@ export class HeaderComponent implements OnInit{
 
   brand : String = "CapacIT";
 
-  constructor(public auth: AuthService, private router: Router){
+  constructor(private router: Router){
 
   }
+
   ngOnInit(): void {
-    this.auth.isAuthenticated$.subscribe(isAuthenticated =>{
-      if (isAuthenticated) {
-        this.router.navigate(['/course'])
-      }
-    })
+    
   }
 
-  login() {
-    this.auth.loginWithRedirect()
+  redirectLogin() {
+    this.router.navigate(['/login'])
+   
   }
 
   logout(){
-    this.auth.logout()
+   
   }
 }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '@auth0/auth0-angular';
 import { take } from 'rxjs/operators';
 
 @Component({
@@ -9,7 +8,7 @@ import { take } from 'rxjs/operators';
 })
 export class NavbarComponent {
 
-  constructor(public auth: AuthService){
+  constructor(){
 
   }
 

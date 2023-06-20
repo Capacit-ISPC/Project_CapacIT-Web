@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms'
-import { AuthModule } from '@auth0/auth0-angular';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -20,8 +19,6 @@ import { RutasComponent } from './rutas/rutas.component';
 import { LoginComponent } from './login/login.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { RoutesAddressComponent } from './routes-address/routes-address.component';
-
-import { FormControl } from '@angular/forms';
 
 
 
@@ -50,15 +47,8 @@ import { FormControl } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AuthModule.forRoot({
-      domain: 'dev-v6nosfjsb2rnwbk8.us.auth0.com',
-      clientId: 'fdQV0bSXaEoBOPDcw68vsxW5qWLHPJiu',
-      authorizationParams: {
-        redirect_uri: window.location.origin
-      }
-    }),
   ],
-  providers: [ HttpClientModule],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
