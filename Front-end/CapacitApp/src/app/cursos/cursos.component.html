@@ -8,12 +8,9 @@
     tag_2: string,
     price: number,
     teacherId: number -->
-    <div class="form-container">
+    <!-- <div class="form-container">
         <form (ngSubmit)="createCourse()" #formCourse="ngForm">
-            <!-- <div class="form-group">
-                <label for="id">Id</label>
-                <input type="number" class="form-control" [(ngModel)]="newCourse.id" name="id" placeholder="id" required>
-            </div> -->
+            
             <div class="form-group">
                 <label for="name">Nombre curso</label>
                 <input type="text" class="form-control" [(ngModel)]="newCourse.name" name="name" placeholder="Nombre" required>
@@ -34,7 +31,7 @@
             <button type="submit" class="btn btn-primary mt-2">Crear Curso</button>
 
         </form>
-    </div>
+    </div> -->
     <br>
     <div class="row g-3">
         <app-course-card class="col" *ngFor="let course of courses" [course]="course"></app-course-card>

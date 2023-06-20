@@ -1,8 +1,12 @@
 export interface Course {
-    id_course: number,
+    id: number,
     name: string,
-    languaje: string,
     description: string,
+    languaje:string,
+    technology: string,
+    level: string,
     price: number,
-    id_user: number
+    link: string,
+    teacher_name: string
+    
 }

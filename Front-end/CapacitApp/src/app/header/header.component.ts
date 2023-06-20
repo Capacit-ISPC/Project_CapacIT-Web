@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,7 @@ export class HeaderComponent implements OnInit{
 
   brand : String = "CapacIT";
 
-  constructor(private router: Router, private userService: UserService){
+  constructor(private router: Router, private authService: AuthService){
 
   }
 
@@ -25,8 +26,7 @@ export class HeaderComponent implements OnInit{
   }
 
   logout(){
-   this.userService.logout();
-   
+   this.authService.logout();
   }
 }
 

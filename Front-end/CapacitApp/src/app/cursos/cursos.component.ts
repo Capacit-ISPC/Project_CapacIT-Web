@@ -12,24 +12,25 @@ export class CursosComponent {
   courses: Course[] = [];
   newCourse: Course = {} as Course;
 
-  constructor(private service: CourseService) {
+  constructor(private courseService: CourseService) {
 
     this.getAllCourses()
   }
 
   getAllCourses() {
-    this.service.getCourses().subscribe({
+    this.courseService.getCourses().subscribe({
       next: (data) => {
         this.courses = data;
       },
       error: (error) => {
+        alert("Debe estar logueado para ver los cursos")
         console.log("No se pueden traer los usuarios", error)
       }
     });
   }
 
   createCourse() {
-    this.service.createCourse(this.newCourse)
+    this.courseService.createCourse(this.newCourse)
       .subscribe({
         next: (data) => {
           console.log("Curso creado exitosamente", data)
