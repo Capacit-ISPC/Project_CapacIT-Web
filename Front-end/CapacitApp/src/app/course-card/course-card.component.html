@@ -1,9 +1,69 @@
-<div class="card">
+<!--<div class="card">
   <img src = "../../assets/img/typescript-intro.jpg" class="card-img-top" alt="imagenCurso">
   <div class="card-body">
     <h5 class="card-title">{{ course.name }}</h5>
     <p class="card-text">{{ course.description }}</p>
     <a href="**" class="btn btn-primary">Comprar <span><i class="bi bi-cart2"></i></span></a>
     <span><strong> {{ course.price|currency: 'USD'}} USD</strong></span>
+  </div>
+</div>-->
+
+<div class="card">
+  <img
+    src="../../assets/img/typescript-intro.jpg"
+    class="card-img-top"
+    alt="imagenCurso"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ course.name }}</h5>
+    <p class="card-text">{{ course.description }}</p>
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#miModal"
+    >
+      Más info de este curso
+    </button>
+
+    <div
+      class="modal fade"
+      id="miModal"
+      tabindex="-1"
+      aria-labelledby="miModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="miModalLabel">{{ course.name }}</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            {{ course.description }}
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <a href="**" class="btn btn-primary"
+              >Comprar <span><i class="bi bi-cart2"></i></span
+            ></a>
+            <span
+              ><strong> {{ course.price | currency : "USD" }} USD</strong></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
