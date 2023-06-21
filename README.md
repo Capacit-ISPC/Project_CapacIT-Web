@@ -4,7 +4,7 @@
 
 La web CapacIT es una plataforma de formación en línea que ofrece una amplia variedad de cursos básicos para principiantes hasta cursos avanzados para profesionales con experiencia en áreas de programación, tecnología de la información y disciplinas relacionadas. Los cursos están diseñados para atender las necesidades tanto de aquellos que buscan adquirir habilidades técnicas para su carrera profesional, como de aquellos que buscan aprender por hobby o interés personal.
 
-
+Video demo del proyecto: https://youtu.be/s_2U2FvuVes
 
 
 ## Construido con 🛠️
