@@ -1,23 +1,40 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Course } from "../Models/Course"
 import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
 
-  private url:string = 'http://localhost:3000/'
+  private url:string = 'http://127.0.0.1:8000/api/capacit/cour/courses/'
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient, private authService: AuthService) { 
+
+  }
+
 
   getCourses(): Observable<Course[]> {
-    return this.http.get<Course []>(this.url + "courses")
+    const token = this.authService.getToken();
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `token ${token}`
+    });
+
+    return this.httpClient.get<Course []>(`${this.url}`, { headers });
   }
 
   createCourse(newCourse: Course){
-    return this.http.post<Course>(this.url + "courses", newCourse)
+    const token = this.authService.getToken();
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `token ${token}`
+    });
+    return this.httpClient.post<Course>(`${this.url}`, newCourse,{ headers })
   }
 
   findCourseById(Id: number) {

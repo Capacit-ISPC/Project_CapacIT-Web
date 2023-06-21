@@ -1,13 +1,30 @@
-<h1>Perfil</h1>
+<div class="card">
+  <h1>Perfil</h1>
 
-<div *ngIf="perfil">
-  <p>ID: {{ perfil.id }}</p>
-  <p>Username: {{ perfil.username }}</p>
-  <p>Email: {{ perfil.email }}</p>
+  <div *ngIf="perfil">
+    <p>ID: {{ perfil.id }}</p>
+    <p>Username: {{ perfil.username }}</p>
+    <p>Email: {{ perfil.email }}</p>
+  </div>
+
+  <div *ngIf="!perfil">
+    <p>Cargando perfil...</p>
+  </div>
 </div>
 
-<div *ngIf="!perfil">
-  <p>Cargando perfil...</p>
-</div>
+<!-- <div class="card">
+  <img [src]="imagePath" class="card-img-top" alt="imagenCurso" />
+  <div class="card-body">
+    <h5 class="card-title">{{ course.name }}</h5>
+    <p class="card-text">{{ course.description }}</p>
+    <a href="**" class="btn btn-primary"
+      >Comprar <span><i class="bi bi-cart2"></i></span
+    ></a>
+    <span
+      ><strong> {{ course.price | currency : "USD" }} USD</strong></span
+    >
+  </div>
+</div> -->
+
 
 

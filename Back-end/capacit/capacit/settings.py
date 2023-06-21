@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "corsheaders",
     "rest_framework",
-    "coreapi",#modulo para documentar los endpoints
+    "rest_framework.authtoken",
+    'drf_spectacular',
+    "corsheaders",
+    'django_rest_passwordreset',
     "appcapacit"
 ]
 
@@ -82,8 +84,21 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+    },
+   
+#  "default": {
+#      "ENGINE": "django.db.backends.mysql",
+#      "NAME": "Capacit_E-commerce",
+#      "USER": "root",
+#      "PASSWORD": "contraseña",
+#      "HOST": "localhost",
+#      "PORT": "3306",
+#      "OPTIONS": {
+#      "sql_mode": "traditional",
+#      }
+#  }
+
+}           
 
 
 # Password validation
@@ -127,13 +142,45 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-#CAPACIT
-#que otro servidor se puede conectar? o sea el frontend angular
-#quien puede conectarse a nuestro servidor
-CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:9000", #esta no es la url de angular por lo q la cambiaremos proximamente
-]
+AUTH_USER_MODEL = 'appcapacit.User'
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_SCHEMA_CLASS':'drf_spectacular.openapi.AutoSchema',
+    # 'DEFAULT_AUTHENTICATION_CLASSES':[
+    #     'rest_framework.authentication.TokenAuthentication',
+    #     'rest_framework.authentication.SessionAuthentication'
+    # ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    #     'rest_framework.permissions.IsAuthenticated',
+    #     'rest_framework.permissions.IsAdminUser'
+    # ]
+    
 }
+CORS_ALLOWED_ORIGINS = [
+    
+    'http://localhost:4200',  'httt://127.0.0.1:4200'
+]
+CORS_ORIGIN_WHITELIST = ["http://localhost:3000"]
+
+CORS_ALLOW_METHODS = [
+    'GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_EXPOSE_HEADERS = [
+    'Content-Disposition',
+]

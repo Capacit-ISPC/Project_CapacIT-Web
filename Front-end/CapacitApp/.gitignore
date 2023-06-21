@@ -40,3 +40,16 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#python
+/env
+.DS_Store
+**/__pycache__
+**/*.pyc
+
+**/**/__pycache__
+
+/src/utils/data/files_p_f/**
+/src/utils/data/files_p_j/**
+
+.vscode

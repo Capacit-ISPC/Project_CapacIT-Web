@@ -4,17 +4,15 @@
     <h1 class="logo-nombre">{{ brand }}</h1>
   </a>
 
-  <form>
-    <input type="text" placeholder="Buscar" name="busqueda">
-    <button type="submit" class="bi bi-search"></button>
-  </form>
-
   <nav>
     <ul>
-      <a routerLink="/login">Login</a>
-      <a routerLink="/register">Registro</a>
-      <a routerLink="/cart">
-        <span class="bi bi-cart2"></span></a>
+      
+      <a  (click)="redirectLogin()">Login</a>
+      <a (click)="logout()">Logout</a>
+      <!-- <a routerLink="/register">Registro</a> -->
+     <!--  <a *ngIf="auth.isAuthenticated$ | async" routerLink="/cart">        
+        <span class="bi bi-cart2"></span>
+      </a> -->
     </ul>
   </nav>
 </header>

@@ -1,11 +1,12 @@
 export interface Course {
     id: number,
     name: string,
-    imagePath: string,
     description: string,
-    languaje: string,
-    tag_1: string,
-    tag_2: string,
-    price: number,
-    teacherId: number
+    language:string,
+    technology: string,
+    level: string,
+    price: string,
+    link: string,
+    teacher_name: string
+    
 }
