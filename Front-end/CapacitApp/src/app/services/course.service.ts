@@ -28,7 +28,13 @@ export class CourseService {
   }
 
   createCourse(newCourse: Course){
-    return this.httpClient.post<Course>(this.url + "courses", newCourse)
+    const token = this.authService.getToken();
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `token ${token}`
+    });
+    return this.httpClient.post<Course>(`${this.url}`, newCourse,{ headers })
   }
 
   findCourseById(Id: number) {

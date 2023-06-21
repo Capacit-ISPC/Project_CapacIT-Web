@@ -18,10 +18,5 @@ export class UserService {
     return this.http.post(this.url + "create/", user);
   }
 
-  logout() {
-    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    console.log("Logout exitoso");
-    alert("Se ha cerrado la sesión correctamente");
-    this.router.navigate(['/home']); 
-  }
+ 
 }

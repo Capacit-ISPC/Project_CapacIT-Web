@@ -11,10 +11,11 @@ import { Course } from '../Models/Course';
 export class CursosComponent {
   courses: Course[] = [];
   newCourse: Course = {} as Course;
+  showCourseList: Boolean = false;
+  showCourseForm: Boolean = false;
 
   constructor(private courseService: CourseService) {
 
-    this.getAllCourses()
   }
 
   getAllCourses() {
@@ -30,6 +31,11 @@ export class CursosComponent {
   }
 
   createCourse() {
+
+    this.newCourse.technology = 'default';
+    this.newCourse.level = 'default';
+    this.newCourse.description='default'
+    
     this.courseService.createCourse(this.newCourse)
       .subscribe({
         next: (data) => {
@@ -38,9 +44,35 @@ export class CursosComponent {
           this.courses.push(this.newCourse)
         },
         error: (error) => {
+          alert("Debe estar logueado para crear un curso")
           console.log("Error al creal el curso", error)
+          
         }
       })
   }
 
+  showCourses() {
+    this.showCourseList = !this.showCourseList;
+    this.getAllCourses()
+  }
+
+  showForm() {
+    this.showCourseForm = true;
+  }
+
+  hideForm() {
+    this.showCourseForm = false;
+  }
+
+  showCreateForm() {
+
+  }
+
+  deleteCourses() {
+
+  }
+
+  editCourses() {
+
+  }
 }
