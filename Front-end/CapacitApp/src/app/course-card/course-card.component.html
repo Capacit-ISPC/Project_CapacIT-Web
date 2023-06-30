@@ -10,7 +10,7 @@
 </div>
 
 <div class="modal fade" [attr.id]="'miModal-' + course.id" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="miModalLabel">{{ course.name }}</h5>
@@ -22,12 +22,13 @@
       <div>
         <span>Profesor: {{course.teacher_name}}</span> 
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="flex-direction: column;">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
-        <a href="**" class="btn btn-primary">Comprar <span><i class="bi bi-cart2"></i></span></a>
+        <!-- <a href="**" class="btn btn-primary">Comprar <span><i class="bi bi-cart2"></i></span></a> -->
         <span><strong> {{ course.price | currency : "USD" }} USD</strong></span>
+        <div class="payment-container" #paymentRef></div>
       </div>
     </div>
   </div>

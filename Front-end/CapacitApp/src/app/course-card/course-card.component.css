@@ -9,3 +9,8 @@ img {
 max-width: 300px;
 max-height: 400px;
 }
+
+.payment-container{
+   /*  max-width: 800px; */
+    width: 100%;
+}
