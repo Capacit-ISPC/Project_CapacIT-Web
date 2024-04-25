@@ -2,7 +2,7 @@
 
 (Proyecto Integrador - ISPC)
 
-La web CapacIT es una plataforma de formación en línea que ofrece una amplia variedad de cursos básicos para principiantes hasta cursos avanzados para profesionales con experiencia en áreas de programación, tecnología de la información y disciplinas relacionadas. Los cursos están diseñados para atender las necesidades tanto de aquellos que buscan adquirir habilidades técnicas para su carrera profesional, como de aquellos que buscan aprender por hobby o interés personal.
+La web CapacIT es una plataforma de formación en línea que ofrece una amplia variedad de cursos (gratuitos y pagos) básicos para principiantes hasta cursos avanzados para profesionales con experiencia en áreas de programación, tecnología de la información y disciplinas relacionadas. Los cursos están diseñados para atender las necesidades tanto de aquellos que buscan adquirir habilidades técnicas para su carrera profesional, como de aquellos que buscan aprender por hobby o interés personal.
 
 Video demo del proyecto: https://youtu.be/s_2U2FvuVes
 
@@ -24,7 +24,7 @@ En nuestra [Wiki]( ) pueden consultar:
 
   * Meeting realizadas : https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Reuniones
 
-  * Detalle del Proyecto a realizar: https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Proyecto-Final
+  * Detalles del Proyecto: https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Proyecto-Final
 
 
 ## Autores ✒️
