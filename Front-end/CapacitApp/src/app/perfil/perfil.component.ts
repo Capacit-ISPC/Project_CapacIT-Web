@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { PerfilService } from '../services/perfil.service';
-import { Perfil } from '../Models/Perfil';
+import { Perfil } from '../models/Perfil';
 
 @Component({
   selector: 'app-perfil',

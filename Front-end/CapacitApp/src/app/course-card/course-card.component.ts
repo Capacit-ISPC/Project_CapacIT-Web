@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { Course } from '../Models/Course';
+import { Course } from '../models/Course';
 
 @Component({
   selector: 'app-course-card',

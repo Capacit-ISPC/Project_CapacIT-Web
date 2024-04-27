@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { CourseService } from '../services/course.service'
-import { Course } from '../Models/Course';
+import { Course } from '../models/Course';
 
 
 @Component({
