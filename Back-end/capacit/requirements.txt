@@ -18,7 +18,7 @@ MarkupSafe==2.1.2
 mercadopago==2.2.0
 pyrsistent==0.19.3
 pytz==2023.3
-PyYAML==6.0
+PyYAML==6.0.1
 requests==2.30.0
 sqlparse==0.4.4
 tzdata==2023.3
