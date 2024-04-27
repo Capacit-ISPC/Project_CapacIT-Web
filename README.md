@@ -20,7 +20,7 @@ Proyecto anterior: Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON
 
 ## 📖 Wiki 
 
-En nuestra [Wiki]( ) pueden consultar:
+En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki) pueden consultar:
 
   * Meeting realizadas : https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Reuniones
 
@@ -31,7 +31,7 @@ En nuestra [Wiki]( ) pueden consultar:
 
 * **Estudiantes TSDWAD de ISPC**
 
-* Puede ver miembros de equipo en : https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Miembros-Equipo)
+* Puede ver miembros de equipo en : [Equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
 
 
 
