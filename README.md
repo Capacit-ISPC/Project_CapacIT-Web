@@ -7,7 +7,7 @@ La web CapacIT es una plataforma de formación en línea que ofrece una amplia v
 Video demo del proyecto: https://youtu.be/s_2U2FvuVes
 
 
-## Construido con 🛠️
+## 🛠️ Construido con:
 
 SPA (Single Page Application) con ANGULAR
 
@@ -18,7 +18,7 @@ Proyecto anterior: Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON
 
 
 
-## Wiki 📖
+## 📖 Wiki 
 
 En nuestra [Wiki]( ) pueden consultar:
 
@@ -27,7 +27,7 @@ En nuestra [Wiki]( ) pueden consultar:
   * Detalles del Proyecto: https://github.com/DaniBarrios22/Proyecto_Grupal-Ispc/wiki/Proyecto-Final
 
 
-## Autores ✒️
+## ✒️ Autores 
 
 * **Estudiantes TSDWAD de ISPC**
 
