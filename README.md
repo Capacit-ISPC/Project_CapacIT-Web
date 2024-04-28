@@ -23,15 +23,15 @@ https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Apuntes-Project_CapacIT
 
 En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pueden consultar:
 
-  * Meeting realizadas : https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Reuniones-Equipo
+  * [Meeting realizadas](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Reuniones-Equipo)
 
-  * Detalles del Proyecto:https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Proyecto-Final-%E2%80%90-Pr%C3%A1ctica-Profesionalizante-ISPC-2024
+  * [Detalles del Proyecto](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Proyecto-Final-%E2%80%90-Pr%C3%A1ctica-Profesionalizante-ISPC-2024)
 
 
 ## Autores ✒️
 
 * **Estudiantes TSDWAD de ISPC**
 
-* Puede ver miembros de equipo en : https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo
+* [Miembros de equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
 
 
