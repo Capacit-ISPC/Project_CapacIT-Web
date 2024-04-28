@@ -21,7 +21,7 @@ https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Apuntes-Project_CapacIT
 
 ## Wiki 📖
 
-En nuestra [Wiki]( ) pueden consultar:
+En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pueden consultar:
 
   * Meeting realizadas : https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Reuniones-Equipo
 
