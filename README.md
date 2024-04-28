@@ -8,15 +8,15 @@ La web CapacIT es una plataforma de formación en línea que ofrece una amplia v
 
 ## Construido con 🛠️
 
-SPA (Single Page Application) con ANGULAR
+ * SPA (Single Page Application) con ANGULAR
 
-POO con Django-Python
+ * POO con Django-Python
 
-Proyecto anterior: Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON, MySQL
+ * Proyecto anterior: Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON, MySQL
 
- 	* Comandos para levantar proyecto 🛠️
+##Cómo levantar proyecto 🛠️
 
-https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Apuntes-Project_CapacIT%E2%80%90Web
+[Instrucciones](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Apuntes-Project_CapacIT%E2%80%90Web)
 
 
 ## Wiki 📖
@@ -30,7 +30,7 @@ En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pue
 
 ## Autores ✒️
 
-* **Estudiantes TSDWAD de ISPC**
+**Estudiantes TSDWAD de ISPC**
 
 * [Miembros de equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
 
