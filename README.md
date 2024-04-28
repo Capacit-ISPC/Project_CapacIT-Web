@@ -14,9 +14,9 @@ La web CapacIT es una plataforma de formación en línea que ofrece una amplia v
 
  * Proyecto anterior: Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON, MySQL
 
-##Cómo levantar proyecto 🛠️
+## Cómo levantar proyecto 🛠️
 
-[Instrucciones](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Apuntes-Project_CapacIT%E2%80%90Web)
+ * [Instrucciones](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Apuntes-Project_CapacIT%E2%80%90Web)
 
 
 ## Wiki 📖
