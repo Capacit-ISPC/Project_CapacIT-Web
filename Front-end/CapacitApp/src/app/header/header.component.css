@@ -16,7 +16,7 @@ nav ul{
 }
 
 nav ul a{
-  background-color: rgb(50, 153, 148);
+  background-color: var(--secondary-color);
   color:white;
   margin: 5px 10px 5px 10px;
   text-align: center;
@@ -45,10 +45,10 @@ header{
   flex-wrap: wrap;
   min-width: 480px;
   /* background-color: rgb(50, 153, 148); */
-  background-image: linear-gradient(to bottom right,rgb(38, 156, 156),#f3f3f4 );
+  background-image: linear-gradient(to bottom right, var(--secundary-color),#f3f3f4 );
   justify-content: space-between;
   align-items: center;
-  margin-left: 5.1em;
+  margin-left: 10em;
   padding: 5px;
   border-radius: 5px;
 

@@ -23,6 +23,7 @@
 {
     width: 15vh;
     z-index: 1;
+    background-color: var(--primary-color) ;
 }
 .navbar-lista{
     text-decoration: none;
