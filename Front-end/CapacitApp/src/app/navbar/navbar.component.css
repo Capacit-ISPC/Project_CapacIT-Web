@@ -21,7 +21,7 @@
 .navbar:hover,
 .navbar.active
 {
-    width: 15vh;
+    width: 20vh;
     z-index: 1;
     background-color: var(--primary-color) ;
 }
