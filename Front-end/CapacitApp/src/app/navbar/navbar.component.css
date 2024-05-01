@@ -21,7 +21,7 @@
 .navbar:hover,
 .navbar.active
 {
-    width: 35vh;
+    width: 15vh;
     z-index: 1;
 }
 .navbar-lista{
