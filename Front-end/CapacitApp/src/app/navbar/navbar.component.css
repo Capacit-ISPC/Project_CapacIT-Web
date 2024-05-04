@@ -19,11 +19,12 @@
 }
 
 .navbar:hover,
+
 .navbar.active
 {
-    width: 20vh;
+    width: 25vh;
     z-index: 1;
-    background-color: var(--primary-color) ;
+    background-color: var(--secondary-color);
 }
 .navbar-lista{
     text-decoration: none;
@@ -40,6 +41,7 @@
     padding: 0.625em;
     display: flex;
     align-items: center;
+    color: var(--white-color);
 }
 
 a {
@@ -48,12 +50,13 @@ a {
     font-weight: bolder;
     margin-left: 1rem;
 	padding: 2%;
-    color: black;
+    color: var(--black-color);
     outline: transparent solid 0.125em;
     outline-offset: 0.125em;
     display: flex;
     width: 100%;
     overflow: hidden;
+    color: var(--white-color);
 }
 a:hover{
     color: blue;

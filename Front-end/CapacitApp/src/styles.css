@@ -1,6 +1,11 @@
 :root {
     --primary-color:#FFFFFF;
-    --secondary-color: #276CC0;
+    --secondary-color: #303F9F;
+    --accent-color: #00BCD4;
+    --white-color:  #FFFFFF;
+    --black-color: #000000;
+    --secondary-text:#757575;
+
 }
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
 @import "~bootstrap-icons/font/bootstrap-icons.css";
