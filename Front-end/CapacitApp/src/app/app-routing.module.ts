@@ -9,6 +9,9 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { RutasComponent } from './rutas/rutas.component';
+import { PasswordComponent } from './password/password.component';
+
+
 
 const routes: Routes = [
   {path: '', redirectTo:"/home", pathMatch: "full"},
@@ -22,6 +25,7 @@ const routes: Routes = [
   {path: 'course', component: CursosComponent},
   {path: 'routes', component: RutasComponent},
   {path: '**', component: PageNotFoundComponent},
+  {path: 'password', component: PasswordComponent},
 ];
 
 @NgModule({
