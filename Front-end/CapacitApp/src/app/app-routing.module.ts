@@ -24,8 +24,8 @@ const routes: Routes = [
   {path: 'news', component: NoticiasComponent},
   {path: 'course', component: CursosComponent},
   {path: 'routes', component: RutasComponent},
-  {path: '**', component: PageNotFoundComponent},
   {path: 'password', component: PasswordComponent},
+  {path: '**', component: PageNotFoundComponent},
 ];
 
 @NgModule({
