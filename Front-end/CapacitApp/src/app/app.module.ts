@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { CourseCardComponent } from './course-card/course-card.component';
 import { RoutesAddressComponent } from './routes-address/routes-address.component';
 import { PasswordComponent } from './password/password.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 
@@ -41,6 +42,7 @@ import { PasswordComponent } from './password/password.component';
     CourseCardComponent,
     RoutesAddressComponent,
     PasswordComponent,
+    ContactFormComponent,
 
   ],
   imports: [
