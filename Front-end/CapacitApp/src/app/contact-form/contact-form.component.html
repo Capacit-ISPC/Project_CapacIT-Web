@@ -1,1 +1,67 @@
-<p>contact-form works!</p>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="contact-form-container">
+    <h1>Enviar una solicitud</h1>
+    <p>
+      ¿En qué podemos ayudarle? Nos esforzaremos por contactarte lo más pronto
+      posible.
+    </p>
+
+    <div class="contact-info-group">
+      <label for="name">Nombre:</label>
+      <input type="text" formControlName="name" />
+    </div>
+    <div class="contact-info-group">
+      <label for="email">Correo:</label>
+      <input type="email" formControlName="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="contactMethod">Seleccione el medio de contacto:</label>
+      <select formControlName="contactMethod">
+        <option value="" disabled selected>
+          Seleccione un medio de contacto
+        </option>
+        <option value="email">Correo electrónico</option>
+        <option value="phone">Teléfono</option>
+      </select>
+    </div>
+
+    <div *ngIf="contactForm.get('contactMethod')?.value === 'phone'">
+      <h2>Información de contacto telefónico:</h2>
+      <!-- <div class="form-group">
+      <label for="phoneType">Tipo de teléfono:</label>
+      <select formControlName="phoneType">
+        <option value="" disabled selected>
+          Seleccione un tipo de teléfono
+        </option>
+        <option value="mobile">Teléfono celular</option>
+        <option value="landline">Teléfono fijo</option>
+      </select>
+    </div> -->
+      <div class="form-group">
+        <label for="phone">Número de teléfono:</label>
+        <input type="text" formControlName="phone" />
+      </div>
+      <div class="form-group">
+        <label for="availability">Horario disponible:</label>
+        <input type="text" formControlName="availability" />
+      </div>
+    </div>
+
+    <h2>Información de solicitud:</h2>
+    <div class="contact-info-group">
+      <label for="subject">Asunto:</label>
+      <select formControlName="subject">
+        <option value="Soporte">Soporte</option>
+        <option value="Cursos">Cursos</option>
+        <option value="Pagos">Pagos o facturación</option>
+      </select>
+    </div>
+    <div class="contact-info-group">
+      <label for="message">Mensaje:</label>
+      <textarea formControlName="message"></textarea>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </div>
+</form>

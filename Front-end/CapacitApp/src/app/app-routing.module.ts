@@ -10,6 +10,7 @@ import { NoticiasComponent } from './noticias/noticias.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { RutasComponent } from './rutas/rutas.component';
 import { PasswordComponent } from './password/password.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'course', component: CursosComponent},
   {path: 'routes', component: RutasComponent},
   {path: 'password', component: PasswordComponent},
+  {path: 'Contacto y Asistencia', component: ContactFormComponent},
   {path: '**', component: PageNotFoundComponent},
 ];
 
