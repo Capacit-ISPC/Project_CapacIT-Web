@@ -1,1 +1,32 @@
-<p>contact-form works!</p>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <h1>Enviar una solicitud</h1>
+  <p>
+    ¿En qué podemos ayudarle? Nos esforzaremos por contactar con usted lo más
+    pronto posible.
+  </p>
+  <h3>Información de contacto</h3>
+  <div>
+    <label for="name">Nombre:</label>
+    <input type="text" formControlName="name" />
+  </div>
+  <div>
+    <label for="email">Correo:</label>
+    <input type="email" formControlName="email" />
+  </div>
+
+  <h2>Información de solicitud:</h2>
+  <div>
+    <label for="subject">Asunto:</label>
+    <select formControlName="subject">
+      <option value="Soporte">Soporte</option>
+      <option value="Cursos">Cursos</option>
+      <option value="Pagos">Pagos o facturación</option>
+    </select>
+  </div>
+  <div>
+    <label for="message">Mensaje:</label>
+    <textarea formControlName="message"></textarea>
+  </div>
+
+  <button type="submit">Enviar</button>
+</form>
