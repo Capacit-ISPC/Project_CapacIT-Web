@@ -9,7 +9,7 @@
     position: fixed;
     height: 100%;
     flex-direction: column;
-    width: 5em;
+    width: 3em;
     background-color: var(--secondary-color) ;
     overflow: hidden;
     left: 0;
@@ -22,7 +22,7 @@
 
 .navbar.active
 {
-    width: 25vh;
+    width: 20vh;
     z-index: 1;
     background-color: var(--secondary-color);
 }
@@ -30,7 +30,7 @@
     text-decoration: none;
     list-style: none;
     width: 100%;
-	padding-left: 1.5rem;
+	padding-left: 1rem;
 }
 .navbar-lista-item{
     margin-top: 10px;
@@ -41,6 +41,7 @@
     padding: 0.625em;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--white-color);
 }
 
@@ -48,15 +49,17 @@ a {
     text-decoration: none;
     font-size: 1rem;
     font-weight: bolder;
-    margin-left: 1rem;
-	padding: 2%;
+    margin-left: 0.6rem;
+    padding: 2%;
     color: var(--black-color);
     outline: transparent solid 0.125em;
     outline-offset: 0.125em;
     display: flex;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
     color: var(--white-color);
+    align-items: center;
+    justify-content: center;
 }
 a:hover{
     color: blue;
