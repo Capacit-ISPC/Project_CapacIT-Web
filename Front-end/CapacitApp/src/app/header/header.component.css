@@ -4,14 +4,16 @@ a{
   color: black;
   cursor: pointer;
 }
-
+nav {
+  align-content: center;
+  margin-left: auto;
+}
 nav a{
   font-weight: 600;
   padding-right: 10px ;
 }
 nav ul{
   display: flex;
-  align-content: center;
 
 }
 

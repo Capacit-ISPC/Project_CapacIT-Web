@@ -5,7 +5,8 @@
 
 body {
 min-height: 100vh;
-  padding: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .navbar{
   display: flex;
@@ -48,7 +49,7 @@ a {
   font-size: 1rem;
   font-weight: bolder;
   margin-left: 1rem;
-padding: 2%;
+  padding: 2%;
   color: black;
   outline: transparent solid 0.125em;
   outline-offset: 0.125em;
@@ -60,19 +61,18 @@ padding: 2%;
 /* body index*/
 .titulo-principal{
 text-align: center;
-font-size: 2em;
+font-size: 5em;
 margin: 0 0 1em;
 clear: left;
 }
 
 .principal {
 background-color: var(--primary-color);
-padding: 2.5em;
+padding: 1em;
 text-align: center;
-  width: 90%;
-  border-radius: 1.875em;
-margin-top: 30px;
-margin-left: 110px;
+width: 90%;
+border-radius: 1.875em;
+margin-left: 85px;
 margin-right: 10px;
 
 }
@@ -92,8 +92,8 @@ margin: 0 1.25em 1.25em 0;
 }
 
 .video{
-width: 35em;
-margin: 1em auto;
+  width: 35em;
+  margin: 0 auto;
 }
 
 @media screen and (max-width:30em){
@@ -112,8 +112,6 @@ width: auto;
   width: 100%;
 }
 }
-
-
 
 .copyright{
 color: #000000;

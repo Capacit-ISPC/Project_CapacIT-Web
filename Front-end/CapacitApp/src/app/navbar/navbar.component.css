@@ -61,6 +61,8 @@ a {
     align-items: center;
     justify-content: center;
 }
-a:hover{
-    color: blue;
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-underline-offset: 5px;
 }
