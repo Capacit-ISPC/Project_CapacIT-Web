@@ -7,8 +7,15 @@
   <nav>
     <ul>
 
-      <a  (click)="redirectLogin()">Login</a>
-      <a (click)="logout()">Logout</a>
+      <ng-container *ngIf="!isLoggedIn(); else loggedIn">
+        <a (click)="redirectLogin()">Login</a>
+      </ng-container>
+      <ng-template #loggedIn>
+        <a (click)="logout()">Logout</a>
+      </ng-template>
+
+      <!-- <a  (click)="redirectLogin()">Login</a>
+      <a (click)="logout()">Logout</a> -->
       <!-- <a routerLink="/register">Registro</a> -->
      <!--  <a *ngIf="auth.isAuthenticated$ | async" routerLink="/cart">
         <span class="bi bi-cart2"></span>
