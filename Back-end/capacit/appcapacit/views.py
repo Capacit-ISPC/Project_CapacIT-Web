@@ -18,7 +18,7 @@ from appcapacit.serializers import (
 from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-from appcapacit.models import Course, User,Category,Tutor
+from appcapacit.models import Course, User,Tutor, Category
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
 from rest_framework.decorators import api_view, permission_classes

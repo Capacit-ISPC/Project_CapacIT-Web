@@ -24,6 +24,8 @@ from appcapacit.views import CourseViewSet
 ####
 router = DefaultRouter()
 router.register('courses', views.CourseViewSet)
+router.register(r'category', views.CategoryViewSet)
+router.register(r'tutor', views.TutorViewSet)
 
 
 

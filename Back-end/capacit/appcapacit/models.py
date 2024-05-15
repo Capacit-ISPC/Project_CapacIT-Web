@@ -56,7 +56,7 @@ class Category(models.Model):
         verbose_name_plural = ('Categorias')
         ordering = ('id',)
 
-    def str(self):
+    def __str__(self):
         return self.tipo
 
 class Tutor(models.Model):
@@ -66,13 +66,13 @@ class Tutor(models.Model):
     email =models.EmailField(unique=True)
 
     class Meta:
-        db_table = 'Profesor'
-        verbose_name = ('Profesor')
-        verbose_name_plural = ('Profesores')
+        db_table = 'Tutor'
+        verbose_name = ('Tutor')
+        verbose_name_plural = ('Tutores')
         ordering = ('id',)
 
-    def str(self):
-        return f"Profsor: {self.name} --- {self.last_name}"
+    def __str__(self):
+        return f"Profsor: {self.name}, {self.last_name}"
 
 
 class Course(models.Model):
@@ -81,13 +81,13 @@ class Course(models.Model):
     language = models.CharField(max_length=255)
     technology = models.CharField(max_length=255)
     level = models.CharField(max_length=255)
-    price = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
-    link = models.CharField(max_length=255)
+    price = models.DecimalField(blank=False, decimal_places=2, max_digits=10)
+    link = models.CharField(max_length=255, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  
     tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return f"cours: {self.name}. tutor:{self.tutor}"
 
 
 
