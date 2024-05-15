@@ -11,14 +11,17 @@ from appcapacit.serializers import (
     AuthTokenSerializer,
     CourseSerializer,
     CourseDetailSerializer,
-    UserTokenSerializer
+    UserTokenSerializer,
+    CategorySerializer,
+    TutorSerializer
 )
 from rest_framework import viewsets
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
-from appcapacit.models import Course, User
+from appcapacit.models import Course, User,Category,Tutor
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
+from rest_framework.decorators import api_view, permission_classes
 
 class CreateUserView(generics.CreateAPIView):
     """Create a new user in the system."""
@@ -28,6 +31,13 @@ class ManageUsersView(generics.RetrieveUpdateAPIView):
     serializer_class = UserSerializer
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes= [permissions.IsAuthenticated]
+
+#########################################################################
+def allow_access_without_authentication(view_func):
+    decorated_view_func = permission_classes([AllowAny])(view_func)
+    return decorated_view_func
+"""views for the Course APIs"""
+@allow_access_without_authentication
 
 class CourseViewSet(viewsets.ModelViewSet):
     """View for managing course API."""
@@ -46,7 +56,17 @@ class CourseViewSet(viewsets.ModelViewSet):
             return CourseSerializer
         return self.serializer_class
     
+##Category
+@allow_access_without_authentication
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
+##Tutor
+@allow_access_without_authentication
+class TutorViewSet(viewsets.ModelViewSet):
+    queryset = Tutor.objects.all()
+    serializer_class = TutorSerializer
 
 
 # Login
