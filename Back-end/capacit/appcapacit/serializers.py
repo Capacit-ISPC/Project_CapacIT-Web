@@ -4,8 +4,7 @@ from django.contrib.auth import (
 )
 from django.utils.translation import gettext as _
 from rest_framework import serializers
-####
-from appcapacit.models import Course
+from appcapacit.models import Course, User
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -31,6 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
         
         return user
 
+
         
 class AuthTokenSerializer(serializers.Serializer):
     """Serializer for the user auth token."""
@@ -55,6 +55,11 @@ class AuthTokenSerializer(serializers.Serializer):
         
         attrs['user'] = user
         return attrs
+    
+class UserTokenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= User
+        fields = ('name', 'email',)
         
 ############################################################################################
 class CourseSerializer(serializers.ModelSerializer):
