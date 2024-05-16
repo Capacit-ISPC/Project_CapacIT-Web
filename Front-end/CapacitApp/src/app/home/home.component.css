@@ -98,6 +98,10 @@ a {
   margin: 0 1.25em 1.25em 0;
 }
 
+
+.textos {
+  font-size: 1.6em;
+}
 .video {
   width: 100%;
   text-align: center;
