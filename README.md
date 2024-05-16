@@ -26,6 +26,8 @@ En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pue
   * [Meeting realizadas](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Reuniones-Equipo)
 
   * [Detalles del Proyecto](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Proyecto-Final-%E2%80%90-Pr%C3%A1ctica-Profesionalizante-ISPC-2024)
+    
+  * [IEEE830 ‐ CapacIT Web 2024](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/IEEE830-%E2%80%90-CapacIT--Web-2024)
 
 
 ## Autores ✒️

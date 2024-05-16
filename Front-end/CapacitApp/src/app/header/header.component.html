@@ -1,16 +1,23 @@
 <header>
-  <a routerLink="/home" class="logo">
+  <!-- <a routerLink="/home" class="logo">
     <img src="../../assets/img/logo-imagen-sin-letra.png" alt="logo de CapacitApp" />
     <h1 class="logo-nombre">{{ brand }}</h1>
-  </a>
+  </a> -->
 
   <nav>
     <ul>
-      
-      <a  (click)="redirectLogin()">Login</a>
-      <a (click)="logout()">Logout</a>
+
+      <ng-container *ngIf="!isLoggedIn(); else loggedIn">
+        <a (click)="redirectLogin()">Login</a>
+      </ng-container>
+      <ng-template #loggedIn>
+        <a (click)="logout()">Logout</a>
+      </ng-template>
+
+      <!-- <a  (click)="redirectLogin()">Login</a>
+      <a (click)="logout()">Logout</a> -->
       <!-- <a routerLink="/register">Registro</a> -->
-     <!--  <a *ngIf="auth.isAuthenticated$ | async" routerLink="/cart">        
+     <!--  <a *ngIf="auth.isAuthenticated$ | async" routerLink="/cart">
         <span class="bi bi-cart2"></span>
       </a> -->
     </ul>
