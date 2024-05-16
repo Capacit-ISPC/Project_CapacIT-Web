@@ -86,6 +86,12 @@ class Course(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  
     tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE)
 
+    class Meta:
+        db_table = 'Course'
+        verbose_name = ('Course')
+        verbose_name_plural = ('Courses')
+        ordering = ('id',)
+
     def __str__(self):
         return f"cours: {self.name}. tutor:{self.tutor}"
 

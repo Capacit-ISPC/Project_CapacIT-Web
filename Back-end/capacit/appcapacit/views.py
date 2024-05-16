@@ -32,12 +32,16 @@ class ManageUsersView(generics.RetrieveUpdateAPIView):
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes= [permissions.IsAuthenticated]
 
+class CreateTokenView(ObtainAuthToken):
+    serializer_class = AuthTokenSerializer
+    renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES
+
 #########################################################################
-def allow_access_without_authentication(view_func):
+""" def allow_access_without_authentication(view_func):
     decorated_view_func = permission_classes([AllowAny])(view_func)
-    return decorated_view_func
+    return decorated_view_func """
 """views for the Course APIs"""
-@allow_access_without_authentication
+#@allow_access_without_authentication
 
 class CourseViewSet(viewsets.ModelViewSet):
     """View for managing course API."""
@@ -57,13 +61,13 @@ class CourseViewSet(viewsets.ModelViewSet):
         return self.serializer_class
     
 ##Category
-@allow_access_without_authentication
+#@allow_access_without_authentication
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
 ##Tutor
-@allow_access_without_authentication
+#@allow_access_without_authentication
 class TutorViewSet(viewsets.ModelViewSet):
     queryset = Tutor.objects.all()
     serializer_class = TutorSerializer
