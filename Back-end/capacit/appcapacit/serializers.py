@@ -4,8 +4,7 @@ from django.contrib.auth import (
 )
 from django.utils.translation import gettext as _
 from rest_framework import serializers
-####
-from appcapacit.models import Course
+from appcapacit.models import Course, User, Tutor, Category
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -31,6 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
         
         return user
 
+
         
 class AuthTokenSerializer(serializers.Serializer):
     """Serializer for the user auth token."""
@@ -55,14 +55,35 @@ class AuthTokenSerializer(serializers.Serializer):
         
         attrs['user'] = user
         return attrs
+    
+class UserTokenSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= User
+        fields = ('name', 'email',)
+
+##CategorySerializer
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ('id','tipo','description',)
+        read_only = ["id"]
+
+#Tutor
+
+class TutorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= Tutor
+        fields = ['id', 'name', 'last_name', 'phone', 'email']       
         
 ############################################################################################
 class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = ['id', 'name','technology','level','price', 'link','teacher_name']
+        fields = ['id', 'name','technology','level','price', 'link','category','tutor']
         read_only_fields = ['id']
+
+
 
 
 class CourseDetailSerializer(CourseSerializer):

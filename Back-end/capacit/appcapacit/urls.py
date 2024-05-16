@@ -24,13 +24,15 @@ from appcapacit.views import CourseViewSet
 ####
 router = DefaultRouter()
 router.register('courses', views.CourseViewSet)
+router.register(r'category', views.CategoryViewSet)
+router.register(r'tutor', views.TutorViewSet)
 
 
 
 urlpatterns = [
     path('create/', views.CreateUserView.as_view(), name='create'),
     path('token/', views.CreateTokenView.as_view(), name='token'),
-    path('me/', views.ManageUserView.as_view(), name='me'),
+    #path('me/', views.ManageUserView.as_view(), name='me'),
     
     path('cour/', include(router.urls))
 
