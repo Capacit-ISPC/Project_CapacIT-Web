@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs/operators';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,12 @@ import { take } from 'rxjs/operators';
 })
 export class NavbarComponent {
 
-  constructor(){
+  constructor(private authService: AuthService){
 
+  }
+
+  isLoggedIn(): boolean {
+    return this.authService.isLoggedIn();
   }
 
 }
