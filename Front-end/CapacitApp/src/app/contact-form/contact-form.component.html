@@ -1,12 +1,12 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <!--<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
   <div class="contact-form-container">
     <h1>Enviar una solicitud</h1>
     <p>
-      ¿En qué podemos ayudarle? Nos esforzaremos por contactarte lo más pronto
+      ¿En qué podemos ayudarte? Nos esforzaremos por contactarte lo más pronto
       posible.
     </p>
 
-    <div class="contact-info-group">
+  <div class="contact-info-group">
       <label for="name">Nombre:</label>
       <input type="text" formControlName="name" />
     </div>
@@ -28,7 +28,7 @@
 
     <div *ngIf="contactForm.get('contactMethod')?.value === 'phone'">
       <h2>Información de contacto telefónico:</h2>
-      <!-- <div class="form-group">
+       <div class="form-group">
       <label for="phoneType">Tipo de teléfono:</label>
       <select formControlName="phoneType">
         <option value="" disabled selected>
@@ -37,7 +37,7 @@
         <option value="mobile">Teléfono celular</option>
         <option value="landline">Teléfono fijo</option>
       </select>
-    </div> -->
+    </div> 
       <div class="form-group">
         <label for="phone">Número de teléfono:</label>
         <input type="text" formControlName="phone" />
@@ -64,4 +64,878 @@
 
     <button type="submit">Enviar</button>
   </div>
-</form>
+</form>-->
+
+<div class="requests">
+
+  <div class="color-header">
+              <div class="header">
+          <div class="text">
+              <h1>Enviar una solicitud</h1>
+              <h3>Centro de ayuda</h3>
+          </div>
+          <img src="https://d3puay5pkxu9s4.cloudfront.net/academy/imagenes/help-center/requests/presentation.png">
+      </div>
+  </div>
+
+  <div class="container">
+      <div class="menu-horizontal">
+          <h4><a href="#">Inicio </a>/ Enviar una solicitud</h4>
+      </div>
+      <div class="container-form">
+          <form action="javascript:enviar();" onsubmit="return valid_fields()">
+
+              <p>¿En qué podemos ayudarle? Nos esforzaremos por contactar con usted lo más pronto posible.</p>
+
+              <div class="section">
+                  <h3>1. Información de contacto</h3>
+
+                  <div class="items required">
+                      <h4>Nombre</h4>
+                      <input id="name-input" required="" type="text">
+                  </div>
+
+                  <div class="items required">
+                      <h4>Correo electrónico</h4>
+                      <input id="email-input" required="" type="email">
+                  </div>
+
+                  <div class="items required">
+                      <h4>País de residencia</h4>
+                                              <div class="custom-select">
+                          <select id="country">
+                              <option value="0">Seleccionar país</option>
+                                                                  <option value="2@AFGHANISTAN">
+                                      AFGHANISTAN                                    </option>
+                                                                  <option value="3@ALBANIA">
+                                      ALBANIA                                    </option>
+                                                                  <option value="4@ALGERIA">
+                                      ALGERIA                                    </option>
+                                                                  <option value="5@AMERICAN SAMOA">
+                                      AMERICAN SAMOA                                    </option>
+                                                                  <option value="6@ANDORRA">
+                                      ANDORRA                                    </option>
+                                                                  <option value="7@ANGOLA">
+                                      ANGOLA                                    </option>
+                                                                  <option value="8@ANGUILLA">
+                                      ANGUILLA                                    </option>
+                                                                  <option value="9@ANTARCTICA">
+                                      ANTARCTICA                                    </option>
+                                                                  <option value="10@ANTIGUA AND BARBUDA">
+                                      ANTIGUA AND BARBUDA                                    </option>
+                                                                  <option value="11@ARGENTINA">
+                                      ARGENTINA                                    </option>
+                                                                  <option value="12@ARMENIA">
+                                      ARMENIA                                    </option>
+                                                                  <option value="13@ARUBA">
+                                      ARUBA                                    </option>
+                                                                  <option value="14@AUSTRALIA">
+                                      AUSTRALIA                                    </option>
+                                                                  <option value="15@AUSTRIA">
+                                      AUSTRIA                                    </option>
+                                                                  <option value="16@AZERBAIJAN">
+                                      AZERBAIJAN                                    </option>
+                                                                  <option value="17@BAHAMAS">
+                                      BAHAMAS                                    </option>
+                                                                  <option value="18@BAHRAIN">
+                                      BAHRAIN                                    </option>
+                                                                  <option value="19@BANGLADESH">
+                                      BANGLADESH                                    </option>
+                                                                  <option value="20@BARBADOS">
+                                      BARBADOS                                    </option>
+                                                                  <option value="21@BELARUS">
+                                      BELARUS                                    </option>
+                                                                  <option value="22@BELGIUM">
+                                      BELGIUM                                    </option>
+                                                                  <option value="23@BELIZE">
+                                      BELIZE                                    </option>
+                                                                  <option value="24@BENIN">
+                                      BENIN                                    </option>
+                                                                  <option value="25@BERMUDA">
+                                      BERMUDA                                    </option>
+                                                                  <option value="26@BHUTAN">
+                                      BHUTAN                                    </option>
+                                                                  <option value="27@BOLIVIA">
+                                      BOLIVIA                                    </option>
+                                                                  <option value="28@BOSNIA AND HERZEGOVINA">
+                                      BOSNIA AND HERZEGOVINA                                    </option>
+                                                                  <option value="29@BOTSWANA">
+                                      BOTSWANA                                    </option>
+                                                                  <option value="30@BRASIL">
+                                      BRASIL                                    </option>
+                                                                  <option value="31@BRITISH INDIAN OCEAN TERRITORY">
+                                      BRITISH INDIAN OCEAN TERRITORY                                    </option>
+                                                                  <option value="32@BRITISH VIRGIN ISLANDS">
+                                      BRITISH VIRGIN ISLANDS                                    </option>
+                                                                  <option value="33@BRUNEI">
+                                      BRUNEI                                    </option>
+                                                                  <option value="34@BULGARIA">
+                                      BULGARIA                                    </option>
+                                                                  <option value="35@BURKINA FASO">
+                                      BURKINA FASO                                    </option>
+                                                                  <option value="36@BURUNDI">
+                                      BURUNDI                                    </option>
+                                                                  <option value="37@CAMBODIA">
+                                      CAMBODIA                                    </option>
+                                                                  <option value="38@CAMEROON">
+                                      CAMEROON                                    </option>
+                                                                  <option value="39@CANADA">
+                                      CANADA                                    </option>
+                                                                  <option value="40@CAPE VERDE">
+                                      CAPE VERDE                                    </option>
+                                                                  <option value="41@CAYMAN ISLANDS">
+                                      CAYMAN ISLANDS                                    </option>
+                                                                  <option value="42@CENTRAL AFRICAN REPUBLIC">
+                                      CENTRAL AFRICAN REPUBLIC                                    </option>
+                                                                  <option value="43@CHAD">
+                                      CHAD                                    </option>
+                                                                  <option value="44@CHILE">
+                                      CHILE                                    </option>
+                                                                  <option value="45@CHINA">
+                                      CHINA                                    </option>
+                                                                  <option value="46@CHRISTMAS ISLAND">
+                                      CHRISTMAS ISLAND                                    </option>
+                                                                  <option value="47@COCOS ISLANDS">
+                                      COCOS ISLANDS                                    </option>
+                                                                  <option value="48@COLOMBIA">
+                                      COLOMBIA                                    </option>
+                                                                  <option value="49@COMOROS">
+                                      COMOROS                                    </option>
+                                                                  <option value="50@COOK ISLANDS">
+                                      COOK ISLANDS                                    </option>
+                                                                  <option value="51@COSTA RICA">
+                                      COSTA RICA                                    </option>
+                                                                  <option value="52@CROATIA">
+                                      CROATIA                                    </option>
+                                                                  <option value="53@CUBA">
+                                      CUBA                                    </option>
+                                                                  <option value="54@CURACAO">
+                                      CURACAO                                    </option>
+                                                                  <option value="55@CYPRUS">
+                                      CYPRUS                                    </option>
+                                                                  <option value="56@CZECH REPUBLIC">
+                                      CZECH REPUBLIC                                    </option>
+                                                                  <option value="57@DEMOCRATIC REPUBLIC OF THE CONGO">
+                                      DEMOCRATIC REPUBLIC OF THE CONGO                                    </option>
+                                                                  <option value="58@DENMARK">
+                                      DENMARK                                    </option>
+                                                                  <option value="59@DJIBOUTI">
+                                      DJIBOUTI                                    </option>
+                                                                  <option value="60@DOMINICA">
+                                      DOMINICA                                    </option>
+                                                                  <option value="61@REPUBLICA DOMINICANA">
+                                      REPUBLICA DOMINICANA                                    </option>
+                                                                  <option value="62@EAST TIMOR">
+                                      EAST TIMOR                                    </option>
+                                                                  <option value="63@ECUADOR">
+                                      ECUADOR                                    </option>
+                                                                  <option value="64@EGYPT">
+                                      EGYPT                                    </option>
+                                                                  <option value="65@EL SALVADOR">
+                                      EL SALVADOR                                    </option>
+                                                                  <option value="66@EQUATORIAL GUINEA">
+                                      EQUATORIAL GUINEA                                    </option>
+                                                                  <option value="67@ERITREA">
+                                      ERITREA                                    </option>
+                                                                  <option value="68@ESTONIA">
+                                      ESTONIA                                    </option>
+                                                                  <option value="69@ETHIOPIA">
+                                      ETHIOPIA                                    </option>
+                                                                  <option value="70@FALKLAND ISLANDS">
+                                      FALKLAND ISLANDS                                    </option>
+                                                                  <option value="71@FAROE ISLANDS">
+                                      FAROE ISLANDS                                    </option>
+                                                                  <option value="72@FIJI">
+                                      FIJI                                    </option>
+                                                                  <option value="73@FINLAND">
+                                      FINLAND                                    </option>
+                                                                  <option value="74@FRANCIA">
+                                      FRANCIA                                    </option>
+                                                                  <option value="75@FRENCH POLYNESIA">
+                                      FRENCH POLYNESIA                                    </option>
+                                                                  <option value="76@GABON">
+                                      GABON                                    </option>
+                                                                  <option value="77@GAMBIA">
+                                      GAMBIA                                    </option>
+                                                                  <option value="78@GEORGIA">
+                                      GEORGIA                                    </option>
+                                                                  <option value="79@ALEMANIA">
+                                      ALEMANIA                                    </option>
+                                                                  <option value="80@GHANA">
+                                      GHANA                                    </option>
+                                                                  <option value="81@GIBRALTAR">
+                                      GIBRALTAR                                    </option>
+                                                                  <option value="82@GREECE">
+                                      GREECE                                    </option>
+                                                                  <option value="83@GREENLAND">
+                                      GREENLAND                                    </option>
+                                                                  <option value="84@GRENADA">
+                                      GRENADA                                    </option>
+                                                                  <option value="85@GUAM">
+                                      GUAM                                    </option>
+                                                                  <option value="86@GUATEMALA">
+                                      GUATEMALA                                    </option>
+                                                                  <option value="87@GUERNSEY">
+                                      GUERNSEY                                    </option>
+                                                                  <option value="88@GUINEA">
+                                      GUINEA                                    </option>
+                                                                  <option value="89@GUINEA-BISSAU">
+                                      GUINEA-BISSAU                                    </option>
+                                                                  <option value="90@GUYANA">
+                                      GUYANA                                    </option>
+                                                                  <option value="91@HAITI">
+                                      HAITI                                    </option>
+                                                                  <option value="92@HONDURAS">
+                                      HONDURAS                                    </option>
+                                                                  <option value="93@HONG KONG">
+                                      HONG KONG                                    </option>
+                                                                  <option value="94@HUNGARY">
+                                      HUNGARY                                    </option>
+                                                                  <option value="95@ISLANDIA">
+                                      ISLANDIA                                    </option>
+                                                                  <option value="96@INDIA">
+                                      INDIA                                    </option>
+                                                                  <option value="97@INDONESIA">
+                                      INDONESIA                                    </option>
+                                                                  <option value="98@IRAN">
+                                      IRAN                                    </option>
+                                                                  <option value="99@IRAQ">
+                                      IRAQ                                    </option>
+                                                                  <option value="100@IRELAND">
+                                      IRELAND                                    </option>
+                                                                  <option value="101@ISLE OF MAN">
+                                      ISLE OF MAN                                    </option>
+                                                                  <option value="102@ISRAEL">
+                                      ISRAEL                                    </option>
+                                                                  <option value="103@ITALIA">
+                                      ITALIA                                    </option>
+                                                                  <option value="104@IVORY COAST">
+                                      IVORY COAST                                    </option>
+                                                                  <option value="105@JAMAICA">
+                                      JAMAICA                                    </option>
+                                                                  <option value="106@JAPON">
+                                      JAPON                                    </option>
+                                                                  <option value="107@JERSEY">
+                                      JERSEY                                    </option>
+                                                                  <option value="108@JORDAN">
+                                      JORDAN                                    </option>
+                                                                  <option value="109@KAZAKHSTAN">
+                                      KAZAKHSTAN                                    </option>
+                                                                  <option value="110@KENYA">
+                                      KENYA                                    </option>
+                                                                  <option value="111@KIRIBATI">
+                                      KIRIBATI                                    </option>
+                                                                  <option value="112@KOSOVO">
+                                      KOSOVO                                    </option>
+                                                                  <option value="113@KUWAIT">
+                                      KUWAIT                                    </option>
+                                                                  <option value="114@KYRGYZSTAN">
+                                      KYRGYZSTAN                                    </option>
+                                                                  <option value="115@LAOS">
+                                      LAOS                                    </option>
+                                                                  <option value="116@LATVIA">
+                                      LATVIA                                    </option>
+                                                                  <option value="117@LEBANON">
+                                      LEBANON                                    </option>
+                                                                  <option value="118@LESOTHO">
+                                      LESOTHO                                    </option>
+                                                                  <option value="119@LIBERIA">
+                                      LIBERIA                                    </option>
+                                                                  <option value="120@LIBYA">
+                                      LIBYA                                    </option>
+                                                                  <option value="121@LIECHTENSTEIN">
+                                      LIECHTENSTEIN                                    </option>
+                                                                  <option value="122@LITHUANIA">
+                                      LITHUANIA                                    </option>
+                                                                  <option value="123@LUXEMBOURG">
+                                      LUXEMBOURG                                    </option>
+                                                                  <option value="124@MACAU">
+                                      MACAU                                    </option>
+                                                                  <option value="125@MACEDONIA">
+                                      MACEDONIA                                    </option>
+                                                                  <option value="126@MADAGASCAR">
+                                      MADAGASCAR                                    </option>
+                                                                  <option value="127@MALAWI">
+                                      MALAWI                                    </option>
+                                                                  <option value="128@MALAYSIA">
+                                      MALAYSIA                                    </option>
+                                                                  <option value="129@MALDIVES">
+                                      MALDIVES                                    </option>
+                                                                  <option value="130@MALI">
+                                      MALI                                    </option>
+                                                                  <option value="131@MALTA">
+                                      MALTA                                    </option>
+                                                                  <option value="132@MARSHALL ISLANDS">
+                                      MARSHALL ISLANDS                                    </option>
+                                                                  <option value="133@MAURITANIA">
+                                      MAURITANIA                                    </option>
+                                                                  <option value="134@MAURITIUS">
+                                      MAURITIUS                                    </option>
+                                                                  <option value="135@MAYOTTE">
+                                      MAYOTTE                                    </option>
+                                                                  <option value="136@MEXICO">
+                                      MEXICO                                    </option>
+                                                                  <option value="137@MICRONESIA">
+                                      MICRONESIA                                    </option>
+                                                                  <option value="138@MOLDOVA">
+                                      MOLDOVA                                    </option>
+                                                                  <option value="139@MONACO">
+                                      MONACO                                    </option>
+                                                                  <option value="140@MONGOLIA">
+                                      MONGOLIA                                    </option>
+                                                                  <option value="141@MONTENEGRO">
+                                      MONTENEGRO                                    </option>
+                                                                  <option value="142@MONTSERRAT">
+                                      MONTSERRAT                                    </option>
+                                                                  <option value="143@MOROCCO">
+                                      MOROCCO                                    </option>
+                                                                  <option value="144@MOZAMBIQUE">
+                                      MOZAMBIQUE                                    </option>
+                                                                  <option value="145@MYANMAR">
+                                      MYANMAR                                    </option>
+                                                                  <option value="146@NAMIBIA">
+                                      NAMIBIA                                    </option>
+                                                                  <option value="147@NAURU">
+                                      NAURU                                    </option>
+                                                                  <option value="148@NEPAL">
+                                      NEPAL                                    </option>
+                                                                  <option value="149@NETHERLANDS">
+                                      NETHERLANDS                                    </option>
+                                                                  <option value="150@NETHERLANDS ANTILLES">
+                                      NETHERLANDS ANTILLES                                    </option>
+                                                                  <option value="151@NEW CALEDONIA">
+                                      NEW CALEDONIA                                    </option>
+                                                                  <option value="152@NEW ZEALAND">
+                                      NEW ZEALAND                                    </option>
+                                                                  <option value="153@NICARAGUA">
+                                      NICARAGUA                                    </option>
+                                                                  <option value="154@NIGER">
+                                      NIGER                                    </option>
+                                                                  <option value="155@NIGERIA">
+                                      NIGERIA                                    </option>
+                                                                  <option value="156@NIUE">
+                                      NIUE                                    </option>
+                                                                  <option value="157@NORTH KOREA">
+                                      NORTH KOREA                                    </option>
+                                                                  <option value="158@NORTHERN MARIANA ISLANDS">
+                                      NORTHERN MARIANA ISLANDS                                    </option>
+                                                                  <option value="159@NORWAY">
+                                      NORWAY                                    </option>
+                                                                  <option value="160@OMAN">
+                                      OMAN                                    </option>
+                                                                  <option value="161@PAKISTAN">
+                                      PAKISTAN                                    </option>
+                                                                  <option value="162@PALAU">
+                                      PALAU                                    </option>
+                                                                  <option value="163@PALESTINE">
+                                      PALESTINE                                    </option>
+                                                                  <option value="164@PANAMÁ">
+                                      PANAMÁ                                    </option>
+                                                                  <option value="165@PAPUA NEW GUINEA">
+                                      PAPUA NEW GUINEA                                    </option>
+                                                                  <option value="166@PARAGUAY">
+                                      PARAGUAY                                    </option>
+                                                                  <option value="167@PERÚ">
+                                      PERÚ                                    </option>
+                                                                  <option value="168@PHILIPPINES">
+                                      PHILIPPINES                                    </option>
+                                                                  <option value="169@PITCAIRN">
+                                      PITCAIRN                                    </option>
+                                                                  <option value="170@POLAND">
+                                      POLAND                                    </option>
+                                                                  <option value="171@PORTUGAL">
+                                      PORTUGAL                                    </option>
+                                                                  <option value="172@PUERTO RICO">
+                                      PUERTO RICO                                    </option>
+                                                                  <option value="173@QATAR">
+                                      QATAR                                    </option>
+                                                                  <option value="174@REPUBLIC OF THE CONGO">
+                                      REPUBLIC OF THE CONGO                                    </option>
+                                                                  <option value="175@REUNION">
+                                      REUNION                                    </option>
+                                                                  <option value="176@ROMANIA">
+                                      ROMANIA                                    </option>
+                                                                  <option value="177@RUSIA">
+                                      RUSIA                                    </option>
+                                                                  <option value="178@RWANDA">
+                                      RWANDA                                    </option>
+                                                                  <option value="179@SAINT BARTHELEMY">
+                                      SAINT BARTHELEMY                                    </option>
+                                                                  <option value="180@SAINT HELENA">
+                                      SAINT HELENA                                    </option>
+                                                                  <option value="181@SAINT KITTS AND NEVIS">
+                                      SAINT KITTS AND NEVIS                                    </option>
+                                                                  <option value="182@SAINT LUCIA">
+                                      SAINT LUCIA                                    </option>
+                                                                  <option value="183@SAINT MARTIN">
+                                      SAINT MARTIN                                    </option>
+                                                                  <option value="184@SAINT PIERRE AND MIQUELON">
+                                      SAINT PIERRE AND MIQUELON                                    </option>
+                                                                  <option value="185@SAINT VINCENT AND THE GRENADINES">
+                                      SAINT VINCENT AND THE GRENADINES                                    </option>
+                                                                  <option value="186@SAMOA">
+                                      SAMOA                                    </option>
+                                                                  <option value="187@SAN MARINO">
+                                      SAN MARINO                                    </option>
+                                                                  <option value="188@SAO TOME AND PRINCIPE">
+                                      SAO TOME AND PRINCIPE                                    </option>
+                                                                  <option value="189@SAUDI ARABIA">
+                                      SAUDI ARABIA                                    </option>
+                                                                  <option value="190@SENEGAL">
+                                      SENEGAL                                    </option>
+                                                                  <option value="191@SERBIA">
+                                      SERBIA                                    </option>
+                                                                  <option value="192@SEYCHELLES">
+                                      SEYCHELLES                                    </option>
+                                                                  <option value="193@SIERRA LEONE">
+                                      SIERRA LEONE                                    </option>
+                                                                  <option value="194@SINGAPORE">
+                                      SINGAPORE                                    </option>
+                                                                  <option value="195@SINT MAARTEN">
+                                      SINT MAARTEN                                    </option>
+                                                                  <option value="196@SLOVAKIA">
+                                      SLOVAKIA                                    </option>
+                                                                  <option value="197@SLOVENIA">
+                                      SLOVENIA                                    </option>
+                                                                  <option value="198@SOLOMON ISLANDS">
+                                      SOLOMON ISLANDS                                    </option>
+                                                                  <option value="199@SOMALIA">
+                                      SOMALIA                                    </option>
+                                                                  <option value="200@SOUTH AFRICA">
+                                      SOUTH AFRICA                                    </option>
+                                                                  <option value="201@SOUTH KOREA">
+                                      SOUTH KOREA                                    </option>
+                                                                  <option value="202@SOUTH SUDAN">
+                                      SOUTH SUDAN                                    </option>
+                                                                  <option value="203@ESPAÑA">
+                                      ESPAÑA                                    </option>
+                                                                  <option value="204@SRI LANKA">
+                                      SRI LANKA                                    </option>
+                                                                  <option value="205@SUDAN">
+                                      SUDAN                                    </option>
+                                                                  <option value="206@SURINAME">
+                                      SURINAME                                    </option>
+                                                                  <option value="207@SVALBARD AND JAN MAYEN">
+                                      SVALBARD AND JAN MAYEN                                    </option>
+                                                                  <option value="208@SWAZILAND">
+                                      SWAZILAND                                    </option>
+                                                                  <option value="209@SWEDEN">
+                                      SWEDEN                                    </option>
+                                                                  <option value="210@SWITZERLAND">
+                                      SWITZERLAND                                    </option>
+                                                                  <option value="211@SYRIA">
+                                      SYRIA                                    </option>
+                                                                  <option value="212@TAIWAN">
+                                      TAIWAN                                    </option>
+                                                                  <option value="213@TAJIKISTAN">
+                                      TAJIKISTAN                                    </option>
+                                                                  <option value="214@TANZANIA">
+                                      TANZANIA                                    </option>
+                                                                  <option value="215@THAILAND">
+                                      THAILAND                                    </option>
+                                                                  <option value="216@TOGO">
+                                      TOGO                                    </option>
+                                                                  <option value="217@TOKELAU">
+                                      TOKELAU                                    </option>
+                                                                  <option value="218@TONGA">
+                                      TONGA                                    </option>
+                                                                  <option value="219@TRINIDAD AND TOBAGO">
+                                      TRINIDAD AND TOBAGO                                    </option>
+                                                                  <option value="220@TUNISIA">
+                                      TUNISIA                                    </option>
+                                                                  <option value="221@TURKEY">
+                                      TURKEY                                    </option>
+                                                                  <option value="222@TURKMENISTAN">
+                                      TURKMENISTAN                                    </option>
+                                                                  <option value="223@TURKS AND CAICOS ISLANDS">
+                                      TURKS AND CAICOS ISLANDS                                    </option>
+                                                                  <option value="224@TUVALU">
+                                      TUVALU                                    </option>
+                                                                  <option value="225@U.S. VIRGIN ISLANDS">
+                                      U.S. VIRGIN ISLANDS                                    </option>
+                                                                  <option value="226@UGANDA">
+                                      UGANDA                                    </option>
+                                                                  <option value="227@UKRAINE">
+                                      UKRAINE                                    </option>
+                                                                  <option value="228@UNITED ARAB EMIRATES">
+                                      UNITED ARAB EMIRATES                                    </option>
+                                                                  <option value="229@REINO UNIDO">
+                                      REINO UNIDO                                    </option>
+                                                                  <option value="230@UNITED STATES OF AMERICA">
+                                      UNITED STATES OF AMERICA                                    </option>
+                                                                  <option value="231@URUGUAY">
+                                      URUGUAY                                    </option>
+                                                                  <option value="232@UZBEKISTAN">
+                                      UZBEKISTAN                                    </option>
+                                                                  <option value="233@VANUATU">
+                                      VANUATU                                    </option>
+                                                                  <option value="234@VATICAN">
+                                      VATICAN                                    </option>
+                                                                  <option value="235@VENEZUELA">
+                                      VENEZUELA                                    </option>
+                                                                  <option value="236@VIETNAM">
+                                      VIETNAM                                    </option>
+                                                                  <option value="237@WALLIS AND FUTUNA">
+                                      WALLIS AND FUTUNA                                    </option>
+                                                                  <option value="238@WESTERN SAHARA">
+                                      WESTERN SAHARA                                    </option>
+                                                                  <option value="239@YEMEN">
+                                      YEMEN                                    </option>
+                                                                  <option value="240@ZAMBIA">
+                                      ZAMBIA                                    </option>
+                                                                  <option value="241@ZIMBABWE">
+                                      ZIMBABWE                                    </option>
+                                                          </select>
+                      <div class="select-selected">Seleccionar país</div><div class="select-items select-hide"><div>
+                                      AFGHANISTAN                                    </div><div>
+                                      ALBANIA                                    </div><div>
+                                      ALGERIA                                    </div><div>
+                                      AMERICAN SAMOA                                    </div><div>
+                                      ANDORRA                                    </div><div>
+                                      ANGOLA                                    </div><div>
+                                      ANGUILLA                                    </div><div>
+                                      ANTARCTICA                                    </div><div>
+                                      ANTIGUA AND BARBUDA                                    </div><div>
+                                      ARGENTINA                                    </div><div>
+                                      ARMENIA                                    </div><div>
+                                      ARUBA                                    </div><div>
+                                      AUSTRALIA                                    </div><div>
+                                      AUSTRIA                                    </div><div>
+                                      AZERBAIJAN                                    </div><div>
+                                      BAHAMAS                                    </div><div>
+                                      BAHRAIN                                    </div><div>
+                                      BANGLADESH                                    </div><div>
+                                      BARBADOS                                    </div><div>
+                                      BELARUS                                    </div><div>
+                                      BELGIUM                                    </div><div>
+                                      BELIZE                                    </div><div>
+                                      BENIN                                    </div><div>
+                                      BERMUDA                                    </div><div>
+                                      BHUTAN                                    </div><div>
+                                      BOLIVIA                                    </div><div>
+                                      BOSNIA AND HERZEGOVINA                                    </div><div>
+                                      BOTSWANA                                    </div><div>
+                                      BRASIL                                    </div><div>
+                                      BRITISH INDIAN OCEAN TERRITORY                                    </div><div>
+                                      BRITISH VIRGIN ISLANDS                                    </div><div>
+                                      BRUNEI                                    </div><div>
+                                      BULGARIA                                    </div><div>
+                                      BURKINA FASO                                    </div><div>
+                                      BURUNDI                                    </div><div>
+                                      CAMBODIA                                    </div><div>
+                                      CAMEROON                                    </div><div>
+                                      CANADA                                    </div><div>
+                                      CAPE VERDE                                    </div><div>
+                                      CAYMAN ISLANDS                                    </div><div>
+                                      CENTRAL AFRICAN REPUBLIC                                    </div><div>
+                                      CHAD                                    </div><div>
+                                      CHILE                                    </div><div>
+                                      CHINA                                    </div><div>
+                                      CHRISTMAS ISLAND                                    </div><div>
+                                      COCOS ISLANDS                                    </div><div>
+                                      COLOMBIA                                    </div><div>
+                                      COMOROS                                    </div><div>
+                                      COOK ISLANDS                                    </div><div>
+                                      COSTA RICA                                    </div><div>
+                                      CROATIA                                    </div><div>
+                                      CUBA                                    </div><div>
+                                      CURACAO                                    </div><div>
+                                      CYPRUS                                    </div><div>
+                                      CZECH REPUBLIC                                    </div><div>
+                                      DEMOCRATIC REPUBLIC OF THE CONGO                                    </div><div>
+                                      DENMARK                                    </div><div>
+                                      DJIBOUTI                                    </div><div>
+                                      DOMINICA                                    </div><div>
+                                      REPUBLICA DOMINICANA                                    </div><div>
+                                      EAST TIMOR                                    </div><div>
+                                      ECUADOR                                    </div><div>
+                                      EGYPT                                    </div><div>
+                                      EL SALVADOR                                    </div><div>
+                                      EQUATORIAL GUINEA                                    </div><div>
+                                      ERITREA                                    </div><div>
+                                      ESTONIA                                    </div><div>
+                                      ETHIOPIA                                    </div><div>
+                                      FALKLAND ISLANDS                                    </div><div>
+                                      FAROE ISLANDS                                    </div><div>
+                                      FIJI                                    </div><div>
+                                      FINLAND                                    </div><div>
+                                      FRANCIA                                    </div><div>
+                                      FRENCH POLYNESIA                                    </div><div>
+                                      GABON                                    </div><div>
+                                      GAMBIA                                    </div><div>
+                                      GEORGIA                                    </div><div>
+                                      ALEMANIA                                    </div><div>
+                                      GHANA                                    </div><div>
+                                      GIBRALTAR                                    </div><div>
+                                      GREECE                                    </div><div>
+                                      GREENLAND                                    </div><div>
+                                      GRENADA                                    </div><div>
+                                      GUAM                                    </div><div>
+                                      GUATEMALA                                    </div><div>
+                                      GUERNSEY                                    </div><div>
+                                      GUINEA                                    </div><div>
+                                      GUINEA-BISSAU                                    </div><div>
+                                      GUYANA                                    </div><div>
+                                      HAITI                                    </div><div>
+                                      HONDURAS                                    </div><div>
+                                      HONG KONG                                    </div><div>
+                                      HUNGARY                                    </div><div>
+                                      ISLANDIA                                    </div><div>
+                                      INDIA                                    </div><div>
+                                      INDONESIA                                    </div><div>
+                                      IRAN                                    </div><div>
+                                      IRAQ                                    </div><div>
+                                      IRELAND                                    </div><div>
+                                      ISLE OF MAN                                    </div><div>
+                                      ISRAEL                                    </div><div>
+                                      ITALIA                                    </div><div>
+                                      IVORY COAST                                    </div><div>
+                                      JAMAICA                                    </div><div>
+                                      JAPON                                    </div><div>
+                                      JERSEY                                    </div><div>
+                                      JORDAN                                    </div><div>
+                                      KAZAKHSTAN                                    </div><div>
+                                      KENYA                                    </div><div>
+                                      KIRIBATI                                    </div><div>
+                                      KOSOVO                                    </div><div>
+                                      KUWAIT                                    </div><div>
+                                      KYRGYZSTAN                                    </div><div>
+                                      LAOS                                    </div><div>
+                                      LATVIA                                    </div><div>
+                                      LEBANON                                    </div><div>
+                                      LESOTHO                                    </div><div>
+                                      LIBERIA                                    </div><div>
+                                      LIBYA                                    </div><div>
+                                      LIECHTENSTEIN                                    </div><div>
+                                      LITHUANIA                                    </div><div>
+                                      LUXEMBOURG                                    </div><div>
+                                      MACAU                                    </div><div>
+                                      MACEDONIA                                    </div><div>
+                                      MADAGASCAR                                    </div><div>
+                                      MALAWI                                    </div><div>
+                                      MALAYSIA                                    </div><div>
+                                      MALDIVES                                    </div><div>
+                                      MALI                                    </div><div>
+                                      MALTA                                    </div><div>
+                                      MARSHALL ISLANDS                                    </div><div>
+                                      MAURITANIA                                    </div><div>
+                                      MAURITIUS                                    </div><div>
+                                      MAYOTTE                                    </div><div>
+                                      MEXICO                                    </div><div>
+                                      MICRONESIA                                    </div><div>
+                                      MOLDOVA                                    </div><div>
+                                      MONACO                                    </div><div>
+                                      MONGOLIA                                    </div><div>
+                                      MONTENEGRO                                    </div><div>
+                                      MONTSERRAT                                    </div><div>
+                                      MOROCCO                                    </div><div>
+                                      MOZAMBIQUE                                    </div><div>
+                                      MYANMAR                                    </div><div>
+                                      NAMIBIA                                    </div><div>
+                                      NAURU                                    </div><div>
+                                      NEPAL                                    </div><div>
+                                      NETHERLANDS                                    </div><div>
+                                      NETHERLANDS ANTILLES                                    </div><div>
+                                      NEW CALEDONIA                                    </div><div>
+                                      NEW ZEALAND                                    </div><div>
+                                      NICARAGUA                                    </div><div>
+                                      NIGER                                    </div><div>
+                                      NIGERIA                                    </div><div>
+                                      NIUE                                    </div><div>
+                                      NORTH KOREA                                    </div><div>
+                                      NORTHERN MARIANA ISLANDS                                    </div><div>
+                                      NORWAY                                    </div><div>
+                                      OMAN                                    </div><div>
+                                      PAKISTAN                                    </div><div>
+                                      PALAU                                    </div><div>
+                                      PALESTINE                                    </div><div>
+                                      PANAMÁ                                    </div><div>
+                                      PAPUA NEW GUINEA                                    </div><div>
+                                      PARAGUAY                                    </div><div>
+                                      PERÚ                                    </div><div>
+                                      PHILIPPINES                                    </div><div>
+                                      PITCAIRN                                    </div><div>
+                                      POLAND                                    </div><div>
+                                      PORTUGAL                                    </div><div>
+                                      PUERTO RICO                                    </div><div>
+                                      QATAR                                    </div><div>
+                                      REPUBLIC OF THE CONGO                                    </div><div>
+                                      REUNION                                    </div><div>
+                                      ROMANIA                                    </div><div>
+                                      RUSIA                                    </div><div>
+                                      RWANDA                                    </div><div>
+                                      SAINT BARTHELEMY                                    </div><div>
+                                      SAINT HELENA                                    </div><div>
+                                      SAINT KITTS AND NEVIS                                    </div><div>
+                                      SAINT LUCIA                                    </div><div>
+                                      SAINT MARTIN                                    </div><div>
+                                      SAINT PIERRE AND MIQUELON                                    </div><div>
+                                      SAINT VINCENT AND THE GRENADINES                                    </div><div>
+                                      SAMOA                                    </div><div>
+                                      SAN MARINO                                    </div><div>
+                                      SAO TOME AND PRINCIPE                                    </div><div>
+                                      SAUDI ARABIA                                    </div><div>
+                                      SENEGAL                                    </div><div>
+                                      SERBIA                                    </div><div>
+                                      SEYCHELLES                                    </div><div>
+                                      SIERRA LEONE                                    </div><div>
+                                      SINGAPORE                                    </div><div>
+                                      SINT MAARTEN                                    </div><div>
+                                      SLOVAKIA                                    </div><div>
+                                      SLOVENIA                                    </div><div>
+                                      SOLOMON ISLANDS                                    </div><div>
+                                      SOMALIA                                    </div><div>
+                                      SOUTH AFRICA                                    </div><div>
+                                      SOUTH KOREA                                    </div><div>
+                                      SOUTH SUDAN                                    </div><div>
+                                      ESPAÑA                                    </div><div>
+                                      SRI LANKA                                    </div><div>
+                                      SUDAN                                    </div><div>
+                                      SURINAME                                    </div><div>
+                                      SVALBARD AND JAN MAYEN                                    </div><div>
+                                      SWAZILAND                                    </div><div>
+                                      SWEDEN                                    </div><div>
+                                      SWITZERLAND                                    </div><div>
+                                      SYRIA                                    </div><div>
+                                      TAIWAN                                    </div><div>
+                                      TAJIKISTAN                                    </div><div>
+                                      TANZANIA                                    </div><div>
+                                      THAILAND                                    </div><div>
+                                      TOGO                                    </div><div>
+                                      TOKELAU                                    </div><div>
+                                      TONGA                                    </div><div>
+                                      TRINIDAD AND TOBAGO                                    </div><div>
+                                      TUNISIA                                    </div><div>
+                                      TURKEY                                    </div><div>
+                                      TURKMENISTAN                                    </div><div>
+                                      TURKS AND CAICOS ISLANDS                                    </div><div>
+                                      TUVALU                                    </div><div>
+                                      U.S. VIRGIN ISLANDS                                    </div><div>
+                                      UGANDA                                    </div><div>
+                                      UKRAINE                                    </div><div>
+                                      UNITED ARAB EMIRATES                                    </div><div>
+                                      REINO UNIDO                                    </div><div>
+                                      UNITED STATES OF AMERICA                                    </div><div>
+                                      URUGUAY                                    </div><div>
+                                      UZBEKISTAN                                    </div><div>
+                                      VANUATU                                    </div><div>
+                                      VATICAN                                    </div><div>
+                                      VENEZUELA                                    </div><div>
+                                      VIETNAM                                    </div><div>
+                                      WALLIS AND FUTUNA                                    </div><div>
+                                      WESTERN SAHARA                                    </div><div>
+                                      YEMEN                                    </div><div>
+                                      ZAMBIA                                    </div><div>
+                                      ZIMBABWE                                    </div></div></div>
+                  </div>
+
+                  <div class="items required">
+                      <h4>Seleccione el medio de contacto</h4>
+                      <label>
+                          <div>Correo electrónico</div>
+                          <input id="email-inputc" type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                      </label>
+                      <label>
+                          <div>Teléfono celular</div>
+                          <input id="celular-input" type="checkbox" onclick="modify_view('celular-input')">
+                          <span class="checkmark"></span>
+                      </label>
+                      <label>
+                          <div>Teléfono fijo</div>
+                          <input id="fijo-input" type="checkbox" onclick="modify_view('fijo-input')">
+                          <span class="checkmark"></span>
+                      </label>
+                  </div>
+                  <script>	  
+                      function modify_view(input){
+                          switch (input)
+                          {
+                              case "fijo-input": 
+                                  if(document.getElementById('fijo-input').checked){
+                                      document.getElementById('fijo-div').style.display = 'block';
+                                      document.getElementById('ciudad-div').style.display = 'block';
+                                      document.getElementById('horario-div').style.display = 'block';
+                                  }else{
+                                      document.getElementById('fijo-div').style.display = 'none';
+                                      document.getElementById('ciudad-div').style.display = 'none';
+                                      if(!document.getElementById('celular-input').checked){
+                                          document.getElementById('horario-div').style.display = 'none';
+                                      }
+                                  }
+                                  break;
+                              case "celular-input":
+                                  if(document.getElementById('celular-input').checked){
+                                      document.getElementById('horario-div').style.display = 'block';
+                                      document.getElementById('celular-div').style.display = 'block';;
+                                  }else{
+                                      document.getElementById('celular-div').style.display = 'none';
+                                      if(!document.getElementById('fijo-input').checked){
+                                          document.getElementById('horario-div').style.display = 'none';
+                                      }
+                                  }
+                                  break;
+                          }
+                      }
+                  </script>                
+                  <div class="items required" id="celular-div" style="display: none;">
+                      <h4>Teléfono celular</h4>
+                      <input id="movil-input" type="number">
+                  </div>
+
+                  <div class="items required" id="fijo-div" style="display: none;">
+                      <h4>Teléfono fijo</h4>
+                      <input type="number" id="homePhone-input">
+                  </div>
+
+                  <div class="items required" id="ciudad-div" style="display: none;">
+                      <h4>Ciudad o región</h4>
+                      <input type="text" id="ciudad-input">
+                  </div>
+
+                  <div class="items required" id="horario-div" style="display: none;">
+                      <h4>Horario de disponibilidad</h4>
+                      <input type="text" id="horario-input">
+                  </div>
+
+              </div>
+
+              <div class="section">
+                  <h3>2. Información de solicitud</h3>
+
+                  <div class="items required">
+                      <h4>Asunto</h4>
+                      <div class="custom-select">
+                          <select id="asunto-input">
+                              <option value="">Seleccionar asunto</option>
+                              <option value="Cursos">Cursos</option>
+                              <option value="Certificado de estudios">Certificado de estudios</option>
+                              <option value="Carreras profesionales">Carreras profesionales</option>
+                              <option value="Pagos o facturación">Pagos o facturación</option>
+                              <option value="Configuración de cuenta">Configuración de cuenta</option>
+                              <option value="Soporte técnico">Soporte técnico</option>
+                              <option value="Otros">Otros</option>
+                          </select>
+                      <div class="select-selected">Seleccionar asunto</div><div class="select-items select-hide"><div>Cursos</div><div>Certificado de estudios</div><div>Carreras profesionales</div><div>Pagos o facturación</div><div>Configuración de cuenta</div><div>Soporte técnico</div><div>Otros</div></div></div>
+                  </div>
+
+                  <div class="items required">
+                      <h4>Mensaje</h4>
+                      <textarea id="mensaje-input" required=""></textarea>
+                  </div>
+
+              </div>
+
+              <div class="submit">
+                  <div class="row">
+                      <p id="notificaciones_error"> </p>
+                <button type="submit" id="btn_send">Enviar solicitud</button>
+                  </div>
+                  <h5>Sus datos se utilizarán exclusivamente para asuntos académicos.</h5>
+              </div>
+
+          </form>
+      </div>
+  </div>
+
+</div>
