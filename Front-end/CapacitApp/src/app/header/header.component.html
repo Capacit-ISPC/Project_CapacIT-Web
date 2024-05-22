@@ -6,7 +6,6 @@
 
   <nav>
     <ul>
-
       <ng-container *ngIf="!isLoggedIn(); else loggedIn">
         <a (click)="redirectLogin()">Login</a>
       </ng-container>
