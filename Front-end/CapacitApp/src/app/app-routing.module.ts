@@ -11,7 +11,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import { RutasComponent } from './rutas/rutas.component';
 import { PasswordComponent } from './password/password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-// import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+
 
 
 
@@ -28,7 +29,7 @@ const routes: Routes = [
   {path: 'routes', component: RutasComponent},
   {path: 'password', component: PasswordComponent},
   {path: 'Contacto y Asistencia', component: ContactFormComponent},
-  // {path: 'Sobre nosotros', component: SobreNosotrosComponent},
+  {path: 'About us', component:AboutUsComponent},
   {path: '**', component: PageNotFoundComponent},
   
 ];
