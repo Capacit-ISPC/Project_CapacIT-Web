@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   private token: string = '';
+  private usuarioActual: any;
   private url:string = 'http://127.0.0.1:8000/api/capacit/'
 
   constructor(private http:HttpClient, private router: Router){}
@@ -20,6 +21,14 @@ export class AuthService {
   getToken() {
     return this.token;
   }
+  setUsuarioActual(usuario: any) {
+    this.usuarioActual = usuario;
+  }
+
+  getUsuarioActual() {
+    return this.usuarioActual;
+  }
+
 
   deleteCookie(name: string) {
     console.log("borrado de la cookie")

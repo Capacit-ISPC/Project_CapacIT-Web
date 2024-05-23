@@ -5,6 +5,7 @@
   padding: 20px;
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para agregar profundidad */
+  min-height: 100vh;
 }
 
 h1 {
@@ -33,4 +34,347 @@ textarea {
   padding: 8px; /* Espacio interno dentro de los campos */
   border: 1px solid #ccc; /* Borde gris claro */
   border-radius: 5px; /* Bordes redondeados */
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+        body{
+			margin: 0;
+			font-family: 'Muli', 'sans-serif';
+            color: #031b4e;
+			max-width: 100%;
+            overflow-x: hidden;
+            background-color: #f3f5f9;
+        }
+        .requests a{
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .requests h1,
+        .requests h2,
+        .requests h3,
+        .requests h4,
+        .requests h5{
+            font-weight: 400;
+            margin: 0;
+        }
+        .requests p{
+            line-height: 1.8;
+            color: rgba(3, 27, 78, .8);
+            margin: 0;
+        }
+        .requests .header h1{
+            font-weight: 600;
+        }
+        .requests .container,
+        .requests .container-fb{
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 2rem 60px 2rem;
+            box-sizing: content-box;
+        }
+        .requests .color-header{
+            background-color: #fff;
+        }
+        .requests .menu-horizontal h4{
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        .requests .menu-horizontal h4{
+            font-size: 15px;
+        }
+        .requests .items .item .title h3{
+            margin: 0;
+        }
+        .requests .header,
+        .requests .feet{
+            max-width: 900px;
+            min-height: 200px;
+            margin: 0 auto;
+            padding: 120px 2rem 0;
+            position: relative;
+        }
+        .requests .header{
+            min-height: 140px;
+            padding: 160px 2rem 0;
+        }
+        .requests .header .text,
+        .requests .feet .text{
+            z-index: 100;
+        }
+        .requests .header img{
+            position: absolute;
+            right: 2rem;
+        }
+        .requests .header img{
+            top: 100px;
+        }
+        .requests .header .text h3{
+            color: rgba(3, 27, 78, .6);
+            margin-top: 6px;
+        }
+        .menu-horizontal a{
+            color: rgba(3, 27, 78, .5);
+        }
+        .requests .row,
+        .requests .header{
+            display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+        }
+        .requests .row{
+            width: 100%;
+        }
+        .requests .row .column{
+            flex: 1;
+        }
+        .requests .container-form{
+            background-color: #fff;
+            border: 1px solid rgba(3, 27, 78, .2);
+            border-radius: 5px;
+        }
+        .requests form{
+            padding: 50px 80px;
+            max-width: 720px;
+            margin: 0 auto;
+            box-sizing: content-box;
+        }
+        .menu-horizontal a:hover,
+        .requests form .submit h5 a{
+            text-decoration: underline;
+        }
+        /* start-form */
+        .requests form input,
+        .requests form textarea{
+            min-height: 40px;
+            border-radius: 4px;
+            border: 1px solid rgba(3, 27, 78, .2);
+            width: calc(100% - 20px);
+            font-family: 'Muli', 'sans-serif';
+            font-size: 15px;
+            color: #031b4e;
+            line-height: 1.6;
+            padding: 0 10px;
+            outline: none;
+        }
+        .requests form textarea{
+            min-height: 100px;
+            padding: 10px;
+            resize: none;
+            vertical-align: baseline
+        }
+        .requests input[type=text]:focus,
+        .requests input[type=email]:focus,
+        .requests input[type=number]:focus,
+        .requests textarea:focus{
+            border: 1px solid #0056BF;
+        }
+        .requests form .section{
+            border: 1px solid rgba(3, 27, 78, .1);
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .requests form h4{
+            margin-bottom: 10px;
+        }
+        .requests form .submit h5{
+            margin-top: 10px;
+            color: rgba(3, 27, 78, .7);
+            text-align: right;
+            line-height: 1.6;
+        }
+        .requests form .submit h5 a:hover{
+            color: #2979FF;
+        }
+        .requests form .items.required h4:after{
+            display: inline-block;
+            vertical-align: top;
+            margin: -0.2em 0 0 .2em;
+            content: '*';
+            color: red;
+        }
+        .requests form .items{
+            margin-top: 30px;
+        }
+        .requests .submit button{
+            background-color: #2979FF;
+            border: none;
+            outline: none;
+            color: #fff;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 30px 0 0 auto;
+            cursor: pointer;
+            font-family: 'Muli', 'sans-serif';
+            font-size: 15px;
+        }
+        .requests .submit button:hover{
+            background-color: #0056BF;
+            transition: background-color .2s linear;
+            -webkit-transition: background-color .2s linear;
+            -moz-transition: background-color .2s linear;            
+            -o-transition: background-color .2s linear;
+        }
+        /* start-select */
+        .requests .custom-select{
+            position: relative;
+            font-family: 'Muli', 'sans-serif';
+        }
+        .requests .custom-select select{
+            display: none;
+        }
+        .requests .select-selected{
+            color: rgba(3, 27, 78, .7)!important;
+            background-color: #e8f0fe;
+            border-radius: 4px;
+            border-bottom: 1px solid transparent!important;
+        }
+        .requests .select-selected:after{
+            position: absolute;
+            content: "";
+            top: 18px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: rgba(3, 27, 78, .8) transparent transparent transparent;
+        }
+        .requests .select-selected.select-arrow-active:after{
+            border-color: transparent transparent rgba(3, 27, 78, .8) transparent;
+            top: 13px;
+        }
+        .requests .select-items div,
+        .requests .select-selected{
+            color: #031b4e;
+            padding: 10px 16px;
+            cursor: pointer;
+            user-select: none;
+            border-bottom: 1px solid rgba(3, 27, 78, .2);
+        }
+        .requests .select-items div:last-of-type{
+            border-bottom: none;
+        }
+        .requests .select-items{
+            position: absolute;
+            background-color: #fff;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            border: 1px solid rgba(3, 27, 78, .2);
+            border-radius: 4px;
+            -webkit-box-shadow: 0 2px 5px -1px rgba(50,50,93,.25), 0 1px 3px -1px rgba(0,0,0,.3);
+            box-shadow: 0 2px 5px -1px rgba(50,50,93,.25), 0 1px 3px -1px rgba(0,0,0,.3);
+            overflow-y: auto;
+            height: 280px;
+        }
+        .requests .select-hide{
+            display: none;
+        }
+        .requests .select-items div:hover,
+        .requests .same-as-selected{
+            background-color: rgba(3, 27, 78, .1);
+        }
+        /* end-select */
+        /* start-checkbox */
+        .requests form label{
+            display: block;
+            position: relative;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            display: inline-block;
+            margin: 4px 26px 4px 0;
+        }
+        .requests form label div{
+            padding-left: 28px;
+            font-size: 16px;
+        }
+        /* Hide the browser's default checkbox */
+        .requests form label input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .requests form .checkmark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: transparent;
+            border: 1px solid rgba(3, 27, 78, .4);
+            border-radius: 3px;
+        }
+        .requests form label:hover input ~ .checkmark{
+            border: 1px solid rgba(3, 27, 78, .7);
+            background-color: rgba(3, 27, 78, .02);
+        }
+        .requests form label input:checked ~ .checkmark{
+            background-color: transparent;
+        }
+        .requests form .checkmark:after{
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .requests form label input:checked ~ .checkmark:after{
+            display: block;
+        }
+        .requests form label .checkmark:after{
+            left: 5px;
+            top: 1px;
+            width: 5px;
+            height: 10px;
+            border: solid #031b4e;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        /* end-checkbox */
+        /* end-form */
+
+@media only screen and (max-width: 819px){
+    .requests form{
+        padding: 50px 60px;
+    }
+}
+@media only screen and (max-width: 779px){
+    .requests form{
+        padding: 50px 2rem;
+    }
+}
+@media only screen and (max-width: 620px){
+    .requests .container{
+        padding: 20px 1rem 60px 1rem;
+    }
+    .requests .header{
+        min-height: 100px;
+        padding: 160px 1rem 0;
+    }
+    .requests .header img{
+        display: none;
+    }
+    .requests .color-header{
+        background-color: #0056BF;
+        color: #fff;
+    }
+    .requests .header .text h3{
+        color: #fff;
+    }
+}
+@media only screen and (max-width: 520px){
+    .requests form{
+        padding: 50px 1rem;
+    }
 }

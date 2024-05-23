@@ -1,285 +1,121 @@
-:root {
-  --primary-color: rgb(50, 153, 148);
-  --secondary-color: rgb(99, 199, 199);
-}
 
-body {
+main {
+
   height: auto;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 49px;
+
+  font-family: 'Segoe UI';
 }
 
-.navbar {
-  display: flex;
-  padding-bottom: 1rem;
-  position: fixed;
-  height: 100%;
-  flex-direction: row;
-  width: 100%;
-  background-color: var(--secondary-color);
-  overflow: hidden;
-  left: 0;
-  top: 0;
-  transition: width 0.3s ease-in-out;
-}
-
-.navbar:hover,
-.navbar.active {
-  width: 35vh;
-}
-
-.navbar-lista {
-  text-decoration: none;
-  list-style: none;
-  width: 100%;
-  padding-left: 1.5rem;
-}
-
-.navbar-lista-item {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.bi {
-  font-size: 1.4rem;
-  padding: 0.625em;
-  display: flex;
-  align-items: center;
-}
-
-a {
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bolder;
-  margin-left: 1rem;
-  padding: 2%;
-  color: black;
-  outline: transparent solid 0.125em;
-  outline-offset: 0.125em;
-  display: flex;
-  width: var(--width);
-  overflow: hidden;
-}
-
-/* body index*/
-.titulo-principal {
-  text-align: center;
-  font-size: 5em;
-  margin: 0 0 1em;
-  clear: left;
-  color: #303F9F;
-}
-
-.principal {
-  color: #303F9F;
-  padding: 1em;
-  text-align: center;
-  width: 90%;
-  border-radius: 1.875em;
-  margin-left: 85px;
-  margin-right: 10px;
-}
-
-.principal p {
-  margin: 0 0 1em;
-}
-
-.principal strong {
-  font-weight: bold;
-}
-
-.principal em {
-  font-style: italic;
-}
-
-.presentacion {
-  width: 7.5em;
-  float: left;
-  margin: 0 1.25em 1.25em 0;
-}
-
-
-.textos {
-  font-size: 1.6em;
-}
-.video {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.video iframe {
+div {
   display: block;
-  margin: 0 auto;
-}
-
-.sobre_nos, .sobre_nos a {
-  text-align: left;
-  margin: 0 auto;
-  width: 80%;
-  color: #303F9F;
 }
 
 
-.cursos {
-  width: 58.75em;
-  margin: 0 auto;
-  padding: 3.125em;
-}
-
-.cursos li {
-  display: inline-block;
-  text-align: center;
-  width: 30%;
-  vertical-align: top;
-  margin: 0 1.5%;
-  padding: 1.875em 1.25em;
-  box-sizing: border-box;
-  border: 0.125em solid #000000;
-  border-radius: 0.625em;
-}
-
-.cursos li:hover {
-  border-color: #c78c19;
-}
-
-.cursos li:active {
-  border-color: #088c19;
-}
-
-.cursos h2 {
-  font-size: 1.875em;
-  font-weight: bold;
-}
-
-.cursos li:hover h2 {
-  font-size: 2.0625em;
-}
-
-.cursos-descripcion {
-  font-size: 1.125em;
-}
-
-.cursos-precio {
-  font-size: 1.25em;
-  font-weight: bold;
-  margin-top: 0.625em;
-}
-
-.ruta {
-  display: inline-block;
-  width: 60%;
-  vertical-align: top;
-  margin: 0 1.5%;
-  padding: 1.875em 1.25em;
-  box-sizing: border-box;
-  border: 0.125em solid #000000;
-  border-radius: 0.625em;
-}
-
-.toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  background: var(--primary-color);
-  cursor: pointer;
-}
-
-.toggle span {
+div:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
+  height: 75vh;
+  background-image: url('../../assets/img/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+div:first-child p {
+  color: rgb(48, 63, 159);
   font-size: 40px;
-  color: rgb(0, 0, 0);
-}
-
-.toggle.active {
-  background: var(--secondary-color);
-}
-
-.toggle:before {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
   position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.mision {
+  color: rgb(48, 63, 159);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+
+  height: 60vh;
   width: 100%;
-  height: 100%;
-  line-height: 60px;
-  text-align: center;
-  font-size: 24px;
-  color: rgb(0, 0, 0);
-}
+  margin-top: 100px;
 
-.toggle:before span {
+  background-image: url('../../assets/img/portada2.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4px;
-  font-size: 40px;
-  color: black;
 }
+
+
+.valores {
+  background-color: rgb(48, 63, 159);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 30px;
+
+  height: 60vh;
+  width: 100%;
+  margin-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.valores p {
+  margin: 0 100px;
+  text-align: center;
+}
+
+.valores_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 100px;
+  color: rgb(48, 63, 159);
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  gap: 30px;
+}
+
+.valores_item p {
+  width: 50%;
+  margin: 0 30px;
+  text-align: justify;
+}
+
+.valores_item img {
+  border-radius: 10px;
+  height: 300px;
+  width: 300px;
+}
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 768px) {
-  main {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-  }
 
-  .scroll-ele, .video {
-    align-items: center;
-    text-align: center;
-  }
-
-  .titulo-principal {
-    font-size: 4vh;
-  }
-
-  .img-fluid {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .video {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-  }
-
-  .video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .navbar {
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    padding-bottom: 0;
-  }
-
-  .navbar-lista {
-    padding-left: 0;
-  }
-
-  a {
-    margin-left: 0;
-    padding: 1%;
-  }
-
-  .toggle,
-  .toggle.active {
-    width: 100%;
-  }
 }
 

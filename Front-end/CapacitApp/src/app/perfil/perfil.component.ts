@@ -1,25 +1,26 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PerfilService } from '../services/perfil.service';
-import { Perfil } from '../models/Perfil';
+import { Perfil } from '../Models/Perfil';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css'],
-
+  styleUrls: ['./perfil.component.css']
 })
+export class PerfilComponent implements OnInit {
+  perfil: Perfil | undefined;
 
+  constructor(private perfilService: PerfilService, private authService: AuthService) { }
 
-export class PerfilComponent{
-
-  @Input() perfil: any;
-
-  constructor(private perfilService: PerfilService) { }
-
-
-  ngOnInit() {
-    const usuarioId = 2;
-    this.getPerfil(usuarioId);
+  ngOnInit(): void {
+    const usuarioActual = this.authService.getUsuarioActual(); // Obtener la información del usuario actual
+    if (usuarioActual) {
+      const usuarioId = usuarioActual.id; // Obtener el ID del usuario actual
+      this.getPerfil(usuarioId);
+    } else {
+      console.error('Error: No se pudo obtener el usuario actual.');
+    }
   }
 
   getPerfil(usuarioId: number) {
@@ -33,6 +34,4 @@ export class PerfilComponent{
       }
     });
   }
-
-
 }

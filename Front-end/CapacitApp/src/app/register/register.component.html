@@ -32,6 +32,9 @@
                 <span>Password</span>
                 <input type="password" [formControl]="password" name="password" [(ngModel)]="newUser.password" id="password" required minlength="8" maxlength="15" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
             </label>
+            <div class="alert alert-danger" [hidden]="password.valid || password.pristine">
+                La Password debe ser de 8 o más caracteres.
+              </div>
         </div>
 
         <span>Recuérdame</span>
