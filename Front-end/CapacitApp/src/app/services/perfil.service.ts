@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Perfil } from '../models/Perfil';
+import { Perfil } from '../Models/Perfil';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +11,14 @@ import { Perfil } from '../models/Perfil';
 export class PerfilService {
 
   private url = 'http://localhost:3000/perfiles';
+  
 
 
   constructor(private http: HttpClient) { }
 
   getPerfil(usuarioId: number): Observable<Perfil> {
     const url = `${this.url}/${usuarioId}`;
-    return this.http.get<Perfil>(url);
+    return this.http.get<Perfil>(url)
+    console.log(this.getPerfil) ;
   }
 }
