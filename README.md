@@ -4,15 +4,15 @@ Proyecto Integrador - Practica Profesionalizante - ISPC
 
 La web CapacIT es una plataforma de formación en línea que ofrece una amplia variedad de cursos (gratuitos y pagos) básicos para principiantes hasta cursos avanzados para profesionales con experiencia en áreas de programación, tecnología de la información y disciplinas relacionadas. Los cursos están diseñados para atender las necesidades tanto de aquellos que buscan adquirir habilidades técnicas para su carrera profesional, como de aquellos que buscan aprender por hobby o interés personal.
 
+Link: https://capacit.great-site.net/html/
 
 
-## Construido con 🛠️
+## 🛠️ Construido con:
 
  * SPA (Single Page Application) con ANGULAR
 
  * POO con Django-Python
 
- * Proyecto anterior: Wordpress, HTML5, CSS3, BOOTSTRAP, JAVASCRIPT, POO con PYTHON, MySQL
 
 ## Cómo levantar proyecto 🛠️
 
@@ -34,6 +34,7 @@ En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pue
 
 **Estudiantes TSDWAD de ISPC**
 
-* [Miembros de equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
+
+* Puede ver miembros de equipo en : [Equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
 
 
