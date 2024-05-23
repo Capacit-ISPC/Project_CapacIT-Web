@@ -21,6 +21,7 @@ import { CourseCardComponent } from './course-card/course-card.component';
 import { RoutesAddressComponent } from './routes-address/routes-address.component';
 import { PasswordComponent } from './password/password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -43,6 +44,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     RoutesAddressComponent,
     PasswordComponent,
     ContactFormComponent,
+    AboutUsComponent,
 
   ],
   imports: [
