@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 from apps.users.views import Login, Register, Logout
+from apps.users.token_view import CustomAuthToken
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("api-token/", CustomAuthToken.as_view(), name = "api-token"),
+    
     path('users/', include('apps.users.api.routers')),
     path('courses/', include('apps.courses.api.urls')),
 
