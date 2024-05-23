@@ -1,0 +1,76 @@
+:host {
+    display: flex;flex-direction: column;
+align-items: center;
+color: #303F9F;
+padding: 1em;
+text-align: center;
+width: 90%;
+border-radius: 1.875em;
+margin-left: auto;
+margin-right: auto;
+font-family: 'Oxygen', sans-serif;
+}
+
+h1 {
+font-size: 2em;
+font-weight: bold;
+line-height: 1.5;
+letter-spacing: 0.1em;
+color: rgb(48, 63, 159);
+font-family: 'Segoe UI';
+}
+h2{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+p {
+color: rgb(48, 63, 159);
+font-size: 20px;
+font-weight: normal;
+ 
+}
+
+.team-members {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+width: 100%;
+max-width: 960px; /* Añadido para limitar el ancho de los miembros */
+margin: 0 auto;
+}
+
+.team-member {
+flex-basis: calc(33.33% - 20px);
+margin-bottom: 20px;
+text-align: center;
+}
+
+.team-member img {
+width: 150px;
+height: auto;
+margin-bottom: 10px;
+border-radius: 50%;
+}
+
+.team-member p {
+margin: 0;
+background-color: rgba(48, 63, 159, 0.781);
+    color: rgb(255, 255, 255);
+}
+
+.boton-unirse {
+    background-color: #303F9F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #001f6d; /* Cambia el color al pasar el mouse sobre el botón */
+  }
