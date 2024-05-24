@@ -7,6 +7,24 @@ class CourseSerializer(serializers.ModelSerializer):
         model = Course
         exclude = ('state', 'created_date','modified_date','deleted_date') 
 
+    def validate_category(self, value):
+        if value == "" or value == None:
+            raise serializers.ValidationError("Debe ingresar una categoria para el curso")
+        return value
+    
+    def validate_tutor(self, value):
+        if value == "" or value == None:
+            raise serializers.ValidationError("Debe ingresar un tutor para el curso")
+        return value
+    
+    def validate(self, data):
+        if "category" not in data.keys():
+            raise serializers.ValidationError({'category': "Debe ingresar el id de la categoria"})
+        
+        if "tutor" not in data.keys():
+            raise serializers.ValidationError({'tutor': "Debe ingresar el id del tutor"})
+                                              
+
     def to_representation(self, instance):
         return {
             "id": instance.id,
