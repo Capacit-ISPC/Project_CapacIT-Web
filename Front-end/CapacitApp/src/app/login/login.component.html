@@ -1,3 +1,4 @@
+<div class="contact-form-container">
 <div class="card">
   <div class="card-body">
     <form [formGroup]="formUser" method="post" (ngSubmit)="login()">
@@ -66,5 +67,6 @@
     <div class="registrarse">¿Todavía no te registraste?</div>
     <div class="registrarse"><a routerLink="/register">Registrarme</a></div>
   </div>
+</div>
 </div>
 {{ formUser.get("passwordControl")?.valid }}

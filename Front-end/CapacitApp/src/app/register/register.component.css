@@ -162,3 +162,7 @@ label input:focus{
 	border: 0.125em solid #000000;
 	border-radius: 0.625em;
 }
+
+.contact-form-container {
+    min-height: 100vh;
+  }

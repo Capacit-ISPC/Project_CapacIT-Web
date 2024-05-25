@@ -91,3 +91,6 @@ label input:focus{
   justify-items: center;
 
 }
+.contact-form-container {
+  min-height: 100vh;
+}
