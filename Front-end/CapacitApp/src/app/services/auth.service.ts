@@ -10,7 +10,7 @@ export class AuthService {
 
   private token: string = '';
   private usuarioActual: any;
-  private url:string = 'http://127.0.0.1:8000/api/capacit/'
+  private url:string = 'http://127.0.0.1:8000/login/'
 
   constructor(private http:HttpClient, private router: Router){}
 
@@ -21,12 +21,14 @@ export class AuthService {
   getToken() {
     return this.token;
   }
-  setUsuarioActual(usuario: any) {
-    this.usuarioActual = usuario;
+  setUsuarioActual(usuario: { name: string, email: string }) {
+    this.usuarioActual = { name: usuario.name, email: usuario.email };
   }
-
   getUsuarioActual() {
     return this.usuarioActual;
+  }
+  getUsuarioActualDesdeServidor(): Observable<{ name: string, email: string }> {
+    return this.http.get<{ name: string, email: string }>('/api/usuario-actual');
   }
 
 
@@ -45,8 +47,8 @@ export class AuthService {
       email: email,
       password: password
     };
-    console.log("Token en servicio auth: "+this.getToken())
-    return this.http.post(this.url + "token/",user);
+    console.log("Token en servicio auth: " + this.getToken())
+    return this.http.post(this.url, user);
   }
 
   logout() {
