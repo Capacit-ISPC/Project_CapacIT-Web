@@ -11,7 +11,21 @@
               El nombre es obligatorio
             </div>
         </div>
+        <div>
 
+                <label for="lastname">
+                    <span>Lastname</span>
+                    <input autoFocus type="text" [formControl]="last_name" name="lastname" [(ngModel)]="newUser.last_name" id="lastname" required>
+                </label>
+                <div class="alert alert-danger" [hidden]="last_name.valid || last_name.pristine">
+                  El apellido es obligatorio
+                </div>
+           
+
+
+
+
+        </div>
         <div>
             <label for="email">
                 <span>Email</span>

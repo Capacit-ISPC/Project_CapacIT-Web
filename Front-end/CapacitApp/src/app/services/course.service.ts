@@ -9,7 +9,7 @@ import { AuthService } from './auth.service';
 })
 export class CourseService {
 
-  private url:string = 'http://127.0.0.1:8000/api/capacit/cour/courses/'
+  private url:string = 'http://127.0.0.1:8000/courses/courses/'
 
   constructor(private httpClient: HttpClient, private authService: AuthService) { 
 
