@@ -25,6 +25,17 @@ class CourseViewSet(viewsets.ModelViewSet):
             return Response({'msj': 'Curso creado correctamente'}, status= status.HTTP_201_CREATED)
         return Response(serializer.errors, status= status.HTTP_400_BAD_REQUEST)
     
+    def partial_update(self, request, pk=None):
+        course = self.get_queryset(pk)
+        if not course:
+            return Response({'msg': 'No existe el curso con ese id'}, status=status.HTTP_404_NOT_FOUND)
+
+        course_serializer = self.get_serializer(course, data=request.data, partial=True)
+        if course_serializer.is_valid():
+            course_serializer.save()
+            return Response(course_serializer.data, status=status.HTTP_200_OK)
+        return Response(course_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
     def update(self, request, pk = None):
         if self.get_queryset(pk):
             course_serializer = self.serializer_class(self.get_queryset(pk), data = request.data)

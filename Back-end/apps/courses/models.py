@@ -56,7 +56,7 @@ class Course(BaseModel):
     technology = models.CharField(max_length=255)
     level = models.CharField(max_length=255)
     price = models.DecimalField(blank=False, decimal_places=2, max_digits=10)
-    image = models.ImageField(upload_to="products/", blank= True, null=True)
+    #image = models.ImageField(upload_to="products/", blank= True, null=True)
     link = models.CharField(max_length=255, blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  
     tutor = models.ForeignKey(Tutor, on_delete=models.CASCADE)
