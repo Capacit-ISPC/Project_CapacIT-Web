@@ -1,108 +1,85 @@
-
-
 <div class="requests">
-
-  <div class="color-header">
-              <div class="header">
-          <div class="text">
-              <h1>Enviar una solicitud</h1>
-            
-          </div>
-          <img src="https://d3puay5pkxu9s4.cloudfront.net/academy/imagenes/help-center/requests/presentation.png">
+    <div class="color-header">
+      <div class="header">
+        <div class="text">
+          <h1>Enviar una solicitud</h1>
+        </div>
+        <img src="https://d3puay5pkxu9s4.cloudfront.net/academy/imagenes/help-center/requests/presentation.png">
       </div>
-  </div>
-
-  <div class="container">
+    </div>
+    <div class="container">
       <div class="menu-horizontal">
-          <h4><a href="#">Inicio </a></h4>
+        <h4><a href="#">Inicio </a></h4>
       </div>
       <div class="container-form">
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-
-              <p class="help">¿En qué podemos ayudarle? Nos esforzaremos por contactar con usted lo más pronto posible.</p>
-
-              <div class="section">
-                  <h3>1. Información de contacto</h3>
-
-                  <div class="items">
-                      <h4>Nombre</h4>
-                      <input formControlName="name" id="name-input" required type="text">
-                      <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)" class="error-message">
-                        <div>El nombre es requerido.</div>
-                      </div>
-                     
-                  </div>
-
-                  <div class="items">
-                      <h4>Correo electrónico</h4>
-                      <input formControlName="email"id="email-input" required="" type="email">
-                      <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)" class="error-message">
-                        <div>El correo electrónico no es válido.</div>
-                      </div>
-                  </div>
-
-                 
-
-                 
-                  <div class="items">
-                      <h4>Seleccione el medio de contacto</h4>
-                      <label>
-                          <div>Correo electrónico</div>
-                          <input  formControlName="contactMethod" id="email-inputc" type="radio" value="email">
-                          <span class="checkmark"></span>
-                      </label>
-                      <label>
-                          <div>Teléfono celular</div>
-                          <input formControlName="contactMethod"id="celular-input" type="radio" value="phone">
-                          <span class="checkmark"></span>
-                      </label>
-                      
-                  </div>
-                     
-                  <div class="items" id="celular-div" style="display: none;">
-                      <h4>Teléfono celular</h4>
-                      <input id="movil-input" type="number">
-                  </div>
-
-                  <div class="items required" *ngIf="contactForm.get('contactMethod')?.value === 'phone'">
-                    <h4>Teléfono celular</h4>
-                    <input formControlName="phone" id="movil-input" type="number">
-                  </div>
-        
-                  <div class="items required" *ngIf="contactForm.get('contactMethod')?.value === 'phone'">
-                    <h4>Horario de disponibilidad</h4>
-                    <input formControlName="availability" id="horario-input" type="text">
-                  </div>
-
-                  <div class="items required" id="horario-div" style="display: none;">
-                      <h4>Horario de disponibilidad</h4>
-                      <input type="text" id="horario-input">
-                  </div>
-
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <p class="help">¿En qué podemos ayudarle? Nos esforzaremos por contactar con usted lo más pronto posible.</p>
+  
+          <div class="section">
+            <h3>1. Información de contacto</h3>
+  
+            <div class="items">
+              <h4>Nombre</h4>
+              <input formControlName="name" id="name-input" required type="text">
+              <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)" class="error-message">
+                <div>El nombre es requerido.</div>
               </div>
-
-              <div class="section">
-                  <h3>2. Información de solicitud</h3>
-
-                  
-
-                  <div class="items ">
-                      <h4>Mensaje</h4>
-                      <textarea id="mensaje-input" required="" ></textarea>
-                  </div>
-
+            </div>
+  
+            <div class="items">
+              <h4>Correo electrónico</h4>
+              <input formControlName="email" id="email-input" required type="email">
+              <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)" class="error-message">
+                <div>El correo electrónico no es válido.</div>
               </div>
-
-              <div class="submit">
-                  <div class="row">
-                      <p id="notificaciones_error"> </p>
-                <button type="submit" id="btn_send">Enviar solicitud</button>
-                  </div>
-                  <h5>Sus datos se utilizarán exclusivamente para asuntos académicos.</h5>
+            </div>
+  
+            <div class="items">
+              <h4>Seleccione el medio de contacto</h4>
+              <label>
+                <div>Correo electrónico</div>
+                <input formControlName="contactMethod" id="email-inputc" type="radio" value="email" (change)="onChangeContactMethod()">
+                <span class="checkmark"></span>
+              </label>
+              <label>
+                <div>Teléfono celular</div>
+                <input formControlName="contactMethod" id="celular-input" type="radio" value="phone" (change)="onChangeContactMethod()">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+  
+            <div class="items" *ngIf="contactForm.get('contactMethod')?.value === 'phone'">
+              <h4>Teléfono celular</h4>
+              <input formControlName="phone" id="movil-input" type="number">
+            </div>
+  
+            <div class="items" *ngIf="contactForm.get('contactMethod')?.value === 'phone'">
+              <h4>Horario de disponibilidad</h4>
+              <input formControlName="availability" id="horario-input" type="text">
+            </div>
+          </div>
+  
+          <div class="section">
+            <h3>2. Información de solicitud</h3>
+           
+            <div class="items">
+              <h4>Mensaje</h4>
+              <textarea formControlName="message" id="mensaje-input" required></textarea>
+              <div *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)" class="error-message">
+                <div>El mensaje es requerido.</div>
               </div>
-
-          </form>
+            </div>
+          </div>
+  
+          <div class="submit">
+            <div class="row">
+              <p id="notificaciones_error"></p>
+              <button type="submit" id="btn_send">Enviar solicitud</button>
+            </div>
+            <h5>Sus datos se utilizarán exclusivamente para asuntos académicos.</h5>
+          </div>
+        </form>
       </div>
+    </div>
   </div>
-
-</div>
+  
