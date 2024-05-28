@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { EmailService } from '../services/email.service';
 
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
   styleUrls: ['./contact-form.component.css']
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements OnInit {
   contactForm!: FormGroup;
 
-  constructor(private FormBuilder: FormBuilder) {}
+  constructor(private FormBuilder: FormBuilder, private emailService: EmailService) {}
 
   ngOnInit() {
     this.createContactForm();
@@ -21,18 +22,24 @@ export class ContactFormComponent {
       contactMethod: ['', Validators.required], // Agregado el control para el método de contacto
       phone: [''], // Control adicional para el número de teléfono
       availability: [''], // Control adicional para el horario disponible
-      subject: ['', Validators.required],
       message: ['', Validators.required],
     });
   }
 
   onSubmit() {
     if (this.contactForm.valid) {
-      // pendiente para  enviar los datos del formulario
-      console.log(this.contactForm.value);
-      // Lógica para enviar el formulario
+      this.emailService.sendEmail(this.contactForm.value).then(
+        response => {
+          console.log('Correo enviado', response);
+          alert('Correo enviado con éxito');
+        },
+        error => {
+          console.error('Error enviando correo', error);
+          alert('Hubo un error al enviar el correo');
+        }
+      );
     } else {
-      // pendiente para el caso en el que el formulario no sea válido
+      console.log('Formulario no válido');
     }
   }
 
