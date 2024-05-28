@@ -19,7 +19,6 @@ export class ContactFormComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       contactMethod: ['', Validators.required], // Agregado el control para el método de contacto
-      phoneType: [''], // Control adicional para el tipo de teléfono
       phone: [''], // Control adicional para el número de teléfono
       availability: [''], // Control adicional para el horario disponible
       subject: ['', Validators.required],
