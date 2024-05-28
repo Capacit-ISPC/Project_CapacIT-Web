@@ -1,3 +1,5 @@
+
+
 .contact-form-container {
   width: 50%; /* Ajusta el ancho según tus necesidades */
   margin: 0 auto; /* Centra el formulario horizontalmente */
@@ -10,7 +12,7 @@
 
 h1 {
   text-align: center; /* Centra el encabezado */
-  color: #333; /* Color de texto con buen contraste */
+  color: white; /* Color de texto con buen contraste */
 }
 
 p {
@@ -20,7 +22,7 @@ p {
 
 h3 {
   text-align: center; /* Centra el subtítulo */
-  color: #444; /* Color de texto con buen contraste */
+  color: #303F9F; /* Color de texto con buen contraste */
 }
 
 label {
@@ -32,17 +34,18 @@ input,
 textarea {
   width: 100%; /* Ancho completo para los campos de entrada */
   padding: 8px; /* Espacio interno dentro de los campos */
-  border: 1px solid #ccc; /* Borde gris claro */
+  border: 1px solid #303F9F; /* Borde gris claro */
   border-radius: 5px; /* Bordes redondeados */
 }
+.error-message{
+    color: red;
+}
 
-
-@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
-
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap');
         body{
 			margin: 0;
-			font-family: 'Muli', 'sans-serif';
-            color: #031b4e;
+			font-family: 'Oxygen', sans-serif;
+            color:#303F9F;
 			max-width: 100%;
             overflow-x: hidden;
             background-color: #f3f5f9;
@@ -76,7 +79,7 @@ textarea {
             box-sizing: content-box;
         }
         .requests .color-header{
-            background-color: #fff;
+            background-color: #303F9F;
         }
         .requests .menu-horizontal h4{
             margin: 20px 0;
@@ -154,7 +157,7 @@ textarea {
             border-radius: 4px;
             border: 1px solid rgba(3, 27, 78, .2);
             width: calc(100% - 20px);
-            font-family: 'Muli', 'sans-serif';
+            font-family: 'Oxygen', sans-serif;
             font-size: 15px;
             color: #031b4e;
             line-height: 1.6;
@@ -171,7 +174,7 @@ textarea {
         .requests input[type=email]:focus,
         .requests input[type=number]:focus,
         .requests textarea:focus{
-            border: 1px solid #0056BF;
+            border: 1px solid #303F9F;
         }
         .requests form .section{
             border: 1px solid rgba(3, 27, 78, .1);
@@ -183,38 +186,34 @@ textarea {
             margin-bottom: 10px;
         }
         .requests form .submit h5{
-            margin-top: 10px;
+            margin: 0;
             color: rgba(3, 27, 78, .7);
             text-align: right;
             line-height: 1.6;
         }
         .requests form .submit h5 a:hover{
-            color: #2979FF;
+            color: #303F9F;
         }
-        .requests form .items.required h4:after{
-            display: inline-block;
-            vertical-align: top;
-            margin: -0.2em 0 0 .2em;
-            content: '*';
-            color: red;
-        }
+        
         .requests form .items{
             margin-top: 30px;
         }
         .requests .submit button{
-            background-color: #2979FF;
+            background-color: white#303F9F;
             border: none;
             outline: none;
-            color: #fff;
+            color:#0e0a0a;
             padding: 16px 32px;
             text-decoration: none;
             margin: 30px 0 0 auto;
             cursor: pointer;
-            font-family: 'Muli', 'sans-serif';
-            font-size: 15px;
+            font-family: 'Oxygen', sans-serif;
+            font-size: 18px;
         }
         .requests .submit button:hover{
-            background-color: #0056BF;
+            border-radius: 10;
+            background-color: #303F9F;
+            color: white;
             transition: background-color .2s linear;
             -webkit-transition: background-color .2s linear;
             -moz-transition: background-color .2s linear;            
@@ -223,7 +222,7 @@ textarea {
         /* start-select */
         .requests .custom-select{
             position: relative;
-            font-family: 'Muli', 'sans-serif';
+            font-family:'Oxygen', sans-serif;
         }
         .requests .custom-select select{
             display: none;
