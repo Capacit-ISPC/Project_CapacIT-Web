@@ -34,7 +34,7 @@ En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pue
 
 **Estudiantes TSDWAD de ISPC**
 
-
 * Puede ver miembros de equipo en : [Equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
+
 
 
