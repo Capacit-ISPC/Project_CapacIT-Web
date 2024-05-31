@@ -3,11 +3,23 @@ from rest_framework.response import Response
 from rest_framework import status
 from apps.base.api import GeneralListApiView
 from apps.courses.api.serializers.courses_serializers import CourseSerializer, CourseretrieverSerializer
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from apps.users.permissions import IsStaff, IsSuperUser
 
 class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
-    permission_classes = (AllowAny,)
+    permission_classes = (IsAuthenticated,)
+
+    def get_permissions(self):
+        if self.action in ['list', 'retrieve']:
+            permission_classes = [AllowAny]
+        elif self.action in ['create', 'update', 'partial_update']:
+            permission_classes = [IsAuthenticated, IsStaff]
+        elif self.action == 'destroy':
+            permission_classes = [IsAuthenticated, IsSuperUser]
+        else:
+            permission_classes = [IsAuthenticated]
+        return [permission() for permission in permission_classes]
 
     def get_queryset(self, pk = None):
         if pk is None:

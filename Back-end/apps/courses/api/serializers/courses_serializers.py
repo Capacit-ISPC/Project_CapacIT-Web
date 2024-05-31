@@ -45,3 +45,8 @@ class CourseretrieverSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         exclude = ('state', 'created_date','modified_date','deleted_date') 
+
+class SimpleCourseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Course
+        fields = ('id', 'name', 'price', 'state',)
