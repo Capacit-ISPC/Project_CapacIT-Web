@@ -1,6 +1,144 @@
-.container{
-    padding: 2em , 2em , 1em, 2em;
-    max-height: 100%;
-    min-height: 100vh;
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color:rgb(48, 63, 159); /* Cambio el color a un tono más oscuro de azul */
+    font-size: 2em; /* Aumento el tamaño del texto */
+    font-weight: bold; /* Hago que el texto sea más audaz */
+    text-transform: uppercase; /* Convierto el texto a mayúsculas */
+    margin-bottom: 20px; /* Agrego un poco de espacio inferior */
+}
+
+
+h3 {
+    color: #201f1f;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    
+}
+h4 {
+    color: rgb(48, 63, 159); /* Cambio el color a un tono más vibrante de azul */
+    font-size: 1.5em; /* Aumento ligeramente el tamaño del texto */
+    font-weight: bold; /* Hago que el texto sea más audaz */
+    text-transform: uppercase; /* Convierto el texto a mayúsculas */
+    margin-top: 30px; /* Agrego un poco de espacio superior */
+    margin-bottom: 5px; /* Reduzco el espacio inferior */
+    line-height: 1.2; /* Ajusto la altura de línea para mejorar la distribución del texto */
+}
+
+
+p {
+    color: #494949;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+h5 {
+    color: #777;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+h5 {
+    padding: 20px
+}
+.buttons-container {
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color:rgb(48, 63, 159);;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Aumentar el padding para que el botón sea más grande */
+    font-size: 1.2em; /* Ajustar el tamaño de fuente */
+    border-radius: 30px; /* Hacer los bordes más redondeados */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    letter-spacing: 1px; /* Agregar un poco de espacio entre las letras */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Agregar una transición suave */
+}
+
+.btn-primary:hover {
+    background-color: #1f62e8;
+    transform: scale(1.05); /* Agregar un efecto de escala al pasar el mouse */
+}
+
+.btn-success {
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Aumentar el padding para que el botón sea más grande */
+    font-size: 1.2em; /* Ajustar el tamaño de fuente */
+    border-radius: 30px; /* Hacer los bordes más redondeados */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    letter-spacing: 1px; /* Agregar un poco de espacio entre las letras */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Agregar una transición suave */
+}
+.btn-success:hover {
+    background-color: #1f62e8;
+    transform: scale(1.05); /* Agregar un efecto de escala al pasar el mouse */
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.course-intro {
+    background-color:rgb(48, 63, 159);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(48, 63, 159, 0.603);
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2575fc;
+}
+
+.btn-primary.mt-2 {
+    margin-top: 20px;
+}
+
+.row.g-3 {
+    margin-top: 20px;
 }
