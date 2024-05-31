@@ -54,3 +54,8 @@ class CustomUserRegisterSerializer(serializers.ModelSerializer):
         updated_user.set_password(validated_data['password'])
         updated_user.save()
         return updated_user
+    
+class CurstomUserCartSerialier(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = ['name', 'last_name']   
