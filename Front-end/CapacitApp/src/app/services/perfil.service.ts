@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Perfil } from '../models/Perfil';
+import { Perfil } from '../Models/Perfil';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ import { Perfil } from '../models/Perfil';
 export class PerfilService {
 
   private url = 'http://localhost:3000/perfiles';
-  
+
 
 
   constructor(private http: HttpClient) { }
