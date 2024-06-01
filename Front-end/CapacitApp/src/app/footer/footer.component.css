@@ -12,6 +12,7 @@ footer {
 }
 
 .footer-content {
+  margin-left: 70px;
   display: flex;
   justify-content: space-between;
   color: white;

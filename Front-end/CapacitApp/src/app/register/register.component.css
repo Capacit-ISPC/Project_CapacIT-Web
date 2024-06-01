@@ -39,7 +39,7 @@
     margin-bottom: 0.3125em;
 }
 .google-btn:hover{
-    background-color: #ddd;
+  background-color: #04635b;
 }
 .google-btn picture{
     width: 2.1875em;
@@ -128,11 +128,11 @@ label input:focus{
     cursor:pointer;
 }
 .boton:hover{
-    background-color:var(--primary-color);
-    border: solid 0.0625em var(--secondary-color);
-    box-shadow: 0 0 0.25em #056b63;
-    opacity:0.9;
-    color: #ffffff;
+  background-color: #04635b;
+  border: solid 0.0625em var(--secondary-color);
+  box-shadow: 0 0 0.25em #056b63;
+  opacity:0.9;
+  color: #ffffff;
 }
 .modo{
     background-color: #3dd1c5;
