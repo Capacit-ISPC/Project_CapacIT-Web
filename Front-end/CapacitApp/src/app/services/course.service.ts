@@ -37,9 +37,9 @@ export class CourseService {
     return this.httpClient.post<Course>(`${this.url}`, newCourse,{ headers })
   }
 
-  findCourseById(Id: number) {
-    
-  }
+  findCourseById(courseId: number): Observable<Course> {
+    return this.httpClient.get<Course>(`${this.url +courseId}`);
+}
 
   updateCourse(){}
 

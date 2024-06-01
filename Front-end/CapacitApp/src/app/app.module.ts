@@ -22,6 +22,7 @@ import { RoutesAddressComponent } from './routes-address/routes-address.componen
 import { PasswordComponent } from './password/password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CourseDetailComponent } from './course-detail/course-detail.component';
 
 
 
@@ -45,6 +46,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     PasswordComponent,
     ContactFormComponent,
     AboutUsComponent,
+    CourseDetailComponent,
 
   ],
   imports: [
