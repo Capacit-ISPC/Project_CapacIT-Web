@@ -59,3 +59,12 @@ class CurstomUserCartSerialier(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ['name', 'last_name']   
+
+class ChangePasswordSerializer(serializers.Serializer):
+    model = CustomUser
+    old_password = serializers.CharField(required=True)
+    new_password = serializers.CharField(required=True)
+
+class ResetPasswordSerializer(serializers.Serializer):
+    model = CustomUser
+    email = serializers.EmailField(required=True)
