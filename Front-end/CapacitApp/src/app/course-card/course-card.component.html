@@ -2,7 +2,10 @@
   <img src="../../assets/img/typescript-intro.jpg" class="card-img-top" alt="imagenCurso" />
   <div class="card-body">
     <h5 class="card-title">{{ course.name }}</h5>
-    <p class="card-text">{{ course.link }}</p>
+    <p class="description-card">{{ course.description }}</p>
+    <p class="card-text">{{ course.technology }}</p>
+    <p class="card-text">{{ course.level }}</p>
+
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#miModal-' + course.id">
       Más info de este curso
     </button>
@@ -20,7 +23,7 @@
         {{ course.link }}
       </div>
       <div>
-        <span>Profesor: {{course.teacher_name}}</span> 
+        <span>Profesor: {{course.teacher_name}}</span>
       </div>
       <div class="modal-footer" style="flex-direction: column;">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">

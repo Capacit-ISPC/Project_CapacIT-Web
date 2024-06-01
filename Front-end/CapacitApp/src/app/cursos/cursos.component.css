@@ -65,12 +65,12 @@ h5 {
     background-color:rgb(48, 63, 159);;
     color: #fff;
     border: none;
-    padding: 15px 30px; /* Aumentar el padding para que el botón sea más grande */
-    font-size: 1.2em; /* Ajustar el tamaño de fuente */
+    padding: 15px 30px;
+    font-size: 1.2em;
     border-radius: 0.625em;
-    text-transform: uppercase; /* Convertir el texto a mayúsculas */
-    letter-spacing: 1px; /* Agregar un poco de espacio entre las letras */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Agregar una transición suave */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
@@ -80,11 +80,11 @@ h5 {
 .btn-success {
     color: #fff;
     border: none;
-    padding: 15px 30px; /* Aumentar el padding para que el botón sea más grande */
-    font-size: 1.2em; /* Ajustar el tamaño de fuente */
+    padding: 15px 30px;
+    font-size: 1.2em;
     border-radius: 0.625em;
-    text-transform: uppercase; /* Convertir el texto a mayúsculas */
-    letter-spacing: 1px; /* Agregar un poco de espacio entre las letras */
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .btn-success:hover {

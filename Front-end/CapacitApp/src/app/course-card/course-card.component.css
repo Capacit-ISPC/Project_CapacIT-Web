@@ -3,11 +3,9 @@
     width: 18rem;
     box-shadow: 10px 5px 5px rgb(0,0,0,0.3);
     height: 450px;
+    color: #ffffff;
 }
 
-.card-title {
-  color: #ffffff;
-}
 
 img {
 max-width: 300px;
