@@ -7,11 +7,11 @@
 }
 
 h1 {
-    color:rgb(48, 63, 159); /* Cambio el color a un tono más oscuro de azul */
-    font-size: 2em; /* Aumento el tamaño del texto */
-    font-weight: bold; /* Hago que el texto sea más audaz */
-    text-transform: uppercase; /* Convierto el texto a mayúsculas */
-    margin-bottom: 20px; /* Agrego un poco de espacio inferior */
+    color:rgb(48, 63, 159);
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 
@@ -19,16 +19,16 @@ h3 {
     color: #201f1f;
     font-size: 1.5em;
     margin-bottom: 20px;
-    
+
 }
 h4 {
-    color: rgb(48, 63, 159); /* Cambio el color a un tono más vibrante de azul */
-    font-size: 1.5em; /* Aumento ligeramente el tamaño del texto */
-    font-weight: bold; /* Hago que el texto sea más audaz */
-    text-transform: uppercase; /* Convierto el texto a mayúsculas */
-    margin-top: 30px; /* Agrego un poco de espacio superior */
-    margin-bottom: 5px; /* Reduzco el espacio inferior */
-    line-height: 1.2; /* Ajusto la altura de línea para mejorar la distribución del texto */
+    color: rgb(48, 63, 159);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
 
 
@@ -55,9 +55,10 @@ h5 {
 .btn {
     font-size: 1.2em;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 0.625em;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-right: 10px;
 }
 
 .btn-primary {
@@ -66,15 +67,14 @@ h5 {
     border: none;
     padding: 15px 30px; /* Aumentar el padding para que el botón sea más grande */
     font-size: 1.2em; /* Ajustar el tamaño de fuente */
-    border-radius: 30px; /* Hacer los bordes más redondeados */
+    border-radius: 0.625em;
     text-transform: uppercase; /* Convertir el texto a mayúsculas */
     letter-spacing: 1px; /* Agregar un poco de espacio entre las letras */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Agregar una transición suave */
 }
 
 .btn-primary:hover {
-    background-color: #1f62e8;
-    transform: scale(1.05); /* Agregar un efecto de escala al pasar el mouse */
+    transform: scale(1.05);
 }
 
 .btn-success {
@@ -82,14 +82,14 @@ h5 {
     border: none;
     padding: 15px 30px; /* Aumentar el padding para que el botón sea más grande */
     font-size: 1.2em; /* Ajustar el tamaño de fuente */
-    border-radius: 30px; /* Hacer los bordes más redondeados */
+    border-radius: 0.625em;
     text-transform: uppercase; /* Convertir el texto a mayúsculas */
     letter-spacing: 1px; /* Agregar un poco de espacio entre las letras */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Agregar una transición suave */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .btn-success:hover {
-    background-color: #1f62e8;
-    transform: scale(1.05); /* Agregar un efecto de escala al pasar el mouse */
+
+    transform: scale(1.05);
 }
 
 .btn-danger {
