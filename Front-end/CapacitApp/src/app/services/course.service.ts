@@ -11,7 +11,7 @@ export class CourseService {
 
   private url:string = 'http://127.0.0.1:8000/courses/courses/'
 
-  constructor(private httpClient: HttpClient, private authService: AuthService) { 
+  constructor(private httpClient: HttpClient, private authService: AuthService) {
 
   }
 

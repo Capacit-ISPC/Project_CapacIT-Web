@@ -35,7 +35,7 @@ export class CursosComponent {
     this.newCourse.technology = 'default';
     this.newCourse.level = 'default';
     this.newCourse.description='default'
-    
+
     this.courseService.createCourse(this.newCourse)
       .subscribe({
         next: (data) => {
@@ -46,7 +46,7 @@ export class CursosComponent {
         error: (error) => {
           alert("Debe estar logueado para crear un curso")
           console.log("Error al creal el curso", error)
-          
+
         }
       })
   }
