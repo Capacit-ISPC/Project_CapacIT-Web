@@ -23,7 +23,7 @@ import { PasswordComponent } from './password/password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
-
+import { SafeUrlPipe } from './safe-url.pipe';
 
 
 @NgModule({
@@ -47,6 +47,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
     ContactFormComponent,
     AboutUsComponent,
     CourseDetailComponent,
+    SafeUrlPipe
 
   ],
   imports: [
