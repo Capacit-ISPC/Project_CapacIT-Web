@@ -107,34 +107,14 @@ header form button:active{
   margin-right: 10px;
 }
 
-@media (max-width:700px){
-  header{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0px;
-    width: 300px;
-  }
-  header form{
-    position: relative;
+@media (max-width:500px){
 
-
-  }
-  header form input {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-  }
   header form button {
-    position: relative;
-    left: 5px;
     border-radius: 10px;
   }
 
   nav{
-    padding:10px 0px;
+    width: 100%;
   }
 }
 
