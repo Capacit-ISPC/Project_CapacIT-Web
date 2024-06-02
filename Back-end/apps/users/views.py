@@ -9,7 +9,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from rest_framework.permissions import IsAuthenticated
 
-from apps.users.api.serializers import  CustomUserSerializer, CustomUserRegisterSerializer
+from apps.users.api.serializers import  CustomUserSerializer, CustomUserRegisterSerializer, ChangePasswordSerializer, ResetPasswordSerializer
 from apps.users.models import CustomUser
 
 
@@ -89,6 +89,22 @@ class Logout(APIView):
             return Response({'message': 'Sesión cerrada correctamente.'}, status=status.HTTP_200_OK)
         except Token.DoesNotExist:
             return Response({'error': 'El usuario no tiene un token de autenticación válido.'}, status=status.HTTP_400_BAD_REQUEST)
+        
+
+class ChangePasswordApiView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request, *args, **kwargs):
+        serializer = ChangePasswordSerializer(data = request.data)
+        if serializer.is_valid():
+            user = request.user
+
+            if user.check_password(serializer.data.get("old_password")):
+                user.set_password(serializer.data.get("new_password"))
+                user.save()
+                return Response({"message": "Password Changed Successfully"}, status=status.HTTP_200_OK)
+            return Response({"old_password": ["Wrong password."]}, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 

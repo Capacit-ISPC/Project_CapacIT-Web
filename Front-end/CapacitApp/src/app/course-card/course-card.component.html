@@ -5,6 +5,7 @@
     <p class="description-card">{{ course.description }}</p>
     <p class="card-text">{{ course.technology }}</p>
     <p class="card-text">{{ course.level }}</p>
+    <p>{{ course.price}}</p>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#miModal-' + course.id">
       Más info de este curso

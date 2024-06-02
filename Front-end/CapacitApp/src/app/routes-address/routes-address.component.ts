@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import{ Route} from '../models/routes'
+import{ Route} from '../Models/routes'
 
 @Component({
   selector: 'app-routes-address',

@@ -19,6 +19,7 @@ from django.urls import path, include
 
 from apps.users.views import Login, Register, Logout
 from apps.users.token_view import CustomAuthToken
+from apps.users.views import ChangePasswordApiView
 
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
@@ -53,5 +54,7 @@ urlpatterns = [
 
     path("login/", Login.as_view(), name= "login"),
     path("logout/", Logout.as_view(), name= "logout"),
-    path("register/", Register.as_view(), name= "register")
+    path("register/", Register.as_view(), name= "register"),
+
+    path("password/change-password/", ChangePasswordApiView.as_view(), name="change-password"),
 ]
