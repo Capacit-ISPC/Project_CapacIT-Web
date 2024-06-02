@@ -1,24 +1,23 @@
-<div class="study-section">
-    <div class="course-header">
-      <h2>{{ course.name }}</h2>
-      <p>{{ course.description }}</p>
+<div class="study-section" *ngIf="course">
+  <div class="course-header">
+    <h2>{{ course.name }}</h2>
+    <p>{{ course.description }}</p>
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <h3>Contenidos del curso</h3>
+      <ul>
+        <li (click)="loadVideo('eS0Q511qNgg')">Capítulo 1: Introducción</li>
+        <li><a href="/ruta/al/archivo.pdf" download="nombre-del-archivo.pdf">Descargar nesesarias</a></li> 
+        <li (click)="loadVideo('NbhlGfQLaKI')">Capítulo 2: Fundamentos</li>
+        <li (click)="loadVideo('video_id_3')">Capítulo 3: Práctica</li>
+        <li>...</li>
+      </ul>
     </div>
-    <div class="content">
-      <div class="sidebar">
-        <h3>Contenidos del curso</h3>
-        <ul>
-          <!-- Aquí puedes iterar sobre los contenidos del curso, si tienes esa información disponible -->
-          <li>Capítulo 1: Introducción</li>
-          <li>Capítulo 2: Fundamentos</li>
-          <li>Capítulo 3: Práctica</li>
-          <li>...</li>
-        </ul>
-      </div>
-      <div class="main-content">
-        <!-- Aquí puedes mostrar el contenido principal del curso -->
-        <h3>Capítulo 1: Introducción</h3>
-        <p>Este es el contenido del primer capítulo...</p>
-      </div>
+    <div class="main-content">
+      <h3>{{ currentChapter }}</h3>
+      <iframe width="100%" height="400" [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
+      <p>Este es el contenido del capítulo seleccionado...</p>
     </div>
   </div>
-  
+</div>
