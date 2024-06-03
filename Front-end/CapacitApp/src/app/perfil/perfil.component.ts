@@ -14,17 +14,16 @@ export class PerfilComponent implements OnInit {
   constructor(private perfilService: PerfilService, private authService: AuthService) { }
 
   ngOnInit(): void {
-    const usuarioActual = this.authService.getUsuarioActual(); // Obtener la información del usuario actual
-    if (usuarioActual) {
-      const usuarioId = usuarioActual.id; // Obtener el ID del usuario actual
-      this.getPerfil(usuarioId);
+    const usuarioId = this.authService.getUsuarioId();
+    if (usuarioId) {
+      this.getPerfilDesdeServidor(usuarioId);
     } else {
       console.error('Error: No se pudo obtener el usuario actual.');
     }
   }
 
-  getPerfil(usuarioId: number) {
-    this.perfilService.getPerfil(usuarioId).subscribe({
+  getPerfilDesdeServidor(usuarioId: number) {
+    this.authService.getUsuarioActualDesdeServidor(usuarioId).subscribe({
       next: (perfil) => {
         this.perfil = perfil;
         console.log('Perfil del usuario:', this.perfil);

@@ -1,5 +1,6 @@
 h1, div {
   text-align: center;
+  color: white;
  }
 
 .card{
@@ -7,4 +8,8 @@ h1, div {
   width: auto;
   box-shadow: 10px 5px 5px rgb(0,0,0,0.3);
   height: 75%;
+}
+p{
+  color: white;
+  font-size: larger;
 }

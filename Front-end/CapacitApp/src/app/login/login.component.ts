@@ -29,8 +29,17 @@ export class LoginComponent {
         expiryDate.setTime(expiryDate.getTime() + (12 * 60 * 60 * 1000));
         document.cookie = `token=${data.token}; expires=${expiryDate.toUTCString()}; path=/`;
 
-        console.log("Token en componente: "+data.token)
-        this.authService.setToken(data.token)
+        console.log("Token en obtenido: "+data.token)
+        
+        console.log("Datos del usuario al iniciar sesión:", data);
+        this.authService.getToken();
+        this.authService.setToken(data.token)//llama a la funcion que guarda el token para pasarlo
+        this.authService.setUsuarioActual({
+          id: data.user.id,
+          email: data.user.email,
+          name: data.user.name,
+          last_name: data.user.last_name
+        });
         alert("Logueo exitoso")
         this.router.navigate(['/course']);
       }, error: (error) => {

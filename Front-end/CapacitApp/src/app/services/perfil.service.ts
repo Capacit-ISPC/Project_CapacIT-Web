@@ -10,7 +10,7 @@ import { Perfil } from '../Models/Perfil';
 
 export class PerfilService {
 
-  private url = 'http://localhost:3000/perfiles';
+  private url = 'http://localhost:8000/users/users/';
 
 
 
