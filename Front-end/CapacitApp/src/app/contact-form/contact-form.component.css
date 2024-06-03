@@ -1,41 +1,40 @@
 
 
 .contact-form-container {
-  width: 50%; /* Ajusta el ancho según tus necesidades */
-  margin: 0 auto; /* Centra el formulario horizontalmente */
-  background-color:white;/* Color de fondo azul claro */
+  width: 50%; 
+  margin: 0 auto; 
+  background-color:white;
   padding: 20px;
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para agregar profundidad */
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   min-height: 100vh;
 }
 
 h1 {
-  text-align: center; /* Centra el encabezado */
-  color: white; /* Color de texto con buen contraste */
+  text-align: center; 
+  color: white; 
 }
 
 p {
-  text-align: center; /* Centra el párrafo */
-  color: #666; /* Color de texto con buen contraste */
+  text-align: center; 
+  color: #666;
 }
 
 h3 {
-  text-align: center; /* Centra el subtítulo */
-  color: #303F9F; /* Color de texto con buen contraste */
+  text-align: center;   color: #303F9F; 
 }
 
 label {
-  display: block; /* Muestra las etiquetas en una nueva línea */
-  margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+  display: block; 
+  margin-bottom: 5px; 
 }
 
 input,
 textarea {
-  width: 100%; /* Ancho completo para los campos de entrada */
-  padding: 8px; /* Espacio interno dentro de los campos */
-  border: 1px solid #303F9F; /* Borde gris claro */
-  border-radius: 5px; /* Bordes redondeados */
+  width: 100%; 
+  padding: 8px; 
+  border: 1px solid #303F9F; 
+  border-radius: 5px; 
 }
 .error-message{
     color: red;

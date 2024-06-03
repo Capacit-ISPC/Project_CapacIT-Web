@@ -3,29 +3,29 @@
     <ul class="navbar-lista">
       <li class="navbar-lista-item">
         <i class="bi bi-house-door">
-          <a routerLink="/">Inicio</a>
+          <a routerLink="/" tabindex="1">Inicio</a>
         </i>
       </li>
       <li class="navbar-lista-item">
         <i class="bi bi-journal-bookmark-fill">
-          <a routerLink="/course">Cursos</a>
+          <a routerLink="/course" tabindex="2">Cursos</a>
         </i>
       </li>
       <li class="navbar-lista-item">
         <ng-container *ngIf="isLoggedIn()">
           <i class="bi bi-file-earmark-person-fill">
-            <a routerLink="/perfil">Perfil</a>
+            <a routerLink="/perfil" tabindex="3">Perfil</a>
           </i>
         </ng-container>
       </li>
       <li class="navbar-lista-item">
         <i class="bi bi-send-fill">
-          <a routerLink="/Contacto y Asistencia">Contacto</a>
+          <a routerLink="/Contacto y Asistencia" tabindex="4">Contacto</a>
         </i>
       </li>
       <li class="navbar-lista-item">
         <i class="bi bi-people-fill">
-          <a routerLink="/About us">Equipo</a>
+          <a routerLink="/About us" tabindex="5">Equipo</a>
         </i>
       </li>
     </ul>

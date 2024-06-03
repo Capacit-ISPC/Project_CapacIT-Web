@@ -8,3 +8,6 @@ h1, div {
   box-shadow: 10px 5px 5px rgb(0,0,0,0.3);
   height: 75%;
 }
+h1, p {
+  color: white;
+}

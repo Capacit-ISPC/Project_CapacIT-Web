@@ -39,7 +39,7 @@ p {
     margin-bottom: 20px;
 }
 h5 {
-    color: #777;
+    color: #333333;
     font-size: 1.2em;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -77,7 +77,7 @@ h5 {
     transform: scale(1.05);
 }
 
-.btn-success {
+/* .btn-success {
     color: #fff;
     border: none;
     padding: 15px 30px;
@@ -90,16 +90,25 @@ h5 {
 .btn-success:hover {
 
     transform: scale(1.05);
-}
+} */
 
 .btn-danger {
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
+    background-color: #ff6347;
+    color: #000; border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 0.625em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-danger:hover {
-    background-color: #c0392b;
+    transform: scale(1.05);
+    
+}
+.btn-cancelar {
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario para que esté alineado */
 }
 
 .course-intro {
