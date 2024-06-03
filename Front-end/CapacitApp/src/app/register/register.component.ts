@@ -25,7 +25,7 @@ export class RegisterComponent {
   password = new FormControl('', [Validators.required, Validators.minLength(8)]);
 
   crearUsuario(){
-    
+
     console.log("entra a registrar")
 
     this.userService.registrarUsuario(this.newUser).subscribe({

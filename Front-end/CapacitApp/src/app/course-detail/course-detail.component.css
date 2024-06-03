@@ -1,90 +1,96 @@
 .study-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .course-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .course-header h2 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .course-header p {
-    color: #666;
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  
-  .content {
-    display: flex;
-  }
-  
-  .sidebar {
-    flex: 1;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .sidebar h3 {
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .sidebar ul {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar li {
-    list-style-type: none;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  
-  .sidebar li:hover {
-    color: #007bff;
-  }
-  
-  .main-content {
-    flex: 3;
-    padding: 20px;
-  }
-  
-  .main-content h3 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  .main-content p {
-    color: #666;
-    font-size: 16px;
-  }
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .main-content {
-    flex: 3;
-    padding: 40px; /* Aumentamos el espacio de relleno */
-  }
-  
-  .main-content h3 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px; /* Aumentamos el espacio inferior del título */
-  }
-  
-  .main-content p {
-    color: #666;
-    font-size: 18px; /* Aumentamos el tamaño del texto */
-    line-height: 1.6; /* Aumentamos el interlineado para una mejor legibilidad */
-  }
+.course-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.course-header h2 {color: #3040a1;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #303fa14d;
+  padding-bottom: 10px;
+
+}
+
+.course-header p {
+  color: rgb(10, 11, 14);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+}
+
+a.download-link {
+  list-style-type: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #007bff;
+  transition: color 0.3s;
+}
+.sidebar {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.sidebar h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(48, 63, 159);
+  transition: color 0.3s;
+}
+
+.sidebar li:hover {
+  color:#007bff;
+}
+
+.main-content {
+  flex: 3;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h3 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+}

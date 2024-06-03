@@ -2,6 +2,61 @@
   "courses": [
     {
       "id": 1,
+      "name": "Curso de Java Básico",
+      "imagePath": "assets/img/java-intro.png",
+      "description": "Aprende los fundamentos de programación en Java con este curso introductorio. Adquiere conocimientos básicos y comienza a desarrollar aplicaciones.",
+      "languaje": "Java",
+      "tag_1": "backend",
+      "tag_2": "basic",
+      "price": 4.5,
+      "teacherId": 1
+    },
+    {
+      "id": 2,
+      "name": "Curso de Python Avanzado",
+      "imagePath": "assets/img/python.jpg",
+      "description": "Domina técnicas avanzadas de Python.",
+      "languaje": "Python",
+      "tag_1": "backend",
+      "tag_2": "advanced",
+      "price": 79.99,
+      "teacherId": 2
+    },
+    {
+      "id": 3,
+      "name": "Curso de Desarrollo Web",
+      "imagePath": "assets/img/desarrollo-web.jpg",
+      "description": "Desarrolla sitios web profesionales.",
+      "languaje": "HTML, CSS, JavaScript",
+      "tag_1": "frontend",
+      "tag_2": "intermediate",
+      "price": 59.99,
+      "teacherId": 3
+    },
+    {
+      "id": 4,
+      "name": "Curso de Machine Learning",
+      "imagePath": "assets/img/machine.png",
+      "description": "Machine Learning con Python.",
+      "languaje": "Python",
+      "tag_1": "A.I.",
+      "tag_2": "intermediate",
+      "price": 89.99,
+      "teacherId": 4
+    },
+    {
+    "id": 5,
+    "name": "Curso de Bases de Datos SQL",
+    "imagePath": "assets/img/machine.png",
+    "description": "Aprende SQL y gestiona BBDD.",
+    "languaje": "SQL",
+    "tag_1": "BBDD",
+    "tag_2": "básico",
+    "price": 39.99,
+    "teacherId": 5
+  },
+    {
+      "id": 6,
       "name": "Introducción a Go",
       "imagePath": "/assets/img/go-intro.jpg",
       "description": "Descubre el lenguaje de programación Go y aprende los conceptos fundamentales para construir aplicaciones eficientes y de alto rendimiento.",
@@ -9,40 +64,30 @@
       "tag_1": "backend",
       "tag_2": "basic",
       "price": 5.98,
-      "teacherId": 1
+      "teacherId": 6
     },
+
     {
-      "id": 2,
-      "name": "Introducción a Java",
-      "imagePath": "assets/img/java-intro.png",
-      "description": "Aprende los fundamentos de programación en Java con este curso introductorio. Adquiere conocimientos básicos y comienza a desarrollar aplicaciones.",
-      "languaje": "Java",
-      "tag_1": "backend",
-      "tag_2": "basic",
-      "price": 4.5,
-      "teacherId": 2
-    },
-    {
-      "id": 3,
-      "name": "Java avanzado",
+      "id": 7,
+      "name": "Curso de Java Avanzado",
       "imagePath": "assets/img/java-avanzado.jpg",
       "description": "Mejora tus habilidades en Java con este curso avanzado. Profundiza en temas como programación orientada a objetos, bases de datos y desarrollo web.",
       "languaje": "Java",
       "tag_1": "backend",
       "tag_2": "intermediate",
       "price": 10.00,
-      "teacherId": 2
+      "teacherId": 7
     },
     {
-      "id": 4,
-      "name": "Introducción a Typescript",
+      "id": 8,
+      "name": "Curso de Typescript básico",
       "imagePath": "assets/img/typescript-intro.jpg",
       "description": "Explora el lenguaje de programación TypeScript y familiarízate con su tipado estático y características modernas para el desarrollo de aplicaciones web robustas.",
       "languaje": "Typescript",
       "tag_1": "backend",
       "tag_2": "basic",
       "price": 3.50,
-      "teacherId": 1
+      "teacherId": 8
     }
   ],
   "perfiles": [
