@@ -1,5 +1,4 @@
-    
-![portada] (https://github.com/Capacit-ISPC/Project_CapacIT-Web/blob/develop/Documentaci%C3%B3n/portada_capacit_WEB.png)
+   ![portada](https://github.com/Capacit-ISPC/Project_CapacIT-Web/blob/develop/Documentaci%C3%B3n/portada_capacit_WEB.png)
 
 
 
