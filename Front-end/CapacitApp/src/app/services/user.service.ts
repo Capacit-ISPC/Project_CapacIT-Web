@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { User } from "../models/User";
+import { User } from "../Models/User";
 import { Router } from "@angular/router";
 import { AuthService } from "./auth.service";
 
@@ -18,5 +18,5 @@ export class UserService {
     return this.http.post(this.url, user);
   }
 
- 
+
 }

@@ -1,10 +1,13 @@
-# CapacIT.com       
+   ![portada](https://github.com/Capacit-ISPC/Project_CapacIT-Web/blob/develop/Documentaci%C3%B3n/portada_capacit_WEB.png)
 
+
+
+# CapacIT.com   
 Proyecto Integrador - Practica Profesionalizante - ISPC
 
 La web CapacIT es una plataforma de formación en línea que ofrece una amplia variedad de cursos (gratuitos y pagos) básicos para principiantes hasta cursos avanzados para profesionales con experiencia en áreas de programación, tecnología de la información y disciplinas relacionadas. Los cursos están diseñados para atender las necesidades tanto de aquellos que buscan adquirir habilidades técnicas para su carrera profesional, como de aquellos que buscan aprender por hobby o interés personal.
 
-Link: https://capacit.great-site.net/html/
+
 
 
 ## 🛠️ Construido con:
@@ -29,12 +32,22 @@ En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pue
     
   * [IEEE830 ‐ CapacIT Web 2024](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/IEEE830-%E2%80%90-CapacIT--Web-2024)
 
+## Personal involucrado en el desarrollo del proyecto:
 
-## Autores ✒️
+---
 
-**Estudiantes TSDWAD de ISPC**
+|        Nombre y apellido         |                      e-mail                       |
+| :------------------------------: | :-----------------------------------------------: |
+|       Jorge Nicolás Ramos        |            jnicolas.ramos10@gmail.com             |
+|   Gabriela Elizabeth Aguilera    |               gaby_ag@live.com.ar                 |
+|      Daniela Andrea Barrios      |               dani_bj1@hotmail.com                |
+|      Edith del Valle Moyano      |               moyanoe357@gmail.com                |
+|      Nelson Federico Vilte       |               nelsonvilte@gmail.com               |
+| Antonio Facundo Emanuel Villalba |                 vfacu44@gmail.com                 |
+|    Eduardo Nicolas Zurbriggen    |                eduz14@hotmail.com                 |
+|        Osvaldo Ever Diaz         |             osvaldoeverdiaz@gmail.com             |
+|      Maria Belen Cacciamani      |             cacciamanibelen@gmail.com             |
 
-* Puede ver miembros de equipo en : [Equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
 
 
 

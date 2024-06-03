@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CourseService } from '../services/course.service';
 import { Observable } from 'rxjs';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { Course } from '../models/Course';
+import { Course } from '../Models/Course';
 
 @Component({
   selector: 'app-course-detail',

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
-import { User } from '../models/User';
+import { User } from '../Models/User';
 
 
 
@@ -25,7 +25,7 @@ export class RegisterComponent {
   password = new FormControl('', [Validators.required, Validators.minLength(8)]);
 
   crearUsuario(){
-    
+
     console.log("entra a registrar")
 
     this.userService.registrarUsuario(this.newUser).subscribe({
