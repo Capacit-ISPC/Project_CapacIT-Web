@@ -32,12 +32,22 @@ En nuestra [Wiki](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki ) pue
     
   * [IEEE830 ‐ CapacIT Web 2024](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/IEEE830-%E2%80%90-CapacIT--Web-2024)
 
+## Personal involucrado en el desarrollo del proyecto:
 
-## Autores ✒️
+---
 
-**Estudiantes TSDWAD de ISPC**
+|        Nombre y apellido         |                      e-mail                       |
+| :------------------------------: | :-----------------------------------------------: |
+|       Jorge Nicolás Ramos        |            jnicolas.ramos10@gmail.com             |
+|   Gabriela Elizabeth Aguilera    |               gaby_ag@live.com.ar                 |
+|      Daniela Andrea Barrios      |               dani_bj1@hotmail.com                |
+|      Edith del Valle Moyano      |               moyanoe357@gmail.com                |
+|      Nelson Federico Vilte       |               nelsonvilte@gmail.com               |
+| Antonio Facundo Emanuel Villalba |                 vfacu44@gmail.com                 |
+|    Eduardo Nicolas Zurbriggen    |                eduz14@hotmail.com                 |
+|        Osvaldo Ever Diaz         |             osvaldoeverdiaz@gmail.com             |
+|      Maria Belen Cacciamani      |             cacciamanibelen@gmail.com             |
 
-* Puede ver miembros de equipo en : [Equipo](https://github.com/Capacit-ISPC/Project_CapacIT-Web/wiki/Miembros-de-Equipo)
 
 
 
