@@ -1,3 +1,5 @@
+
+
 h1, div {
   text-align: center;
   color: white;
@@ -12,4 +14,7 @@ h1, div {
 p{
   color: white;
   font-size: larger;
+}
+.contact-form-container {
+  min-height: 100vh;
 }
