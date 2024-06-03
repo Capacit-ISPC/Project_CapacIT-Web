@@ -7,10 +7,10 @@
   <nav>
     <ul>
       <ng-container *ngIf="!isLoggedIn(); else loggedIn">
-        <a (click)="redirectLogin()">Login</a>
+       <li><a (click)="redirectLogin()">Login</a></li> 
       </ng-container>
       <ng-template #loggedIn>
-        <a (click)="logout()">Logout</a>
+       <li><a (click)="logout()">Logout</a></li> 
       </ng-template>
 
       <!-- <a  (click)="redirectLogin()">Login</a>

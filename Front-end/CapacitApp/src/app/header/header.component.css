@@ -35,6 +35,19 @@ nav ul a:hover{
   color: #030303;
   box-shadow: 1px 10px 30px #030303;
 }
+nav ul li {
+  list-style-type: none; 
+}
+
+nav ul li::before {
+  content: ""; 
+  display: inline-block; 
+  width: 10px; 
+  height: 10px;
+  border-radius: 50%; 
+  background-color: transparent; 
+  margin-right: 5px; 
+}
 
 nav a:active{
   color: red;

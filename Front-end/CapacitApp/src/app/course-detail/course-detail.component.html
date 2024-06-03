@@ -1,3 +1,5 @@
+
+
 <div class="study-section" *ngIf="course">
   <div class="course-header">
     <h2>{{ course.name }}</h2>
@@ -16,7 +18,7 @@
     </div>
     <div class="main-content">
       <h3>{{ currentChapter }}</h3>
-      <iframe width="100%" height="400" [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
+      <iframe width="100%" height="400" [src]="videoUrl" frameborder="0" allowfullscreen aria-label="Video de curso"></iframe>
       <p>Este es el contenido del capítulo seleccionado...</p>
     </div>
   </div>

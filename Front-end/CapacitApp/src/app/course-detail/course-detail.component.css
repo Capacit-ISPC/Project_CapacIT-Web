@@ -70,8 +70,12 @@ a.download-link {
   color: rgb(48, 63, 159);
   transition: color 0.3s;
 }
+.sidebar li a {
+  color: inherit; /* Hereda el color del texto del li */
+}
 
-.sidebar li:hover {
+.sidebar li:hover,
+.sidebar li:hover a  {
   color:#007bff;
 }
 

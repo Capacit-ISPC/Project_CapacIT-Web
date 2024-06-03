@@ -38,6 +38,7 @@ label input{
   outline: none;
   font-size: 14pt;
   transition: background-color 0.5s,border 0.2s, box-shadow 0.2s;
+  color: #000
 }
 
 label input:hover{

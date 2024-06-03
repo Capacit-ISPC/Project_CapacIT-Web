@@ -18,7 +18,7 @@
     <div class="buttons-container">
         <button class="btn btn-primary" (click)="showCourses()">Ver Cursos</button>
         <button class="btn btn-success" (click)="showForm()" *ngIf="!showCourseForm">Cargar Cursos</button>
-        <button class="btn btn-danger" (click)="hideForm()" *ngIf="showCourseForm">Cancelar</button>
+        
     </div>
 
     <p class="course-intro" > Queremos que encuentres el curso perfecto para ti, independientemente de tu nivel actual de habilidad.
@@ -56,6 +56,7 @@
 
 
                 <button type="submit" class="btn btn-primary mt-2">Crear Curso</button>
+                <button class="btn btn-danger btn-cancelar" (click)="hideForm()" *ngIf="showCourseForm">Cancelar</button>
 
             </form>
         </div>
