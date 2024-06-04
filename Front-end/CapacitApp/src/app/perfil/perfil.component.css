@@ -1,20 +1,28 @@
-
-
-h1, div {
-  text-align: center;
-  color: white;
- }
-
-.card{
-  background-color: var(--secondary-color);
-  width: auto;
-  box-shadow: 10px 5px 5px rgb(0,0,0,0.3);
-  height: 75%;
-}
-p{
-  color: white;
-  font-size: larger;
-}
 .contact-form-container {
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  width: 80%; /* ajusta el ancho según sea necesario */
+  max-width: 400px; /* establece un ancho máximo para una mejor legibilidad en dispositivos grandes */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* ajusta el desenfoque de la sombra */
+  padding: 20px;
+  text-align: center;
+}
+
+h1, p {
+  color: white;
+}
+
+p {
+  font-size: 1.1em; /* mejoramos el tamaño de fuente */
+}
+
+.card div:nth-child(2) {
+  color: #999; /* color de texto para el mensaje "Cargando perfil..." */
 }

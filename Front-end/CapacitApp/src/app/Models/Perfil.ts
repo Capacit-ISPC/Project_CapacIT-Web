@@ -1,6 +1,6 @@
 export interface Perfil{
   id:number,
-  username: string,
+  name: string,
   email:string,
   last_name:string
 }
