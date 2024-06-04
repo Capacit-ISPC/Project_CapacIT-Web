@@ -1,3 +1,4 @@
+import { NuestraAppComponent } from './nuestra-app/nuestra-app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path: 'Contacto y Asistencia', component: ContactFormComponent},
   {path: 'About us', component:AboutUsComponent},
   {path: 'courses/:id', component:CourseDetailComponent},
+  {path: 'Nuestra App', component:NuestraAppComponent},
   {path: '**', component: PageNotFoundComponent},
   
 ];
