@@ -19,13 +19,11 @@
 }
 
 .navbar:hover,
-
-.navbar.active
-{
-    width: 24vh;
-    z-index: 1;
-    background-color: var(--secondary-color);
+.navbar.active {
+  width: 22vh;
+  background-color: var(--secondary-color);
 }
+
 .navbar-lista{
     text-decoration: none;
     list-style: none;
@@ -61,8 +59,9 @@ a {
     align-items: center;
     justify-content: center;
 }
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
-  text-decoration-color: white;
   text-underline-offset: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
