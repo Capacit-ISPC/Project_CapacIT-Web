@@ -7,18 +7,14 @@ import { Perfil } from '../Models/Perfil';
   providedIn: 'root'
 })
 
-
 export class PerfilService {
 
-  private url = 'http://localhost:8000/users/users/';
-
-
+  private url = 'http://localhost:8000/users/';
 
   constructor(private http: HttpClient) { }
 
   getPerfil(usuarioId: number): Observable<Perfil> {
     const url = `${this.url}/${usuarioId}`;
-    return this.http.get<Perfil>(url)
-    console.log(this.getPerfil) ;
+    return this.http.get<Perfil>(url);
   }
 }

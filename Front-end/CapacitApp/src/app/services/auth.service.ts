@@ -54,7 +54,7 @@ export class AuthService {
   
 
   getUsuarioActualDesdeServidor(usuarioId: number): Observable<Perfil> {
-    const url = `http://127.0.0.1:8000/users/users/${usuarioId}`;
+    const url = `http://127.0.0.1:8000/users/${usuarioId}`;
     return this.http.get<Perfil>(url);
   }
   
@@ -70,6 +70,7 @@ export class AuthService {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
     this.token='';
   }
+
   logout() {
     localStorage.removeItem('token'); // Elimina el token del almacenamiento local al cerrar sesión
     this.token = ''; // Resetea el token en el servicio

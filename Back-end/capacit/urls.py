@@ -47,10 +47,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("api-token/", CustomAuthToken.as_view(), name = "api-token"),
     
-    path('users/', include('apps.users.api.routers')),
-    path('courses/', include('apps.courses.api.urls')),
-    path('cart/', include('apps.cart.api.urls')),
-    path('orders/', include('apps.order.api.urls')),
+    path('', include('apps.users.api.routers')),
+    path('', include('apps.courses.api.urls')),
+    path('', include('apps.cart.api.urls')),
+    path('', include('apps.order.api.urls')),
 
     path("login/", Login.as_view(), name= "login"),
     path("logout/", Logout.as_view(), name= "logout"),
