@@ -23,6 +23,7 @@ import { PasswordComponent } from './password/password.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { NuestraAppComponent } from './nuestra-app/nuestra-app.component';
 
 
 
@@ -47,6 +48,7 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
     ContactFormComponent,
     AboutUsComponent,
     CourseDetailComponent,
+    NuestraAppComponent,
 
   ],
   imports: [
