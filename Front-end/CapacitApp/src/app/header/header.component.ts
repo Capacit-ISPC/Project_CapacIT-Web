@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 export class HeaderComponent implements OnInit{
 
   brand : String = "CapacIT";
-
+  
   constructor(private router: Router, private authService: AuthService){
 
   }
@@ -28,7 +28,13 @@ export class HeaderComponent implements OnInit{
   isLoggedIn(): boolean {
     return this.authService.isLoggedIn();
   }
+  redirectAdmin(){
+    this.router.navigate(['/course'])
+  }
 
+  isAdmin():boolean{
+    return this.authService.isUserAdmin();
+  }
   logout(){
    this.authService.logout();
   }

@@ -11,6 +11,7 @@ export class AuthService {
   private token: string = '';
   private usuarioActual: User | null = null;
   private url: string = 'http://127.0.0.1:8000/';
+  isAdmin = this.usuarioActual?.is_staff ? this.usuarioActual.is_staff : false;
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -29,6 +30,12 @@ export class AuthService {
       this.token = localStorage.getItem('token') || '';
     }
     return this.token;
+  }
+  authenticatedUser(usuario: User) {
+    this.usuarioActual = usuario;
+    if (this.usuarioActual.is_staff) {
+      this.isAdmin = true;
+    }
   }
   
   setUsuarioActual(usuario: User) {
@@ -67,7 +74,10 @@ export class AuthService {
   deleteCookie(name: string) {
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   }
-
+  isUserAdmin(): boolean {
+    const usuario = this.getUsuarioActual();
+    return usuario ? usuario.is_staff : false;
+  }
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('usuarioActual');
@@ -77,4 +87,5 @@ export class AuthService {
     this.router.navigate(['/home']);
     alert("Se ha cerrado la sesión correctamente");
   }
+  
 }

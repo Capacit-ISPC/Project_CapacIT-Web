@@ -6,6 +6,10 @@
 
   <nav>
     <ul>
+      <ng-container *ngIf="isAdmin()">
+        <li><a  (click)="redirectAdmin()">Admin
+        </a></li>  
+      </ng-container>
       <ng-container *ngIf="!isLoggedIn(); else loggedIn">
        <li><a (click)="redirectLogin()">Login</a></li> 
       </ng-container>
