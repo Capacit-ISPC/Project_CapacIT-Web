@@ -1,18 +1,92 @@
-.card{
+.card {
     background-color: var(--secondary-color);
     width: 18rem;
-    box-shadow: 10px 5px 5px rgb(0,0,0,0.3);
-    height: 450px;
-    color: #ffffff;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+    height: auto;
+    color: var(--white-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 10px;
 }
 
-
-img {
-max-width: 300px;
-max-height: 400px;
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.payment-container{
-   /*  max-width: 800px; */
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.description-card {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+
+.card-text {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.btn {
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 0.625em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 5px;
+}
+
+.btn-info {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border: none;
+}
+
+.btn-info:hover {
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: var(--black-color);
+    border: none;
+}
+
+.btn-warning:hover {
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #ff6347;
+    color: var(--white-color);
+    border: none;
+}
+
+.btn-danger:hover {
+    transform: scale(1.05);
+}
+
+.payment-container {
     width: 100%;
 }

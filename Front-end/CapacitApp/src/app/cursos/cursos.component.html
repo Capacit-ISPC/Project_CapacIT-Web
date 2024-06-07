@@ -1,71 +1,81 @@
 <div class="container">
     <div>
-        <h1>Cursos</h1>
-        <h3>Bienvenido a CapacIT</h3>
-           <p> Ofrecemos diferentes cursos y tutoriales que pretenden ayudarte en tu preparación para el mundo de las tecnologías de la información..</p>
-
-
-
-            <h4>Hoy puede ser tu primer día en este maravilloso mundo.</h4>
-
-            <h5>Para ver más detalles sobre cada curso, incluyendo los temas que cubre, los conocimientos previos necesarios, los costos y mucho más,
-                simplemente haz clic en el curso que te interese y consulta toda su información.</h5>
-
-
+      <h1>Cursos</h1>
+      <h3>Bienvenido a CapacIT</h3>
+      <p>Ofrecemos diferentes cursos y tutoriales que pretenden ayudarte en tu preparación para el mundo de las tecnologías de la información.</p>
+      <h4>Hoy puede ser tu primer día en este maravilloso mundo.</h4>
+      <h5>Para ver más detalles sobre cada curso, incluyendo los temas que cubre, los conocimientos previos necesarios, los costos y mucho más, simplemente haz clic en el curso que te interese y consulta toda su información.</h5>
     </div>
-
-
+  
     <div class="buttons-container">
-        <button class="btn btn-primary" (click)="showCourses()">Ver Cursos</button>
-        <button class="btn btn-success" (click)="showForm()" *ngIf="!showCourseForm">Cargar Cursos</button>
-        
+      <button class="btn btn-primary" (click)="showCourses()">Ver Cursos</button>
+      <button class="btn btn-success" (click)="openModal()" *ngIf="isStaff">Cargar Cursos</button>
     </div>
-
-    <p class="course-intro" > Queremos que encuentres el curso perfecto para ti, independientemente de tu nivel actual de habilidad.
-        Cada curso está dedicado tanto para principiantes como para expertos.</p>
-
-    <div class="container" *ngIf="showCourseForm">
-        <div class="form-container">
-            <form (ngSubmit)="createCourse()" #formCourse="ngForm">
-
-                <div class="form-group">
-                    <label for="name">Nombre curso</label>
-                    <input type="text" class="form-control" [(ngModel)]="newCourse.name" name="name"
-                        placeholder="Nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="language">Lenguaje de programación</label>
-                    <input type="text" class="form-control" [(ngModel)]="newCourse.language" name="language"
-                        placeholder="Lenguaje" required>
-                </div>
-                <div class="form-group">
-                    <label for="link">Descripcion del curso</label>
-                    <input type="text" class="form-control" [(ngModel)]="newCourse.link" name="description"
-                        placeholder="Descripcion">
-                </div>
-                <div class="form-group">
-                    <label for="price">Precio del curso</label>
-                    <input type="text" class="form-control" [(ngModel)]="newCourse.price" name="price"
-                        placeholder="Precio" required>
-                </div>
-                <div class="form-group">
-                    <label for="teacher_name">Nombre del Profesor</label>
-                    <input type="text" class="form-control" [(ngModel)]="newCourse.teacher_name" name="teacher_name"
-                        placeholder="Profesor" required>
-                </div>
-
-
-                <button type="submit" class="btn btn-primary mt-2">Crear Curso</button>
-                <button class="btn btn-danger btn-cancelar" (click)="hideForm()" *ngIf="showCourseForm">Cancelar</button>
-
-            </form>
-        </div>
-    </div>
-    <br>
-    <br>
+  
+    <p class="course-intro">Queremos que encuentres el curso perfecto para ti, independientemente de tu nivel actual de habilidad. Cada curso está dedicado tanto para principiantes como para expertos.</p>
+  
     <div class="courses-container" *ngIf="showCourseList">
-        <div class="row g-3">
-            <app-course-card class="col" *ngFor="let course of courses" [course]="course"></app-course-card>
-        </div>
+      <div class="row g-3">
+        <app-course-card class="col" *ngFor="let course of courses" [course]="course" (delete)="deleteCourse($event)" (edit)="openEditModal($event)" [isStaff]="isStaff"></app-course-card>
+      </div>
     </div>
-    <br>
+  
+    <!-- Custom Modal -->
+    <div class="modal" [ngClass]="{'show': isModalOpen}" (click)="closeModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+          <h5 class="modal-title">Cargar Curso</h5>
+          <button type="button" class="close" (click)="closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="createCourse()" #formCourse="ngForm">
+            <div class="form-group">
+              <label for="name">Nombre curso</label>
+              <input type="text" class="form-control" [(ngModel)]="newCourse.name" name="name" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="language">Lenguaje de programación</label>
+              <input type="text" class="form-control" [(ngModel)]="newCourse.language" name="language" placeholder="Lenguaje" required>
+            </div>
+            <div class="form-group">
+              <label for="description">Descripción del curso</label>
+              <input type="text" class="form-control" [(ngModel)]="newCourse.description" name="description" placeholder="Descripción">
+            </div>
+            <div class="form-group">
+              <label for="technology">Tecnología</label>
+              <input type="text" class="form-control" [(ngModel)]="newCourse.technology" name="technology" placeholder="Tecnología" required>
+            </div>
+            <div class="form-group">
+              <label for="level">Nivel</label>
+              <input type="text" class="form-control" [(ngModel)]="newCourse.level" name="level" placeholder="Nivel" required>
+            </div>
+            <div class="form-group">
+              <label for="price">Precio del curso</label>
+              <input type="number" class="form-control" [(ngModel)]="newCourse.price" name="price" placeholder="Precio" required>
+            </div>
+            <div class="form-group">
+              <label for="link">Enlace</label>
+              <input type="text" class="form-control" [(ngModel)]="newCourse.link" name="link" placeholder="Enlace">
+            </div>
+            <div class="form-group">
+                <label for="category">Categoría</label>
+                <select class="form-control" [(ngModel)]="newCourse.category" name="category" required>
+                  <option *ngFor="let category of categories" [value]="category.id" [selected]="category.id === newCourse.category">{{ category.tipo }}</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="tutor">Tutor</label>
+                <select class="form-control" [(ngModel)]="newCourse.tutor" name="tutor" required>
+                  <option *ngFor="let tutor of tutors" [value]="tutor.id" [selected]="tutor.id === newCourse.tutor">{{ tutor.name }} {{ tutor.last_name }}</option>
+                </select>
+              </div>
+            <div class="buttons-container">
+              <button type="submit" class="btn btn-primary mt-2" *ngIf="isStaff" >Guardar Curso</button>
+              <button type="button" class="btn btn-danger mt-2" (click)="closeModal()">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
