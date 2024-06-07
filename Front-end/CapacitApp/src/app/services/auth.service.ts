@@ -2,84 +2,79 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { Router } from '@angular/router';
-import { Perfil } from '../Models/Perfil';
+import { User } from '../Models/User';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
   private token: string = '';
-  private usuarioActual: any;
-  private url:string = 'http://127.0.0.1:8000/'
+  private usuarioActual: User | null = null;
+  private url: string = 'http://127.0.0.1:8000/';
 
-  constructor(private http:HttpClient, private router: Router){}
+  constructor(private http: HttpClient, private router: Router) {}
 
-  login(email: string, password: string): Observable<any> {//se logue
-    const user = {
-      email: email,
-      password: password
-    };
-    console.log("Token en servicio auth: " + this.getToken())
+  login(email: string, password: string): Observable<any> {
+    const user = { email: email, password: password };
     return this.http.post(`${this.url}/login/`, user);
   }
 
-  setToken(token: string) {//guarda el token obtenido acá
+  setToken(token: string) {
     this.token = token;
-    localStorage.setItem('token',token)//guardo en el localStorage
+    localStorage.setItem('token', token);
   }
 
-  getToken() {
+  getToken(): string {
     if (!this.token) {
-      this.token = localStorage.getItem('token') || ''; // Obtiene el token del almacenamiento local
+      this.token = localStorage.getItem('token') || '';
     }
     return this.token;
   }
   
-  setUsuarioActual(usuario: { id: number, name: string, email: string, last_name: string }) {
+  setUsuarioActual(usuario: User) {
     this.usuarioActual = usuario;
-    localStorage.setItem('usuarioActual', JSON.stringify(usuario)); // Almacena el usuario actual en el almacenamiento local
+    localStorage.setItem('usuarioActual', JSON.stringify(usuario));
   }
 
-  getUsuarioActual() {
+  getUsuarioActual(): User | null {
     if (!this.usuarioActual) {
-      this.usuarioActual = JSON.parse(localStorage.getItem('usuarioActual') || '{}'); // Obtiene el usuario actual del almacenamiento local
+      const storedUser = localStorage.getItem('usuarioActual');
+      console.log("Usuario stored: " + storedUser)
+      if (storedUser) {
+        this.usuarioActual = JSON.parse(storedUser);
+      } else {
+        this.usuarioActual = null;
+      }
     }
     return this.usuarioActual;
   }
+
   getUsuarioId(): number | null {
-    const usuarioActual = JSON.parse(localStorage.getItem('usuarioActual') || '{}');
+    const usuarioActual = this.getUsuarioActual();
+    console.log("Usuario actual: " + usuarioActual)
     return usuarioActual ? usuarioActual.id : null;
   }
-  
 
-  getUsuarioActualDesdeServidor(usuarioId: number): Observable<Perfil> {
-    const url = `http://127.0.0.1:8000/users/${usuarioId}`;
-    return this.http.get<Perfil>(url);
-  }
-  
-
-
-  isLoggedIn() {
-    return !!this.getToken(); // Verifica si hay un token almacenado y devuelve true si está presente
+  getUsuarioActualDesdeServidor(usuarioId: number): Observable<User> {
+    const url = `${this.url}users/${usuarioId}`;
+    return this.http.get<User>(url);
   }
 
+  isLoggedIn(): boolean {
+    return !!this.getToken();
+  }
 
   deleteCookie(name: string) {
-    console.log("borrado de la cookie")
     document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-    this.token='';
   }
 
   logout() {
-    localStorage.removeItem('token'); // Elimina el token del almacenamiento local al cerrar sesión
-    this.token = ''; // Resetea el token en el servicio
-    this.router.navigate(['/home']); // Redirige al usuario a la página de inicio
+    localStorage.removeItem('token');
+    localStorage.removeItem('usuarioActual');
+    this.token = '';
+    this.usuarioActual = null;
     this.deleteCookie('token');
-    console.log("Logout exitoso");
+    this.router.navigate(['/home']);
     alert("Se ha cerrado la sesión correctamente");
-    this.router.navigate(['/home']); 
-
-    console.log("token despues del logout: " + this.getToken())
   }
 }

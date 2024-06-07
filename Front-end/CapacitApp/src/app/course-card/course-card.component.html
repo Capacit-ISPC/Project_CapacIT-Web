@@ -1,15 +1,26 @@
 <div class="card">
-  <img src="../../assets/img/typescript-intro.jpg" class="card-img-top" alt="imagenCurso" />
+  <a [href]="course.link" target="_blank">
+    <img [src]="course.link || '../../assets/img/typescript-intro.jpg'" class="card-img-top" alt="imagenCurso" />
+  </a>
   <div class="card-body">
     <h5 class="card-title">{{ course.name }}</h5>
     <p class="description-card">{{ course.description }}</p>
-    <p class="card-text">{{ course.technology }}</p>
-    <p class="card-text">{{ course.level }}</p>
-    <p>{{ course.price}}</p>
+    <p class="card-text">Tecnología: {{ course.technology }}</p>
+    <p class="card-text">Nivel: {{ course.level }}</p>
+    <p class="card-text">Lenguaje: {{ course.language }}</p>
+    <p class="card-text">Precio: {{ course.price | currency : "USD" }}</p>
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#miModal-' + course.id">
-      Más info de este curso
-    </button>
+    <div class="buttons-container">
+      <button type="button" class="btn btn-info" data-bs-toggle="modal" [attr.data-bs-target]="'#miModal-' + course.id">
+        Más info de este curso
+      </button>
+      <button type="button" class="btn btn-warning" (click)="editCourse(course)" *ngIf="isStaff">
+        Editar
+      </button>
+      <button type="button" class="btn btn-danger" (click)="deleteCourse(course.id)" *ngIf="isStaff">
+        Borrar
+      </button>
+    </div>
   </div>
 </div>
 
@@ -21,17 +32,19 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">
-        {{ course.link }}
-      </div>
-      <div>
-        <span>Profesor: {{course.teacher_name}}</span>
+        <p>{{ course.description }}</p>
+        <p>Tecnología: {{ course.technology }}</p>
+        <p>Nivel: {{ course.level }}</p>
+        <p>Lenguaje: {{ course.language }}</p>
+        <p>Enlace: <a [href]="course.link" target="_blank">{{ course.link }}</a></p>
+        <p>Categoría: {{ course.category }}</p>
+        <p>Profesor: {{ course.tutor }}</p>
       </div>
       <div class="modal-footer" style="flex-direction: column;">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Cerrar
         </button>
-        <!-- <a href="**" class="btn btn-primary">Comprar <span><i class="bi bi-cart2"></i></span></a> -->
-        <span><strong> {{ course.price | currency : "USD" }} USD</strong></span>
+        <span><strong>{{ course.price | currency : "USD" }} USD</strong></span>
         <div class="payment-container" #paymentRef></div>
       </div>
     </div>
