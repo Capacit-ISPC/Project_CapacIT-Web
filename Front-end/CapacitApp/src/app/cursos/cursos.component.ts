@@ -137,7 +137,7 @@ export class CursosComponent implements OnInit {
     this.courseService.deleteCourse(courseId).subscribe({
       next: () => {
         this.courses = this.courses.filter(course => course.id !== courseId);
-        console.log("Curso eliminado exitosamente");
+        alert("Curso eliminado exitosamente");
       },
       error: (error) => {
         this.handleError("Error al eliminar el curso", error);
@@ -152,7 +152,7 @@ export class CursosComponent implements OnInit {
         if (index !== -1) {
           this.courses[index] = data;
         }
-        console.log("Curso actualizado exitosamente", data);
+        alert("Curso actualizado exitosamente");
         this.getAllCourses();  // Actualiza la lista de cursos automáticamente después de editar
         this.closeModal();
       },

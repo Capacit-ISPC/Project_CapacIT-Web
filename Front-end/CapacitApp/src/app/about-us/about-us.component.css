@@ -35,6 +35,7 @@ font-weight: normal;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+align-items: end;
 gap: 20px;
 width: 100%;
 max-width: 960px; /* Añadido para limitar el ancho de los miembros */
