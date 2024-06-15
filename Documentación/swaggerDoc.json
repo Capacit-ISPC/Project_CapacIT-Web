@@ -1,0 +1,916 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Documentacion Capacit API",
+      "description": "Documentacion Publica API Capacit",
+      "termsOfService": "https://www.google.com/policies/terms/",
+      "contact": {
+        "email": "contact@yourapi.local"
+      },
+      "license": {
+        "name": "BSD License"
+      },
+      "version": "v1"
+    },
+    "host": "localhost:8000",
+    "schemes": [
+      "http"
+    ],
+    "basePath": "/",
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "securityDefinitions": {
+      "Basic": {
+        "type": "basic"
+      }
+    },
+    "security": [
+      {
+        "Basic": []
+      }
+    ],
+    "paths": {
+      "/api-token/": {
+        "post": {
+          "operationId": "api-token_create",
+          "description": "",
+          "parameters": [
+            {
+              "name": "data",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/AuthToken"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/AuthToken"
+              }
+            }
+          },
+          "tags": [
+            "api-token"
+          ]
+        },
+        "parameters": []
+      },
+      "/cart/": {
+        "get": {
+          "operationId": "cart_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "cart"
+          ]
+        },
+        "parameters": []
+      },
+      "/cart/items/": {
+        "get": {
+          "operationId": "cart_items_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "cart"
+          ]
+        },
+        "post": {
+          "operationId": "cart_items_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "cart"
+          ]
+        },
+        "delete": {
+          "operationId": "cart_items_delete",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "204": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "cart"
+          ]
+        },
+        "parameters": []
+      },
+      "/cart/items/{cart_item_id}/": {
+        "get": {
+          "operationId": "cart_items_read",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "cart"
+          ]
+        },
+        "post": {
+          "operationId": "cart_items_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "cart"
+          ]
+        },
+        "delete": {
+          "operationId": "cart_items_delete",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "204": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "cart"
+          ]
+        },
+        "parameters": [
+          {
+            "name": "cart_item_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "/category/": {
+        "get": {
+          "operationId": "category_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Category"
+                }
+              }
+            }
+          },
+          "tags": [
+            "category"
+          ]
+        },
+        "parameters": []
+      },
+      "/courses/": {
+        "get": {
+          "operationId": "courses_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Course"
+                }
+              }
+            }
+          },
+          "tags": [
+            "courses"
+          ]
+        },
+        "post": {
+          "operationId": "courses_create",
+          "description": "",
+          "parameters": [
+            {
+              "name": "data",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Course"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/Course"
+              }
+            }
+          },
+          "tags": [
+            "courses"
+          ]
+        },
+        "parameters": []
+      },
+      "/courses/{id}/": {
+        "get": {
+          "operationId": "courses_read",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/Course"
+              }
+            }
+          },
+          "tags": [
+            "courses"
+          ]
+        },
+        "put": {
+          "operationId": "courses_update",
+          "description": "",
+          "parameters": [
+            {
+              "name": "data",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Course"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/Course"
+              }
+            }
+          },
+          "tags": [
+            "courses"
+          ]
+        },
+        "patch": {
+          "operationId": "courses_partial_update",
+          "description": "",
+          "parameters": [
+            {
+              "name": "data",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/Course"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/Course"
+              }
+            }
+          },
+          "tags": [
+            "courses"
+          ]
+        },
+        "delete": {
+          "operationId": "courses_delete",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "204": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "courses"
+          ]
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "/login/": {
+        "post": {
+          "operationId": "login_create",
+          "description": "",
+          "parameters": [
+            {
+              "name": "data",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/AuthToken"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/AuthToken"
+              }
+            }
+          },
+          "tags": [
+            "login"
+          ]
+        },
+        "parameters": []
+      },
+      "/logout/": {
+        "post": {
+          "operationId": "logout_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "logout"
+          ]
+        },
+        "parameters": []
+      },
+      "/orders/": {
+        "get": {
+          "operationId": "orders_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "post": {
+          "operationId": "orders_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "put": {
+          "operationId": "orders_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "patch": {
+          "operationId": "orders_partial_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "delete": {
+          "operationId": "orders_delete",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "204": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "parameters": []
+      },
+      "/orders/{id}/": {
+        "get": {
+          "operationId": "orders_read",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "post": {
+          "operationId": "orders_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "put": {
+          "operationId": "orders_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "patch": {
+          "operationId": "orders_partial_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "delete": {
+          "operationId": "orders_delete",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "204": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "orders"
+          ]
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "/password/change-password/": {
+        "post": {
+          "operationId": "password_change-password_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "password"
+          ]
+        },
+        "parameters": []
+      },
+      "/register/": {
+        "post": {
+          "operationId": "register_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "register"
+          ]
+        },
+        "parameters": []
+      },
+      "/tutor/": {
+        "get": {
+          "operationId": "tutor_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/Tutor"
+                }
+              }
+            }
+          },
+          "tags": [
+            "tutor"
+          ]
+        },
+        "parameters": []
+      },
+      "/users/": {
+        "get": {
+          "operationId": "users_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/CustomUser"
+                }
+              }
+            }
+          },
+          "tags": [
+            "users"
+          ]
+        },
+        "post": {
+          "operationId": "users_create",
+          "description": "",
+          "parameters": [
+            {
+              "name": "data",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/CustomUser"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/CustomUser"
+              }
+            }
+          },
+          "tags": [
+            "users"
+          ]
+        },
+        "parameters": []
+      },
+      "/users/{id}/": {
+        "get": {
+          "operationId": "users_read",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/CustomUser"
+              }
+            }
+          },
+          "tags": [
+            "users"
+          ]
+        },
+        "put": {
+          "operationId": "users_update",
+          "description": "",
+          "parameters": [
+            {
+              "name": "data",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/CustomUser"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "",
+              "schema": {
+                "$ref": "#/definitions/CustomUser"
+              }
+            }
+          },
+          "tags": [
+            "users"
+          ]
+        },
+        "delete": {
+          "operationId": "users_delete",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "204": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "users"
+          ]
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "definitions": {
+      "AuthToken": {
+        "required": [
+          "username",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "title": "Username",
+            "type": "string",
+            "minLength": 1
+          },
+          "password": {
+            "title": "Password",
+            "type": "string",
+            "minLength": 1
+          },
+          "token": {
+            "title": "Token",
+            "type": "string",
+            "readOnly": true,
+            "minLength": 1
+          }
+        }
+      },
+      "Category": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "integer",
+            "readOnly": true
+          },
+          "tipo": {
+            "title": "Tipo",
+            "type": "string",
+            "enum": [
+              "backend",
+              "frontend"
+            ]
+          },
+          "description": {
+            "title": "Description",
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1
+          }
+        }
+      },
+      "Course": {
+        "required": [
+          "name",
+          "language",
+          "technology",
+          "level",
+          "price",
+          "category",
+          "tutor"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "integer",
+            "readOnly": true
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "description": {
+            "title": "Description",
+            "type": "string"
+          },
+          "language": {
+            "title": "Language",
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "technology": {
+            "title": "Technology",
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "level": {
+            "title": "Level",
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "price": {
+            "title": "Price",
+            "type": "string",
+            "format": "decimal"
+          },
+          "link": {
+            "title": "Link",
+            "type": "string",
+            "maxLength": 255
+          },
+          "category": {
+            "title": "Category",
+            "type": "integer"
+          },
+          "tutor": {
+            "title": "Tutor",
+            "type": "integer"
+          }
+        }
+      },
+      "Tutor": {
+        "required": [
+          "last_name",
+          "phone",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "Id",
+            "type": "integer",
+            "readOnly": true
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "maxLength": 50
+          },
+          "last_name": {
+            "title": "Last name",
+            "type": "string",
+            "maxLength": 50,
+            "minLength": 1
+          },
+          "phone": {
+            "title": "Phone",
+            "type": "string",
+            "maxLength": 15,
+            "minLength": 1
+          },
+          "email": {
+            "title": "Email",
+            "type": "string",
+            "format": "email",
+            "maxLength": 254,
+            "minLength": 1
+          }
+        }
+      },
+      "CustomUser": {
+        "required": [
+          "password",
+          "email",
+          "name",
+          "last_name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "title": "ID",
+            "type": "integer",
+            "readOnly": true
+          },
+          "password": {
+            "title": "Password",
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1
+          },
+          "last_login": {
+            "title": "Last login",
+            "type": "string",
+            "format": "date-time",
+            "x-nullable": true
+          },
+          "is_superuser": {
+            "title": "Superuser status",
+            "description": "Designates that this user has all permissions without explicitly assigning them.",
+            "type": "boolean"
+          },
+          "email": {
+            "title": "Email",
+            "type": "string",
+            "format": "email",
+            "maxLength": 255,
+            "minLength": 1
+          },
+          "name": {
+            "title": "Name",
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1
+          },
+          "last_name": {
+            "title": "Last_name",
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1
+          },
+          "is_active": {
+            "title": "Is active",
+            "type": "boolean"
+          },
+          "is_staff": {
+            "title": "Is staff",
+            "type": "boolean"
+          },
+          "groups": {
+            "description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+            "type": "array",
+            "items": {
+              "description": "The groups this user belongs to. A user will get all permissions granted to each of their groups.",
+              "type": "integer"
+            },
+            "uniqueItems": true
+          },
+          "user_permissions": {
+            "description": "Specific permissions for this user.",
+            "type": "array",
+            "items": {
+              "description": "Specific permissions for this user.",
+              "type": "integer"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  }

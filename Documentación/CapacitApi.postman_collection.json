@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "961d5c0d-4c99-4656-bc16-6aab29c863eb",
+		"name": "CapacitApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27791811"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nico@gmail.com\",\r\n    \"password\": \"Capacit1428\",\r\n    \"name\": \"Nicolas\",\r\n    \"last_name\": \"Ramos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/register/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nicolas@capacit.com\",\r\n    \"password\": \"Capacit1428\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/login/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{auth_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\": \"Capacit1428\",\r\n    \"new_password\": \"1428Capacit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/password/change-password/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"password",
+						"change-password",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"auth_token\", \"none\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{auth_token}}"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}/logout/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/users/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/users/5",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"users",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listTutor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/tutor/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"tutor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listCourses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/courses/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/category/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCourse",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token {{auth_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Curso de Java Avanzado\",\r\n    \"description\": \"\\\"Aprende los fundamentos de programación en Java \\\"\",\r\n    \"language\": \"Java\",\r\n    \"technology\": \"Java\",\r\n    \"level\": \"Avanzado\",\r\n    \"price\": 20.0,\r\n    \"link\": \"\",\r\n    \"category\": 1,\r\n    \"tutor\": 2  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}/courses/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}/users/",
+					"host": [
+						"{{base-url}}"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
